@@ -33,14 +33,17 @@
     </head>
     <body>
 
-
+ 
         <div class="wrapper-page">
+             
+               <div align=center >
+                
+                     <h1 class="logo-name"><img src="assets/images/logo.png"> </h1>
+                </div>
             <div class="panel panel-color panel-primary panel-pages">
-                <div class="panel-heading bg-img"> 
-                    <div class="bg-overlay"></div>
-                    <h3 class="text-center m-t-10 text-white"> Sign In to <strong>Moltran</strong> </h3>
-                </div> 
-
+              
+              
+                
                 <div class="panel-body">
                     <form class="form-horizontal m-t-20" role="form"  method="post" action="../controler/usuario/login.php">
                     
@@ -57,7 +60,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
+<!--                    <div class="form-group">
                         <div class="col-xs-12">
                             <div class="checkbox checkbox-primary">
                                 <input id="checkbox-signup" type="checkbox">
@@ -67,7 +70,7 @@
                             </div>
                             
                         </div>
-                    </div>
+                    </div>-->
                     
                     <div class="form-group text-center m-t-40">
                         <div class="col-xs-12">
@@ -77,7 +80,7 @@
 
                     <div class="form-group m-t-30">
                         <div class="col-sm-7">
-                            <a href="recuperarpass.php"><i class="fa fa-lock m-r-5"></i>Recuperar password?</a>
+                            <a href="recuperarpass.php"><i class="fa fa-lock m-r-5"></i>Recuperar Clave?</a>
                         </div>
 <!--                        <div class="col-sm-5 text-right">
                             <a href="register.html">Create an account</a>

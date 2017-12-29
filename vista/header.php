@@ -1,10 +1,12 @@
-    <header id="topnav">
+ <header id="topnav">
             <div class="topbar-main">
                 <div class="container">
 
                     <!-- LOGO -->
                     <div class="topbar-left">
-                        <a href="formPrincipal.php" class="logo"><i class="md md-terrain"></i> <span>Moltran </span></a>
+
+                        
+                        <a href="formPrincipal.php" class="logo" alt="Pescadero" title="Pescadero" > <img src="assets/images/logo2.png" alt="Pescadero" title="Pescadero " width='35' height='35'><span>   Pescadero </span></a>
                     </div>
                     <!-- End Logo container-->
 
@@ -14,67 +16,11 @@
                         <ul class="nav navbar-nav navbar-right pull-right">
                             <li>
                                 <form role="search" class="navbar-left app-search pull-left hidden-xs">
-                                     <input type="text" placeholder="Search..." class="form-control">
-                                     <a href="#"><i class="fa fa-search"></i></a>
+                                    <label style="color: white" ><?php echo $nombre ?></label>
+<!--                                     <a href="#"><i class="fa fa-search"></i></a>-->
                                 </form>
                             </li>
-                            <li class="dropdown hidden-xs">
-                                <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
-                                    <i class="md md-notifications"></i> <span class="badge badge-xs badge-danger">3</span>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-lg">
-                                    <li class="text-center notifi-title">Notification</li>
-                                    <li class="list-group">
-                                       <!-- list item-->
-                                       <a href="javascript:void(0);" class="list-group-item">
-                                          <div class="media">
-                                             <div class="pull-left">
-                                                <em class="fa fa-user-plus fa-2x text-info"></em>
-                                             </div>
-                                             <div class="media-body clearfix">
-                                                <div class="media-heading">New user registered</div>
-                                                <p class="m-0">
-                                                   <small>You have 10 unread messages</small>
-                                                </p>
-                                             </div>
-                                          </div>
-                                       </a>
-                                       <!-- list item-->
-                                        <a href="javascript:void(0);" class="list-group-item">
-                                          <div class="media">
-                                             <div class="pull-left">
-                                                <em class="fa fa-diamond fa-2x text-primary"></em>
-                                             </div>
-                                             <div class="media-body clearfix">
-                                                <div class="media-heading">New settings</div>
-                                                <p class="m-0">
-                                                   <small>There are new settings available</small>
-                                                </p>
-                                             </div>
-                                          </div>
-                                        </a>
-                                        <!-- list item-->
-                                        <a href="javascript:void(0);" class="list-group-item">
-                                          <div class="media">
-                                             <div class="pull-left">
-                                                <em class="fa fa-bell-o fa-2x text-danger"></em>
-                                             </div>
-                                             <div class="media-body clearfix">
-                                                <div class="media-heading">Updates</div>
-                                                <p class="m-0">
-                                                   <small>There are
-                                                      <span class="text-primary">2</span> new updates available</small>
-                                                </p>
-                                             </div>
-                                          </div>
-                                        </a>
-                                       <!-- last list item -->
-                                        <a href="javascript:void(0);" class="list-group-item">
-                                          <small>See all notifications</small>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
+                    
 
                             <li class="dropdown user-box">
                                 <a href="#" class="dropdown-toggle waves-effect waves-light profile " data-toggle="dropdown" aria-expanded="true">
@@ -148,37 +94,36 @@
 
 
 
-          <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
-              
+               <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
                                                 <h4 class="modal-title">Registrar Solicitud</h4>
                                             </div>
+                                            <form action="../controler/problema/insertar.php" method="post">
                                             <div class="modal-body">
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                         <textarea class="form-control" rows="5"></textarea>
-                                                                         
-                                                    </div>
-                                                  
+                                                        <textarea class="form-control" name="problema" rows="5"></textarea>                                                                         
+                                                        <input type="hidden" name="idUsuario" value="<?php echo $usuario?>" >                                                        
+                                                        <input type="hidden" name="cargoUsuario" value="<?php echo $cargo?>" >
+                                                        <input type="hidden" name="nombreUsuario" value="<?php echo $nombre?>" >
+                                                    </div>                                                  
                                                 </div>
-                                         
-                                               
-                                       
-                                            </div>
-                                            
+                                            </div>                                            
                                             <div class="fileupload btn btn-purple waves-effect waves-light">
                                     <span><i class="ion-upload m-r-5"></i>Upload</span>
-                                    <input type="file" class="upload">
+                                    <input type="file" name="imagen" class="upload">
+                                    
                                 </div>
                                             <br>
                                             <br>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-info waves-effect waves-light">Registrar Solicitud</button>
+                                                <button type="submit"  class="btn btn-info waves-effect waves-light">Registrar Solicitud</button>
                                             </div>
-                                        </div>
+                                            </form>
+                                        </div>                                    
                                     </div>
                                 </div><!-- /.modal -->
