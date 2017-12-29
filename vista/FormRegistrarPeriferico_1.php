@@ -104,7 +104,7 @@
                                                  <div class="form-group">
                                                 <label class="col-sm-2 control-label">Tipo de Periferico</label>
                                                 <div class="col-sm-10">
-                                                    <select required class="form-control">
+                                           <select required class="form-control" onChange="pantallaOnChange(this)">
                                                         <option value="">Seleccione</option>
                                                         <option value="1">Pantalla</option>
                                                         <option value="2">Mouse</option>
@@ -116,7 +116,36 @@
                                                 </div>
                                             </div>
                                        
-                                            
+<!--                                             <div id="nCuenta" style="display:none;">
+           Nuestro numero de cuenta es: 000000000000000000000
+      </div>-->
+      <div id="nPantalla" style="display:none; ">
+          
+                     <div class="form-group">
+                                                <label class="col-sm-2 control-label">Tipo de Pantallas</label>
+                                                <div class="col-sm-10">
+                                                    <select required class="form-control">
+                                                        <option value="">Seleccione</option>
+                                                        <option value="1">lcd</option>
+                                                        <option value="2">plasma</option>
+                                                        <option value="3">led</option>
+                                                       
+                                                    </select>
+                                           
+                                                </div>
+                                            </div>
+          
+          
+          <div class="form-group">
+              <label class="col-md-2 control-label">Pulgadas</label>
+              <div class="col-md-10">
+                  <input type="text" class="form-control" required="">
+              </div>
+          </div>
+          
+          
+          
+      </div>
                                             
                                             
                                             <div class="form-group">
@@ -377,7 +406,27 @@
 
                 $("input[name='demo0']").TouchSpin({});
             });
+            
+            
         </script>
+         <script>
+             
+  function pantallaOnChange(sel) {
+    
+      if (sel.value=="1"){
+
+ divT = document.getElementById("nPantalla");
+           divT.style.display = "";
+       
+      }
+      
+        else{
+    divT = document.getElementById("nPantalla");
+           divT.style.display = "none";
+
+      }
+}
+    </script>
 
 
     </body>
