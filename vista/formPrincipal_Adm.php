@@ -68,23 +68,6 @@ $nombre = $_SESSION['nombre_usuario'];
         <div class="wrapper">
             <div class="container">
 
-                <!-- Page-Title -->
-           
-<!--     <div class="row">
-                    <div class="col-sm-12">
-                        <div class="btn-group pull-right">
-                            <button type="button" class="btn btn-primary dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Settings <span class="m-l-5"><i class="fa fa-cog"></i></span></button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
-                        </div>
-                        <h4 class="page-title">Datatable </h4>
-                    </div>
-                </div>-->
 
        
 
@@ -106,7 +89,7 @@ $nombre = $_SESSION['nombre_usuario'];
                           
                             </ul>
                         </div>
-                       <h3 class="panel-title">Solicitudes</h3>
+                       <h3 class="panel-title">Solicitudes Pendientes</h3>
                     </div>
                 </div>
                             </div>
@@ -116,27 +99,18 @@ $nombre = $_SESSION['nombre_usuario'];
                                     <thead>
                                         <tr>
                                             <th hidden="true">id oculto</th>
-                                            <th style="width: 20.011px;">Id</th>
-                                            <th style="width: 20.011px;">Office</th>
-                                            <th style="width: 20.011px;">Age</th>
-                                            <th style="width: 20.011px;">Start date</th>
-                                            <th style="width: 20.011px;">modificar</th>
+                                            <th style="width: 20px;">Id</th>
+                                            <th style="width: 20px;">fecha Problema</th>
+                                            <th style="width: 20px;">Problema</th>
+                                            <th style="width: 20px;">fecha Solucion</th>
+                                            <th style="width: 20px;">Solucion</th>
+                                            <th style="width: 20px;">modificar</th>
                                         </tr>
                                     </thead>
 
 
-                                    <tbody>
-                                        <tr>
-                                            <td hidden="true">Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td><button data-toggle="modal" data-target="#modal-solucion" class="btn btn-icon waves-effect waves-light btn-info m-b-5"> <i class="fa fa-keyboard-o" Title="Descipción " ></i> </button>
-                                            <button class="btn btn-icon waves-effect waves-light btn-danger m-b-5"> <i class="fa fa-remove "Title="Eliminar "></i> </button>
-                                            
-                                            </td>
-                                        </tr>
+                                     <tbody id="pro">
+                                    
                                       
                                     </tbody>
                                 </table>
@@ -246,7 +220,19 @@ $nombre = $_SESSION['nombre_usuario'];
             } );
             TableManageButtons.init();
         </script>
+<script type="text/javascript">
+           $(document).ready(function(){
+                var codID = $('#codID').val();
+                $.post("../controler/solucion/listarSolucionAndProblemaByEquipo_1.php",
+                    {
+                        cod: codID
+                    },
+                    function(data, status){
+                         $('#pro').html(data);
+                    });
 
+             });
+       </script> 
 
     </body>
 

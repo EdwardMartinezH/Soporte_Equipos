@@ -205,10 +205,10 @@ $nombre = $_SESSION['nombre_usuario'];
                     <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Buttons example</h3>
+                                <h3 class="panel-title">Solicitudes Realizadas</h3>
                             </div>
                             <div class="panel-body">
-  <!--<input type="text" id="bd" name="bd" value="<?= $nombre ?>"/>-->
+ 
                                 <table id="datatable-buttons" class="table table-striped table-bordered">
 
                                     <thead>

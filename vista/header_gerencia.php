@@ -36,7 +36,7 @@ $nombre = $_SESSION['nombre_usuario'];
                         <ul class="nav navbar-nav navbar-right pull-right">
                             <li>
                                 <form role="search" class="navbar-left app-search pull-left hidden-xs">
-                                     <label style="color: white" ><?php echo $nombre.$cargo.$usuario ?></label>
+                                     <label style="color: white" ><?php echo $nombre ?></label>
                                   
                                 </form>
                             </li>

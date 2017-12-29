@@ -173,37 +173,37 @@
 
 
 
-          <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+           <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
                                                 <h4 class="modal-title">Registrar Solicitud</h4>
                                             </div>
+                                            <form action="../controler/problema/insertar.php" method="post">
                                             <div class="modal-body">
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                         <textarea class="form-control" rows="5"></textarea>
-                                                                         
-                                                    </div>
-                                                  
+                                                        <textarea class="form-control" name="problema" rows="5"></textarea>                                                                         
+                                                        <input type="hidden" name="idUsuario" value="<?php echo $usuario?>" >                                                        
+                                                        <input type="hidden" name="cargoUsuario" value="<?php echo $cargo?>" >
+                                                        <input type="hidden" name="nombreUsuario" value="<?php echo $nombre?>" >
+                                                    </div>                                                  
                                                 </div>
-                                         
-                                               
-                                       
-                                            </div>
-                                            
+                                            </div>                                            
                                             <div class="fileupload btn btn-purple waves-effect waves-light">
                                     <span><i class="ion-upload m-r-5"></i>Upload</span>
-                                    <input type="file" class="upload">
+                                    <input type="file" name="imagen" class="upload">
+                                    
                                 </div>
                                             <br>
                                             <br>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-info waves-effect waves-light">Registrar Solicitud</button>
+                                                <button type="submit"  class="btn btn-info waves-effect waves-light">Registrar Solicitud</button>
                                             </div>
-                                        </div>
+                                            </form>
+                                        </div>                                    
                                     </div>
                                 </div><!-- /.modal -->
 

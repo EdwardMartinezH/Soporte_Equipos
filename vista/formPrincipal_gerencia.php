@@ -237,6 +237,7 @@ $nombre = $_SESSION['nombre_usuario'];
             } );
             TableManageButtons.init();
         </script>
+        
 <script type="text/javascript">
            $(document).ready(function(){
                 var codID = $('#codID').val();
