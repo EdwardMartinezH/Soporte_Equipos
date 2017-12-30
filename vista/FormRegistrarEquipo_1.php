@@ -63,7 +63,7 @@
     <body>
 
         <!-- Navigation Bar-->
-       <?php include "header_gerencia.php"; ?>  
+   <?php include "header_gerencia.php"; ?>  
         <!-- End Navigation Bar-->
 
 
@@ -99,7 +99,17 @@
                                         <form class="form-horizontal" role="form">   
 
                                          
-                                                     <div class="form-group">
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Empleado</label>
+                                                <div class="col-sm-10">
+                                                    <select required class="form-control" id="empleados">
+                                                     
+                                                    </select>
+                                           
+                                                </div>
+                                             </div>
+
+                                            <div class="form-group">
                                                 <label class="col-sm-2 control-label">Tipo de Equipo</label>
                                                 <div class="col-sm-10">
                                                     <select required class="form-control">
@@ -427,6 +437,22 @@
             });
         </script>
 
+           <script type="text/javascript">
+           $(document).ready(function(){
+                $.ajax({
+                  type: 'post',
+                  url: '../controler/cargo/listar.php'
+                })
+                .done(function(listas_rep){
+                   // alert(listas_rep);
+                  $('#empleados').html(listas_rep);
+                })
+                .fail(function(){
+                  alert('Hubo un errror al cargar las listas_rep')
+                });
+
+             });
+       </script>
 
     </body>
 

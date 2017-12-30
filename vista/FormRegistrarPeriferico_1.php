@@ -93,7 +93,7 @@
                 <div class="row">
                             <div class="col-sm-12">
                                 <div class="panel panel-default">
-                                    <div class="panel-heading"><h3 class="panel-title">Registro de Partes</h3></div>
+                                    <div class="panel-heading"><h3 class="panel-title">Registro de Periferico</h3></div>
                                     <div class="panel-body">
                                         
                                         <form class="form-horizontal" role="form">   
@@ -116,9 +116,7 @@
                                                 </div>
                                             </div>
                                        
-<!--                                             <div id="nCuenta" style="display:none;">
-           Nuestro numero de cuenta es: 000000000000000000000
-      </div>-->
+
       <div id="nPantalla" style="display:none; ">
           
                      <div class="form-group">
@@ -151,7 +149,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Marca</label>
                                                 <div class="col-md-10">
-                                                    <input type="text" class="form-control" value="Some text value..." required="">
+                                                    <input type="text" class="form-control" required="">
                                                 </div>
                                             </div>
                                       
