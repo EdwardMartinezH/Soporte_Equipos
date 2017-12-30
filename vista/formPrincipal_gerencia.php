@@ -1,20 +1,4 @@
-<?php
 
-session_start();
-if (!isset($_SESSION['id_usuario']) || $_SESSION['id_usuario'] == null || $_SESSION['id_usuario'] == "") {
-    echo'<script type="text/javascript">
-                alert("Inicio de Sesion Requerido");
-                window.location="login.php"
-                </script>';
-}
-$usuario = $_SESSION['id_usuario'];
-$cargo = $_SESSION['cargo_id'];
-$nombre = $_SESSION['nombre_usuario'];
-//var_dump('nombre'.$nombre.'usuario'.$usuario.'cargo'.$cargo);
-//session_destroy();
-
-
-?>
 <!DOCTYPE html>
 <html>
     
@@ -26,9 +10,9 @@ $nombre = $_SESSION['nombre_usuario'];
         <meta name="author" content="Coderthemes">
 
         <!--<link rel="shortcut icon" href="assets/images/favicon_1.ico">-->
-  <link rel="shortcut icon" href="http://pescadero.com.co/_images/logoicon.png">
+ <link rel="shortcut icon" href="http://pescadero.com.co/_images/logoicon.png">
 
-        <title>Moltran - Responsive Admin Dashboard Template</title>
+        <title>Soporte Equipos</title>
 
         <!-- DataTables -->
         <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />

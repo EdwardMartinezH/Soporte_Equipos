@@ -1,4 +1,22 @@
- <header id="topnav">
+  <?php
+
+session_start();
+if (!isset($_SESSION['id_usuario']) || $_SESSION['id_usuario'] == null || $_SESSION['id_usuario'] == "") {
+    echo'<script type="text/javascript">
+                alert("Inicio de Sesion Requerido");
+                window.location="login.php"
+                </script>';
+}
+$usuario = $_SESSION['id_usuario'];
+$cargo = $_SESSION['cargo_id'];
+$nombre = $_SESSION['nombre_usuario'];
+//var_dump('nombre'.$nombre.'usuario'.$usuario.'cargo'.$cargo);
+//session_destroy();
+
+
+?>
+
+<header id="topnav">
             <div class="topbar-main">
                 <div class="container">
 
@@ -29,10 +47,10 @@
                                 </a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Profile</a></li>
+                                  
                                     <li><a href="javascript:void(0)"><i class="md md-settings"></i> Settings</a></li>
-                                    <li><a href="javascript:void(0)"><i class="md md-lock"></i> Lock screen</a></li>
-                                    <li><a href="javascript:void(0)"><i class="md md-settings-power"></i> Logout</a></li>
+                                   
+                                    <li><a <?php session_destroy(); ?>href="../index.php"><i class="md md-settings-power"></i> Logout</a></li>
                                 </ul>
                             </li>
                         </ul>

@@ -8,9 +8,9 @@
         <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
         <meta name="author" content="Coderthemes">
 
-        <link rel="shortcut icon" href="assets/images/favicon_1.ico">
+  <link rel="shortcut icon" href="http://pescadero.com.co/_images/logoicon.png">
 
-        <title>Moltran - Responsive Admin Dashboard Template</title>
+        <title>Soporte Equipos</title>
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="assets/css/core.css" rel="stylesheet" type="text/css">
@@ -49,7 +49,7 @@
                     
                     <div class="form-group">
                         <div class="col-xs-12">
-                           <select id="Cargo_id" name="Cargo_id" class="form-control">
+                           <select  required id="Cargo_id" name="Cargo_id" class="form-control">
           </select>
                         </div>
                     </div>
@@ -60,18 +60,6 @@
                         </div>
                     </div>
 
-<!--                    <div class="form-group">
-                        <div class="col-xs-12">
-                            <div class="checkbox checkbox-primary">
-                                <input id="checkbox-signup" type="checkbox">
-                                <label for="checkbox-signup">
-                                    Remember me
-                                </label>
-                            </div>
-                            
-                        </div>
-                    </div>-->
-                    
                     <div class="form-group text-center m-t-40">
                         <div class="col-xs-12">
                             <button class="btn btn-primary btn-lg w-lg waves-effect waves-light" type="submit">Log In</button>

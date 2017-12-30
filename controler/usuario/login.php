@@ -25,26 +25,25 @@
             $usuario->setContrasena($mipassword);
             $usuDao = new UsuarioDao();
             $result = $usuDao->buscarBdPescadero($usuario);
-            //var_dump($result->getCargo_id());
-            if($result->getCargo_id() == null){
-                echo '<script language="javascript">window.location="../../vista/login.php"</script>';      
+            
+       
+            if($result->getCargo_id()==null){
+                
+                echo '<script language="javascript">window.location="../../index.php"</script>';      
                        
                
             }else{
-              
-                //var_dump($result);
+     
      if($result->getCargo_id()=="2"||$result->getCargo_id()=="3"){//tipo director 1
          $_SESSION['id_usuario'] = $result->getId(); 
          $_SESSION['cargo_id'] = $result->getCargo_id();
          $_SESSION['nombre_usuario'] = $result->getNombre();
 
-//         var_dump($result->getCargo_id().$result->getId(). $result->getNombre());
           echo '<script language="javascript">window.location="../../vista/formPrincipal_gerencia.php"</script>';
 
      }
-//     if($result->getCargo_id()==2||$usuario->getCargo_id()==3){//tipo director 1
-//           $_SESSION['basededatos'] = $usuario->getCargo_id();
-//          echo '<script language="javascript">alert("'.$usuario->getCargo_id().'");window.location="../../vista/formPrincipal_gerencia.php"</script>';
+
+          echo '<script language="javascript">alert("'.$usuario->getCargo_id().'");window.location="../../vista/formPrincipal_gerencia.php"</script>';
 //          
 //     }
      
@@ -62,9 +61,9 @@
          $_SESSION['cargo_id'] = $result->getCargo_id();
          $_SESSION['nombre_usuario'] = $result->getNombre();
            
-//            var_dump($result->getCargo_id().$result->getId(). $result->getNombre());
+
            echo '<script language="javascript">window.location="../../vista/formPrincipal.php"</script>';
      }
             }
-            //return $success
+   
    ?>

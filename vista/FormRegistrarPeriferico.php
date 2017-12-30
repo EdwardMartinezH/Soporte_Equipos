@@ -63,7 +63,7 @@
     <body>
 
         <!-- Navigation Bar-->
-       <?php include "header_Adm.php"; ?>  
+<?php include "header_Adm.php"; ?>  
         <!-- End Navigation Bar-->
 
 

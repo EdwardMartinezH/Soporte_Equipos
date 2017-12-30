@@ -1,10 +1,32 @@
-    <header id="topnav">
+   
+  <?php
+
+session_start();
+if (!isset($_SESSION['id_usuario']) || $_SESSION['id_usuario'] == null || $_SESSION['id_usuario'] == "") {
+    echo'<script type="text/javascript">
+                alert("Inicio de Sesion Requerido");
+                window.location="login.php"
+                </script>';
+}
+$usuario = $_SESSION['id_usuario'];
+$cargo = $_SESSION['cargo_id'];
+$nombre = $_SESSION['nombre_usuario'];
+//var_dump('nombre'.$nombre.'usuario'.$usuario.'cargo'.$cargo);
+//session_destroy();
+
+
+?>
+
+
+<header id="topnav">
             <div class="topbar-main">
-                <div class="container">
+                 <div class="container">
 
                     <!-- LOGO -->
-                    <div class="topbar-left">
-                        <a href="formPrincipal_Adm.php" class="logo"><i class="md md-terrain"></i> <span>Moltran </span></a>
+                      <div class="topbar-left">
+
+                        
+                        <a href="formPrincipal.php" class="logo" alt="Pescadero" title="Pescadero" > <img src="assets/images/logo2.png" alt="Pescadero" title="Pescadero " width='25' height='25'><span>   Pescadero </span></a>
                     </div>
                     <!-- End Logo container-->
 
@@ -13,68 +35,12 @@
 
                         <ul class="nav navbar-nav navbar-right pull-right">
                             <li>
-                                <form role="search" class="navbar-left app-search pull-left hidden-xs">
-                                     <input type="text" placeholder="Search..." class="form-control">
-                                     <a href="#"><i class="fa fa-search"></i></a>
+                                <form class="navbar-left app-search pull-left hidden-xs">
+                                     <label style="color: white" ><?php echo $nombre ?></label>
+                                  
                                 </form>
                             </li>
-                            <li class="dropdown hidden-xs">
-                                <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
-                                    <i class="md md-notifications"></i> <span class="badge badge-xs badge-danger">3</span>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-lg">
-                                    <li class="text-center notifi-title">Notification</li>
-                                    <li class="list-group">
-                                       <!-- list item-->
-                                       <a href="javascript:void(0);" class="list-group-item">
-                                          <div class="media">
-                                             <div class="pull-left">
-                                                <em class="fa fa-user-plus fa-2x text-info"></em>
-                                             </div>
-                                             <div class="media-body clearfix">
-                                                <div class="media-heading">New user registered</div>
-                                                <p class="m-0">
-                                                   <small>You have 10 unread messages</small>
-                                                </p>
-                                             </div>
-                                          </div>
-                                       </a>
-                                       <!-- list item-->
-                                        <a href="javascript:void(0);" class="list-group-item">
-                                          <div class="media">
-                                             <div class="pull-left">
-                                                <em class="fa fa-diamond fa-2x text-primary"></em>
-                                             </div>
-                                             <div class="media-body clearfix">
-                                                <div class="media-heading">New settings</div>
-                                                <p class="m-0">
-                                                   <small>There are new settings available</small>
-                                                </p>
-                                             </div>
-                                          </div>
-                                        </a>
-                                        <!-- list item-->
-                                        <a href="javascript:void(0);" class="list-group-item">
-                                          <div class="media">
-                                             <div class="pull-left">
-                                                <em class="fa fa-bell-o fa-2x text-danger"></em>
-                                             </div>
-                                             <div class="media-body clearfix">
-                                                <div class="media-heading">Updates</div>
-                                                <p class="m-0">
-                                                   <small>There are
-                                                      <span class="text-primary">2</span> new updates available</small>
-                                                </p>
-                                             </div>
-                                          </div>
-                                        </a>
-                                       <!-- last list item -->
-                                        <a href="javascript:void(0);" class="list-group-item">
-                                          <small>See all notifications</small>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
+                       
 
                             <li class="dropdown user-box">
                                 <a href="#" class="dropdown-toggle waves-effect waves-light profile " data-toggle="dropdown" aria-expanded="true">
@@ -83,10 +49,10 @@
                                 </a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Profile</a></li>
+                                 
                                     <li><a href="javascript:void(0)"><i class="md md-settings"></i> Settings</a></li>
-                                    <li><a href="javascript:void(0)"><i class="md md-lock"></i> Lock screen</a></li>
-                                    <li><a href="javascript:void(0)"><i class="md md-settings-power"></i> Logout</a></li>
+                                 
+                                  <li><a <?php session_destroy(); ?>href="../index.php"><i class="md md-settings-power"></i> Logout</a></li>
                                 </ul>
                             </li>
                         </ul>

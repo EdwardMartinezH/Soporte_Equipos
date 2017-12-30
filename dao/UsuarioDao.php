@@ -39,6 +39,7 @@ class UsuarioDao{
         $usuario->setNombre($bd[0]['Nombre']);
         $usuario->setEstado($bd[0]['Estado']);
         $usuario->setCargo_id($bd[0]['Cargo_id']);
+//        var_dump($usuario);
         return $usuario;
     }
 
