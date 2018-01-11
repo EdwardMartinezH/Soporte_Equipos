@@ -43,9 +43,9 @@
 
      }
 
-          echo '<script language="javascript">alert("'.$usuario->getCargo_id().'");window.location="../../vista/formPrincipal_gerencia.php"</script>';
-//          
-//     }
+//          echo '<script language="javascript">window.location="../../vista/formPrincipal_gerencia.php"</script>';
+////          
+////     }
      
      if($result->getCargo_id()=="29"){//tipo director 1
          $_SESSION['id_usuario'] = $result->getId(); 

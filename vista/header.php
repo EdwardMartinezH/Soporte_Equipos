@@ -7,14 +7,15 @@ if (!isset($_SESSION['id_usuario']) || $_SESSION['id_usuario'] == null || $_SESS
                 window.location="login.php"
                 </script>';
 }
+//session_destroy();
 $usuario = $_SESSION['id_usuario'];
 $cargo = $_SESSION['cargo_id'];
 $nombre = $_SESSION['nombre_usuario'];
-//var_dump('nombre'.$nombre.'usuario'.$usuario.'cargo'.$cargo);
-//session_destroy();
 
 
+//   window.location="login.php"
 ?>
+
 
 <header id="topnav">
             <div class="topbar-main">
@@ -50,7 +51,7 @@ $nombre = $_SESSION['nombre_usuario'];
                                   
                                     <li><a href="javascript:void(0)"><i class="md md-settings"></i> Settings</a></li>
                                    
-                                    <li><a <?php session_destroy(); ?>href="../index.php"><i class="md md-settings-power"></i> Logout</a></li>
+                                    <li ><a  href="../index.php"><i class="md md-settings-power"></i> Logout</a></li>
                                 </ul>
                             </li>
                         </ul>

@@ -112,7 +112,7 @@
                                             <div class="form-group">
                                                 <label class="col-sm-2 control-label">Tipo de Equipo</label>
                                                 <div class="col-sm-10">
-                                                    <select required class="form-control">
+                                             <select required class="form-control"onChange="pantallaOnChange(this)">
                                                         <option value="">Seleccione</option>
                                                         <option value="1">Portatil</option>
                                                         <option value="2">Todo en Uno</option>
@@ -123,36 +123,59 @@
                                                 </div>
                                             </div>
                                             
-                                                 <div class="form-group">
-                                                <label class="col-sm-2 control-label">Listar Tipo Pantalla</label>
+                                              
+                                            
+                                            
+                   <div id="nPantalla" style="display:none; ">
+          
+                    <div class="form-group">
+                                                <label class="col-sm-2 control-label">Serial Equipos</label>
                                                 <div class="col-sm-10">
                                                     <select required class="form-control">
                                                         <option value="">Seleccione</option>
-                                                        <option value="1">Lcd</option>
-                                                        <option value="2">Plasma</option>
-                                                        <option value="3">Led</option>
+                                                        <option value="1">Serial 1</option>
+                                                        <option value="2">Serial 2</option>
+                                                        <option value="3">Serial 3</option>
                                                        
                                                     </select>
                                            
                                                 </div>
                                             </div>
+          
+          
+       
+          
+          
+          
+      </div>   
                                             
-                                                 <div class="form-group">
-                                                <label class="col-sm-2 control-label">Listar Pantallas</label>
+                   <div id="nPantalla2" style="display:none; ">
+          
+                     <div class="form-group">
+                                                <label class="col-sm-2 control-label">Tipo de Pantallas</label>
                                                 <div class="col-sm-10">
                                                     <select required class="form-control">
-                                                        <option value="">1</option>
-                                                        <option value="1">2</option>
-                                                        <option value="2">3</option>
-                                                        <option value="3">4</option>
+                                                        <option value="">Seleccione</option>
+                                                        <option value="1">lcd</option>
+                                                        <option value="2">plasma</option>
+                                                        <option value="3">led</option>
                                                        
                                                     </select>
                                            
                                                 </div>
                                             </div>
-                                       
+          
+          
+       
+          
+          
+          
+      </div>   
                                             
-                                                 <div class="form-group">
+                                            
+          <div id="nPantalla1" style="display:none; ">
+              
+                   <div class="form-group">
                                                 <label class="col-sm-2 control-label">Listar Teclado</label>
                                                 <div class="col-sm-10">
                                                     <select required class="form-control">
@@ -181,38 +204,38 @@
                                                 </div>
                                             </div>
                                        
+          
+                   
                                             
                                             
-                                                 <div class="form-group">
-                                                <label class="col-sm-2 control-label">Listar Impresora</label>
+          
+      </div>
+                                            
+            <div id="nPantalla3" style="display:none; ">
+          
+                     <div class="form-group">
+                                                <label class="col-sm-2 control-label">Tipo de Pantallas</label>
                                                 <div class="col-sm-10">
                                                     <select required class="form-control">
-                                                        <option value="">1</option>
-                                                        <option value="1">2</option>
-                                                        <option value="2">3</option>
-                                                        <option value="3">4</option>
+                                                        <option value="">Seleccione</option>
+                                                        <option value="1">lcd</option>
+                                                        <option value="2">plasma</option>
+                                                        <option value="3">led</option>
                                                        
                                                     </select>
                                            
                                                 </div>
                                             </div>
+          
+          
+       
+          
+          
+          
+      </div>                                 
                                             
                                             
-                                                 <div class="form-group">
-                                                <label class="col-sm-2 control-label">Listar Camara</label>
-                                                <div class="col-sm-10">
-                                                    <select required class="form-control">
-                                                        <option value="">1</option>
-                                                        <option value="1">2</option>
-                                                        <option value="2">3</option>
-                                                        <option value="3">4</option>
-                                                       
-                                                    </select>
-                                           
-                                                </div>
-                                            </div>
-                                            
-                                            
+                                        
                                         
                                             
                                             
@@ -317,6 +340,51 @@
         <script src="assets/plugins/bootstrap-inputmask/bootstrap-inputmask.min.js" type="text/javascript"></script>
         <script src="assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
 
+             <script>
+             
+  function pantallaOnChange(sel) {
+    
+//           if (sel.value=="1"){
+//
+// divT = document.getElementById("nPantalla");
+//           divT.style.display = "";
+//       
+//      }
+    
+      if (sel.value=="2"){
+
+ divT = document.getElementById("nPantalla12");
+           divT.style.display = "";
+       
+ divT1 = document.getElementById("nPantalla");
+           divT1.style.display = "";
+
+
+      }
+//      
+   
+      
+//        if (sel.value=="3"){
+//
+// divT1 = document.getElementById("nPantalla");
+//           divT1.style.display = "";
+//
+// divT3 = document.getElementById("nPantalla1");
+//           divT3.style.display = "";
+//       
+//      }
+      
+        else{
+    divT = document.getElementById("nPantalla");
+           divT.style.display = "none";
+
+      }
+}
+    </script>
+        
+        
+        
+        
      <script>
             jQuery(document).ready(function() {
 
@@ -453,6 +521,8 @@
 
              });
        </script>
+       
+           
 
     </body>
 
