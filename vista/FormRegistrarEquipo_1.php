@@ -117,6 +117,7 @@
                                                         <option value="1">Portatil</option>
                                                         <option value="2">Todo en Uno</option>
                                                         <option value="3">Pc Escritorio</option>
+                                                        <option value="4">Impresora</option>
                                                       
                                                     </select>
                                            
@@ -149,31 +150,7 @@
           
       </div>   
                                             
-                   <div id="nPantalla2" style="display:none; ">
-          
-                     <div class="form-group">
-                                                <label class="col-sm-2 control-label">Tipo de Pantallas</label>
-                                                <div class="col-sm-10">
-                                                    <select required class="form-control">
-                                                        <option value="">Seleccione</option>
-                                                        <option value="1">lcd</option>
-                                                        <option value="2">plasma</option>
-                                                        <option value="3">led</option>
-                                                       
-                                                    </select>
-                                           
-                                                </div>
-                                            </div>
-          
-          
-       
-          
-          
-          
-      </div>   
-                                            
-                                            
-          <div id="nPantalla1" style="display:none; ">
+            <div id="nPantalla1" style="display:none; ">
               
                    <div class="form-group">
                                                 <label class="col-sm-2 control-label">Listar Teclado</label>
@@ -211,12 +188,12 @@
           
       </div>
                                             
-            <div id="nPantalla3" style="display:none; ">
+                   <div id="nPantalla2" style="display:none; ">
           
                      <div class="form-group">
                                                 <label class="col-sm-2 control-label">Tipo de Pantallas</label>
                                                 <div class="col-sm-10">
-                                                    <select required class="form-control">
+                                                    <select required class="form-control"  onChange="listarPantallas(this)">
                                                         <option value="">Seleccione</option>
                                                         <option value="1">lcd</option>
                                                         <option value="2">plasma</option>
@@ -228,11 +205,28 @@
                                             </div>
           
           
-       
+         <div class="form-group">
+                                                <label class="col-sm-2 control-label">seriales de Pantallas</label>
+                                                <div class="col-sm-10">
+                                                    <select required class="form-control">
+                                                        <option value="">Seleccione</option>
+                                                        <option value="1">serial 1</option>
+                                                        <option value="2">serial 2</option>
+                                                        <option value="3">serial 3</option>
+                                                       
+                                                    </select>
+                                           
+                                                </div>
+                                            </div>
           
           
           
-      </div>                                 
+      </div>   
+                                            
+                                            
+   
+                                            
+                                     
                                             
                                             
                                         
@@ -344,42 +338,93 @@
              
   function pantallaOnChange(sel) {
     
-//           if (sel.value=="1"){
-//
-// divT = document.getElementById("nPantalla");
-//           divT.style.display = "";
-//       
-//      }
-    
+  
+           if (sel.value=="1"){
+   alert("Hello! I am an alert box 1!");
+ divT=document.getElementById("nPantalla");
+           divT.style.display = "";
+ 
+    divT1 = document.getElementById("nPantalla1");
+           divT1.style.display = "none";
+           
+           divT2 = document.getElementById("nPantalla2");
+           divT2.style.display = "none";
+      }
+  
       if (sel.value=="2"){
-
- divT = document.getElementById("nPantalla12");
+ alert("Hello! I am an alert box!");
+ divT = document.getElementById("nPantalla");
            divT.style.display = "";
        
- divT1 = document.getElementById("nPantalla");
+divT1 = document.getElementById("nPantalla1");
            divT1.style.display = "";
-
-
+       
+divT2 = document.getElementById("nPantalla2");
+           divT2.style.display = "none";
       }
 //      
    
       
-//        if (sel.value=="3"){
-//
-// divT1 = document.getElementById("nPantalla");
-//           divT1.style.display = "";
-//
-// divT3 = document.getElementById("nPantalla1");
-//           divT3.style.display = "";
-//       
-//      }
-      
-        else{
-    divT = document.getElementById("nPantalla");
-           divT.style.display = "none";
+        if (sel.value=="3"){
 
+ divT = document.getElementById("nPantalla");
+           divT.style.display = "";
+       
+divT1 = document.getElementById("nPantalla1");
+           divT1.style.display = "";
+       
+divT2 = document.getElementById("nPantalla2");
+           divT2.style.display = "";
+      }
+      
+       if(sel.value==""){
+   divT = document.getElementById("nPantalla");
+           divT.style.display = "none";
+       
+divT1 = document.getElementById("nPantalla1");
+           divT1.style.display = "none";
+       
+divT2 = document.getElementById("nPantalla2");
+           divT2.style.display = "none";
+      }
+      
+       if (sel.value=="4"){
+   alert("Hello! I am an alert box 4!");
+ divT=document.getElementById("nPantalla");
+           divT.style.display = "";
+ 
+    divT1 = document.getElementById("nPantalla1");
+           divT1.style.display = "none";
+           
+           divT2 = document.getElementById("nPantalla2");
+           divT2.style.display = "none";
       }
 }
+
+
+  function listarPantallas(sel2) {
+    
+  
+           if (sel2.value=="1"){
+   alert("listas las pantallas  1!");
+
+      }
+  
+      if (sel.value=="2"){
+ alert("listas las pantallas  2!");
+
+      }
+////      
+//   
+//      
+        if (sel.value=="3"){
+
+ alert("listas las pantallas  3!");
+      }
+//      
+
+}
+
     </script>
         
         
