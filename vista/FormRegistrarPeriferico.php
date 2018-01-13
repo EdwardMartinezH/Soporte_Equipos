@@ -66,6 +66,7 @@
 <?php include "header_Adm.php"; ?>  
         <!-- End Navigation Bar-->
 
+        
 
         <div class="wrapper">
             <div class="container">
@@ -93,7 +94,7 @@
                 <div class="row">
                             <div class="col-sm-12">
                                 <div class="panel panel-default">
-                                    <div class="panel-heading"><h3 class="panel-title">Registro de Partes</h3></div>
+                                    <div class="panel-heading"><h3 class="panel-title">Registro de Periferico</h3></div>
                                     <div class="panel-body">
                                         
                                         <form class="form-horizontal" role="form">   
@@ -104,7 +105,7 @@
                                                  <div class="form-group">
                                                 <label class="col-sm-2 control-label">Tipo de Periferico</label>
                                                 <div class="col-sm-10">
-                                                    <select required class="form-control">
+                                           <select required class="form-control" onChange="pantallaOnChange(this)">
                                                         <option value="">Seleccione</option>
                                                         <option value="1">Pantalla</option>
                                                         <option value="2">Mouse</option>
@@ -116,13 +117,40 @@
                                                 </div>
                                             </div>
                                        
-                                            
+
+      <div id="nPantalla" style="display:none; ">
+          
+                     <div class="form-group">
+                                                <label class="col-sm-2 control-label">Tipo de Pantallas</label>
+                                                <div class="col-sm-10">
+                                                    <select required class="form-control">
+                                                        <option value="">Seleccione</option>
+                                                        <option value="1">lcd</option>
+                                                        <option value="2">plasma</option>
+                                                        <option value="3">led</option>
+                                                       
+                                                    </select>
+                                           
+                                                </div>
+                                            </div>
+          
+          
+          <div class="form-group">
+              <label class="col-md-2 control-label">Pulgadas</label>
+              <div class="col-md-10">
+                  <input type="text" class="form-control" required="">
+              </div>
+          </div>
+          
+          
+          
+      </div>
                                             
                                             
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Marca</label>
                                                 <div class="col-md-10">
-                                                    <input type="text" class="form-control" value="Some text value..." required="">
+                                                    <input type="text" class="form-control" required="">
                                                 </div>
                                             </div>
                                       
@@ -377,10 +405,29 @@
 
                 $("input[name='demo0']").TouchSpin({});
             });
+            
+            
         </script>
+         <script>
+             
+  function pantallaOnChange(sel) {
+    
+      if (sel.value=="1"){
+
+ divT = document.getElementById("nPantalla");
+           divT.style.display = "";
+       
+      }
+      
+        else{
+    divT = document.getElementById("nPantalla");
+           divT.style.display = "none";
+
+      }
+}
+    </script>
 
 
     </body>
 
 <!-- Mirrored from moltran.coderthemes.com/menu_2/table-datatable.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Oct 2017 05:07:58 GMT -->
-</html>

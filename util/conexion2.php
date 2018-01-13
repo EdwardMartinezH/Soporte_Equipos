@@ -1,6 +1,6 @@
 <?php 
 function getConn(){
-  $mysqli = mysqli_connect('localhost', 'root', 'Soporte', "bdpescadero1");
+  $mysqli = mysqli_connect('localhost', 'root', 'Soporte', "soporte");
   if (mysqli_connect_errno($mysqli))
     echo "Fallo al conectar a MySQL: " . mysqli_connect_error();
   $mysqli->set_charset('utf8');

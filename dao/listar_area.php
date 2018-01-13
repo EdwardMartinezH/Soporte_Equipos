@@ -3,7 +3,7 @@ require_once '../util/conexion2.php';
 
 function getListasRep(){
   $mysqli = getConn();
-  $query = 'SELECT u.`Cargo_id` ,c.`Nombre` FROM `usuario` AS u INNER JOIN cargo c ON u.`Cargo_id` = c.id WHERE u.`Cargo_id`>0';
+  $query = 'SELECT u.`Cargo_id` ,c.`Nombre` FROM `usuario` AS u INNER JOIN cargo c ON u.`Cargo_id` = c.id ';
 
   $result = $mysqli->query($query);
 
