@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-    
-<!-- Mirrored from moltran.coderthemes.com/menu_2/table-datatable.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Oct 2017 05:07:42 GMT -->
-<head>
+
+    <!-- Mirrored from moltran.coderthemes.com/menu_2/table-datatable.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Oct 2017 05:07:42 GMT -->
+    <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
@@ -28,8 +28,8 @@
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css">
 
         <script src="assets/js/modernizr.min.js"></script>
-        
-          <!-- Plugins css-->
+
+        <!-- Plugins css-->
         <link href="assets/plugins/tagsinput/jquery.tagsinput.css" rel="stylesheet">
         <link href="assets/plugins/toggles/toggles.css" rel="stylesheet">
         <link href="assets/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
@@ -63,163 +63,163 @@
     <body>
 
         <!-- Navigation Bar-->
-<?php include "header_Adm.php"; ?>  
+        <?php include "header_Adm.php"; ?>  
         <!-- End Navigation Bar-->
 
-        
+
 
         <div class="wrapper">
             <div class="container">
 
                 <!-- Page-Title -->
-           
-<!--     <div class="row">
-                    <div class="col-sm-12">
-                        <div class="btn-group pull-right">
-                            <button type="button" class="btn btn-primary dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Settings <span class="m-l-5"><i class="fa fa-cog"></i></span></button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
-                        </div>
-                        <h4 class="page-title">Datatable </h4>
-                    </div>
-                </div>-->
 
-       
+                <!--     <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn btn-primary dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Settings <span class="m-l-5"><i class="fa fa-cog"></i></span></button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Action</a></li>
+                                                <li><a href="#">Another action</a></li>
+                                                <li><a href="#">Something else here</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Separated link</a></li>
+                                            </ul>
+                                        </div>
+                                        <h4 class="page-title">Datatable </h4>
+                                    </div>
+                                </div>-->
+
+
 
                 <div class="row">
-                            <div class="col-sm-12">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading"><h3 class="panel-title">Registro de Periferico</h3></div>
-                                    <div class="panel-body">
-                                        
-                                        <form class="form-horizontal" role="form">   
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><h3 class="panel-title">Registro de Periferico</h3></div>
+                            <div class="panel-body">
 
-                                         
-                                            
-                                            
-                                                 <div class="form-group">
-                                                <label class="col-sm-2 control-label">Tipo de Periferico</label>
-                                                <div class="col-sm-10">
-                                           <select required class="form-control" onChange="pantallaOnChange(this)">
-                                                        <option value="">Seleccione</option>
-                                                        <option value="1">Pantalla</option>
-                                                        <option value="2">Mouse</option>
-                                                        <option value="3">Teclado</option>
-                                                        <option value="4">Impresora</option>
-                                                        <option value="5">Camara</option>
-                                                    </select>
-                                           
-                                                </div>
-                                            </div>
-                                       
+                                <form class="form-horizontal" role="form" action="../controler/periferico/insertar.php">   
 
-      <div id="nPantalla" style="display:none; ">
-          
-                     <div class="form-group">
-                                                <label class="col-sm-2 control-label">Tipo de Pantallas</label>
-                                                <div class="col-sm-10">
-                                                    <select required class="form-control">
-                                                        <option value="">Seleccione</option>
-                                                        <option value="1">lcd</option>
-                                                        <option value="2">plasma</option>
-                                                        <option value="3">led</option>
-                                                       
-                                                    </select>
-                                           
-                                                </div>
+
+
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Tipo de Periferico</label>
+                                        <div class="col-sm-10">
+                                            <select name="idTipoPeriferico" required class="form-control" onChange="pantallaOnChange(this)">
+                                                <option value="">Seleccione</option>
+                                                <option value="1">Pantalla</option>
+                                                <option value="2">Mouse</option>
+                                                <option value="3">Teclado</option>
+                                                <option value="4">Impresora</option>
+                                                <option value="5">Camara</option>
+                                            </select>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div id="nPantalla" style="display:none; ">
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">Tipo de Pantallas</label>
+                                            <div class="col-sm-10">
+                                                <select name="idTipoPantalla" required class="form-control">
+                                                    <option value="">Seleccione</option>
+                                                    <option value="1">lcd</option>
+                                                    <option value="2">plasma</option>
+                                                    <option value="3">led</option>
+
+                                                </select>
+
                                             </div>
-          
-          
-          <div class="form-group">
-              <label class="col-md-2 control-label">Pulgadas</label>
-              <div class="col-md-10">
-                  <input type="text" class="form-control" required="">
-              </div>
-          </div>
-          
-          
-          
-      </div>
-                                            
-                                            
-                                            <div class="form-group">
-                                                <label class="col-md-2 control-label">Marca</label>
-                                                <div class="col-md-10">
-                                                    <input type="text" class="form-control" required="">
-                                                </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">Pulgadas</label>
+                                            <div class="col-md-10">
+                                                <input name="pulgadas" type="text" class="form-control" required="">
                                             </div>
-                                      
-                                            <div class="form-group">
-                                                <label class="col-md-2 control-label">Modelo</label>
-                                                <div class="col-md-10">
-                                                    <input type="text" class="form-control" required="">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="col-md-2 control-label">Serial</label>
-                                                <div class="col-md-10">
-                                                    <input type="text" class="form-control" required="">
-                                                </div>
-                                            </div>    
-                                
-                                            <div class="form-group">
-                                                <label class="col-md-2 control-label">Stiker Activo</label>
-                                                <div class="col-md-10">
-                                                    <input type="text" class="form-control" required="">
-                                                </div>
-                                            </div>                                    
-                                            <div class="form-group">
-                                                <label class="col-md-2 control-label">Fecha de compra</label>
-                                                <div class="col-md-10">
-<!--                                                    <div class="input-group">-->
-                                    <input type="date" class="form-control" placeholder="mm/dd/yyyy" >
-                                   
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Marca</label>
+                                        <div class="col-md-10">
+                                            <input name="marca" type="text" class="form-control" required="">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Modelo</label>
+                                        <div class="col-md-10">
+                                            <input name="modelo" type="text" class="form-control" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Serial</label>
+                                        <div class="col-md-10">
+                                            <input name="serial" type="text" class="form-control" required="">
+                                        </div>
+                                    </div>    
+
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Stiker Activo</label>
+                                        <div class="col-md-10">
+                                            <input name="sticker_activo" type="text" class="form-control" required="">
+                                        </div>
+                                    </div>                                    
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Fecha de compra</label>
+                                        <div class="col-md-10">
+                                            <!--                                                    <div class="input-group">-->
+                                            <input name="fecha_compra" type="date" class="form-control" placeholder="mm/dd/yyyy" >
+
 <!--                                    <input type="date" class="form-control" placeholder="mm/dd/yyyy" id="datepicker">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>-->
-                                <!--</div>-->
-                                                </div>
-                                            </div>     
-                                            
-                                            
-                                                                       
-                                                                        
-                                       <div class="form-group">                                    
-                                <div class="col-sm-12" align="center">
-                                    <button type="button" type="submit"  value="boton" name="btnMostrar" class="btn btn-info" >Registrar</button>
-                                </div>
-                            </div>       
-                                     
-                                            
-                                        
-                                         
-
-                                       
-                           
-                                        </form>
-                                    </div> <!-- panel-body -->
-                                </div> <!-- panel -->
-                            </div> <!-- col -->
-                        </div> <!-- End row -->
-
-       
-
-
-
-           
+ <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>-->
+                                            <!--</div>-->
+                                        </div>
+                                    </div>     
 
 
 
 
-    
+                                    <div class="form-group">                                    
+                                        <div class="col-sm-12" align="center">
+                                            <button type="button" type="submit"  value="boton" name="btnMostrar" class="btn btn-info" >Registrar</button>
+                                        </div>
+                                    </div>       
 
 
-   <?php include "footer.php"; ?>  
-              
+
+
+
+
+
+                                </form>
+                            </div> <!-- panel-body -->
+                        </div> <!-- panel -->
+                    </div> <!-- col -->
+                </div> <!-- End row -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <?php include "footer.php"; ?>  
+
             </div>
             <!-- end container -->
 
@@ -259,8 +259,8 @@
         <script src="assets/pages/datatables.init.js"></script>
 
         <script src="assets/js/jquery.app.js"></script>
-        
-        
+
+
         <!-- jQuery  -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
@@ -287,147 +287,147 @@
         <script src="assets/plugins/bootstrap-inputmask/bootstrap-inputmask.min.js" type="text/javascript"></script>
         <script src="assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
 
-     <script>
-            jQuery(document).ready(function() {
+        <script>
+                                                  jQuery(document).ready(function () {
 
-                // Tags Input
-                jQuery('#tags').tagsInput({width:'auto'});
+                                                      // Tags Input
+                                                      jQuery('#tags').tagsInput({width: 'auto'});
 
-                // Form Toggles
-                jQuery('.toggle').toggles({on: true});
+                                                      // Form Toggles
+                                                      jQuery('.toggle').toggles({on: true});
 
-                // Time Picker
-                jQuery('#timepicker').timepicker({defaultTIme: false});
-                jQuery('#timepicker2').timepicker({showMeridian: false});
-                jQuery('#timepicker3').timepicker({minuteStep: 15});
+                                                      // Time Picker
+                                                      jQuery('#timepicker').timepicker({defaultTIme: false});
+                                                      jQuery('#timepicker2').timepicker({showMeridian: false});
+                                                      jQuery('#timepicker3').timepicker({minuteStep: 15});
 
-                // Date Picker
-                jQuery('#datepicker').datepicker();
-                jQuery('#datepicker-inline').datepicker();
-                jQuery('#datepicker-multiple').datepicker({
-                    numberOfMonths: 3,
-                    showButtonPanel: true
-                });
-                //colorpicker start
+                                                      // Date Picker
+                                                      jQuery('#datepicker').datepicker();
+                                                      jQuery('#datepicker-inline').datepicker();
+                                                      jQuery('#datepicker-multiple').datepicker({
+                                                          numberOfMonths: 3,
+                                                          showButtonPanel: true
+                                                      });
+                                                      //colorpicker start
 
-                $('.colorpicker-default').colorpicker({
-                    format: 'hex'
-                });
-                $('.colorpicker-rgba').colorpicker();
-
-
-                //multiselect start
-
-                $('#my_multi_select1').multiSelect();
-                $('#my_multi_select2').multiSelect({
-                    selectableOptgroup: true
-                });
-
-                $('#my_multi_select3').multiSelect({
-                    selectableHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='search...'>",
-                    selectionHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='search...'>",
-                    afterInit: function (ms) {
-                        var that = this,
-                            $selectableSearch = that.$selectableUl.prev(),
-                            $selectionSearch = that.$selectionUl.prev(),
-                            selectableSearchString = '#' + that.$container.attr('id') + ' .ms-elem-selectable:not(.ms-selected)',
-                            selectionSearchString = '#' + that.$container.attr('id') + ' .ms-elem-selection.ms-selected';
-
-                        that.qs1 = $selectableSearch.quicksearch(selectableSearchString)
-                            .on('keydown', function (e) {
-                                if (e.which === 40) {
-                                    that.$selectableUl.focus();
-                                    return false;
-                                }
-                            });
-
-                        that.qs2 = $selectionSearch.quicksearch(selectionSearchString)
-                            .on('keydown', function (e) {
-                                if (e.which == 40) {
-                                    that.$selectionUl.focus();
-                                    return false;
-                                }
-                            });
-                    },
-                    afterSelect: function () {
-                        this.qs1.cache();
-                        this.qs2.cache();
-                    },
-                    afterDeselect: function () {
-                        this.qs1.cache();
-                        this.qs2.cache();
-                    }
-                });
+                                                      $('.colorpicker-default').colorpicker({
+                                                          format: 'hex'
+                                                      });
+                                                      $('.colorpicker-rgba').colorpicker();
 
 
+                                                      //multiselect start
 
-                // Select2
-                jQuery(".select2").select2({
-                    width: '100%'
-                });
+                                                      $('#my_multi_select1').multiSelect();
+                                                      $('#my_multi_select2').multiSelect({
+                                                          selectableOptgroup: true
+                                                      });
 
-                //Bootstrap-TouchSpin
-                $(".vertical-spin").TouchSpin({
-                    verticalbuttons: true,
-                    verticalupclass: 'ion-plus-round',
-                    verticaldownclass: 'ion-minus-round'
-                });
-                var vspinTrue = $(".vertical-spin").TouchSpin({
-                    verticalbuttons: true
-                });
-                if (vspinTrue) {
-                    $('.vertical-spin').prev('.bootstrap-touchspin-prefix').remove();
+                                                      $('#my_multi_select3').multiSelect({
+                                                          selectableHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='search...'>",
+                                                          selectionHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='search...'>",
+                                                          afterInit: function (ms) {
+                                                              var that = this,
+                                                                      $selectableSearch = that.$selectableUl.prev(),
+                                                                      $selectionSearch = that.$selectionUl.prev(),
+                                                                      selectableSearchString = '#' + that.$container.attr('id') + ' .ms-elem-selectable:not(.ms-selected)',
+                                                                      selectionSearchString = '#' + that.$container.attr('id') + ' .ms-elem-selection.ms-selected';
+
+                                                              that.qs1 = $selectableSearch.quicksearch(selectableSearchString)
+                                                                      .on('keydown', function (e) {
+                                                                          if (e.which === 40) {
+                                                                              that.$selectableUl.focus();
+                                                                              return false;
+                                                                          }
+                                                                      });
+
+                                                              that.qs2 = $selectionSearch.quicksearch(selectionSearchString)
+                                                                      .on('keydown', function (e) {
+                                                                          if (e.which == 40) {
+                                                                              that.$selectionUl.focus();
+                                                                              return false;
+                                                                          }
+                                                                      });
+                                                          },
+                                                          afterSelect: function () {
+                                                              this.qs1.cache();
+                                                              this.qs2.cache();
+                                                          },
+                                                          afterDeselect: function () {
+                                                              this.qs1.cache();
+                                                              this.qs2.cache();
+                                                          }
+                                                      });
+
+
+
+                                                      // Select2
+                                                      jQuery(".select2").select2({
+                                                          width: '100%'
+                                                      });
+
+                                                      //Bootstrap-TouchSpin
+                                                      $(".vertical-spin").TouchSpin({
+                                                          verticalbuttons: true,
+                                                          verticalupclass: 'ion-plus-round',
+                                                          verticaldownclass: 'ion-minus-round'
+                                                      });
+                                                      var vspinTrue = $(".vertical-spin").TouchSpin({
+                                                          verticalbuttons: true
+                                                      });
+                                                      if (vspinTrue) {
+                                                          $('.vertical-spin').prev('.bootstrap-touchspin-prefix').remove();
+                                                      }
+
+                                                      $("input[name='demo1']").TouchSpin({
+                                                          min: 0,
+                                                          max: 100,
+                                                          step: 0.1,
+                                                          decimals: 2,
+                                                          boostat: 5,
+                                                          maxboostedstep: 10,
+                                                          postfix: '%'
+                                                      });
+                                                      $("input[name='demo2']").TouchSpin({
+                                                          min: -1000000000,
+                                                          max: 1000000000,
+                                                          stepinterval: 50,
+                                                          maxboostedstep: 10000000,
+                                                          prefix: '$'
+                                                      });
+                                                      $("input[name='demo3']").TouchSpin();
+                                                      $("input[name='demo3_21']").TouchSpin({
+                                                          initval: 40
+                                                      });
+                                                      $("input[name='demo3_22']").TouchSpin({
+                                                          initval: 40
+                                                      });
+
+                                                      $("input[name='demo0']").TouchSpin({});
+                                                  });
+
+
+        </script>
+        <script>
+
+            function pantallaOnChange(sel) {
+
+                if (sel.value == "1") {
+
+                    divT = document.getElementById("nPantalla");
+                    divT.style.display = "";
+
                 }
 
-                $("input[name='demo1']").TouchSpin({
-                    min: 0,
-                    max: 100,
-                    step: 0.1,
-                    decimals: 2,
-                    boostat: 5,
-                    maxboostedstep: 10,
-                    postfix: '%'
-                });
-                $("input[name='demo2']").TouchSpin({
-                    min: -1000000000,
-                    max: 1000000000,
-                    stepinterval: 50,
-                    maxboostedstep: 10000000,
-                    prefix: '$'
-                });
-                $("input[name='demo3']").TouchSpin();
-                $("input[name='demo3_21']").TouchSpin({
-                    initval: 40
-                });
-                $("input[name='demo3_22']").TouchSpin({
-                    initval: 40
-                });
+                else {
+                    divT = document.getElementById("nPantalla");
+                    divT.style.display = "none";
 
-                $("input[name='demo0']").TouchSpin({});
-            });
-            
-            
+                }
+            }
         </script>
-         <script>
-             
-  function pantallaOnChange(sel) {
-    
-      if (sel.value=="1"){
-
- divT = document.getElementById("nPantalla");
-           divT.style.display = "";
-       
-      }
-      
-        else{
-    divT = document.getElementById("nPantalla");
-           divT.style.display = "none";
-
-      }
-}
-    </script>
 
 
     </body>
 
-<!-- Mirrored from moltran.coderthemes.com/menu_2/table-datatable.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Oct 2017 05:07:58 GMT -->
+    <!-- Mirrored from moltran.coderthemes.com/menu_2/table-datatable.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Oct 2017 05:07:58 GMT -->
