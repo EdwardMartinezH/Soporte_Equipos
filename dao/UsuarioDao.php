@@ -28,7 +28,7 @@ class UsuarioDao{
         $cargo = $usuario->getCargo_id();
         $pass = $usuario->getContrasena();
         $con = new DataBase('bd2');
-        $sql = "SELECT `Id`, `Nombre`, `Contraseña`, `Estado`, `Cargo_id` 
+        $sql = "SELECT `Id`, `Nombre`, `Contraseña`, `Estado`, `Cargo_id` ,`correo`
                 FROM `usuario`
                 WHERE `Cargo_id` = $cargo
                 AND `Contraseña` = '$pass'";
@@ -39,6 +39,7 @@ class UsuarioDao{
         $usuario->setNombre($bd[0]['Nombre']);
         $usuario->setEstado($bd[0]['Estado']);
         $usuario->setCargo_id($bd[0]['Cargo_id']);
+        $usuario->setCorreo($bd[0]['correo']);
 //        var_dump($usuario);
         return $usuario;
     }

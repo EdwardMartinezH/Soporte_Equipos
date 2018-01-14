@@ -13,6 +13,8 @@ class Usuario
     private $Estado;
 
     private $Cargo_id;
+    
+    private $Correo;
 
      public function setId($Id)
     {
@@ -74,4 +76,14 @@ class Usuario
     {
         return $this->Cargo_id;
     }
+    
+    function getCorreo() {
+        return $this->Correo;
+    }
+
+    function setCorreo($Correo) {
+        $this->Correo = $Correo;
+    }
+
+
 }

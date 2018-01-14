@@ -104,14 +104,10 @@
                                                  <div class="form-group">
                                                 <label class="col-sm-2 control-label">Tipo de Periferico</label>
                                                 <div class="col-sm-10">
-                                           <select required class="form-control" onChange="pantallaOnChange(this)">
-                                                        <option value="">Seleccione</option>
-                                                        <option value="1">Pantalla</option>
-                                                        <option value="2">Mouse</option>
-                                                        <option value="3">Teclado</option>
-                                                        <option value="4">Impresora</option>
-                                                        <option value="5">Camara</option>
-                                                    </select>
+                  <select  required id="tipo_periferico" name="tipo_periferico" class="form-control" onChange="pantallaOnChange(this)">
+          </select>                                   
+                                           <!--<select required class="form-control" onChange="pantallaOnChange(this)">-->
+                                                    
                                            
                                                 </div>
                                             </div>
@@ -122,13 +118,9 @@
                      <div class="form-group">
                                                 <label class="col-sm-2 control-label">Tipo de Pantallas</label>
                                                 <div class="col-sm-10">
-                                                    <select required class="form-control">
-                                                        <option value="">Seleccione</option>
-                                                        <option value="1">lcd</option>
-                                                        <option value="2">plasma</option>
-                                                        <option value="3">led</option>
-                                                       
-                                                    </select>
+                                              
+                                                      <select   id="tipo_pantalla_id" name="tipo_pantalla" class="form-control" >
+          </select> 
                                            
                                                 </div>
                                             </div>
@@ -137,7 +129,7 @@
           <div class="form-group">
               <label class="col-md-2 control-label">Pulgadas</label>
               <div class="col-md-10">
-                  <input type="text" class="form-control" required="">
+                  <input id="pulgadas" name="pulgadas" type="text" class="form-control" required="">
               </div>
           </div>
           
@@ -149,34 +141,34 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Marca</label>
                                                 <div class="col-md-10">
-                                                    <input type="text" class="form-control" required="">
+                                                    <input id="marca" name="marca" type="text" class="form-control" required="">
                                                 </div>
                                             </div>
                                       
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Modelo</label>
                                                 <div class="col-md-10">
-                                                    <input type="text" class="form-control" required="">
+                                                    <input id="modelo" name="modelo" type="text" class="form-control" required="">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Serial</label>
                                                 <div class="col-md-10">
-                                                    <input type="text" class="form-control" required="">
+                                                    <input id="serial" name="serial" type="text" class="form-control" required="">
                                                 </div>
                                             </div>    
                                 
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Stiker Activo</label>
                                                 <div class="col-md-10">
-                                                    <input type="text" class="form-control" required="">
+                                                    <input id="stiker_activo" name="stiker_activo" type="text" class="form-control" required="">
                                                 </div>
                                             </div>                                    
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Fecha de compra</label>
                                                 <div class="col-md-10">
 <!--                                                    <div class="input-group">-->
-                                    <input type="date" class="form-control" placeholder="mm/dd/yyyy" >
+<input id="fecha_compra" name="fecha_compra" type="date" class="form-control" placeholder="mm/dd/yyyy" >
                                    
 <!--                                    <input type="date" class="form-control" placeholder="mm/dd/yyyy" id="datepicker">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>-->
@@ -285,6 +277,9 @@
         <script type="text/javascript" src="assets/plugins/jquery-multi-select/jquery.quicksearch.js"></script>
         <script src="assets/plugins/bootstrap-inputmask/bootstrap-inputmask.min.js" type="text/javascript"></script>
         <script src="assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
+        
+         <script type="text/javascript" src="assets/js/tipo_periferico.js"></script> <!-- /.usu para-body -->
+         <script type="text/javascript" src="assets/js/tipo_pantalla.js"></script> <!-- /.usu para-body -->
 
      <script>
             jQuery(document).ready(function() {
@@ -426,6 +421,7 @@
 }
     </script>
 
+    
 
     </body>
 

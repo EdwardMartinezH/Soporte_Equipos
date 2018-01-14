@@ -3,12 +3,12 @@
          *Insertar un perifericos. Se trae todo. La validación se hace en HTML y aquí llegan muuuchos ""      
          *La request debe traer idEquipo,idTipoPeriferico,idTipoPantalla,marca,modelo,serial,pulgadas,sticker_activo,fecha_compra         
          */        
-            $perifericos=new Perifericos();
-            $equipo=new Equipo();
-            $equipo->setIdEquipo(filter_input(INPUT_POST,'idEquipo'));
-            $perifericos->setEquipoequipo($equipo);            
+//            $perifericos=new Perifericos();
+//            $equipo=new Equipo();
+////            $equipo->setIdEquipo(filter_input(INPUT_POST,'idEquipo'));
+//            $perifericos->setEquipoequipo($equipo);            
             $tipoPeriferico=new TipoPeriferico();
-            $tipoPeriferico->setIdTipoPeriferico(filter_input(INPUT_POST,'idTipoPeriferico'));
+            $tipoPeriferico->setIdTipoPeriferico(filter_input(INPUT_POST,'tipo_periferico'));
             $perifericos->setTipoPeriferico($tipoPeriferico);
             $tipoPantalla=new TipoPantalla();
             $tipoPantalla->setIdTipoPantalla(filter_input(INPUT_POST,'idTipoPantalla'));            

@@ -1,17 +1,19 @@
-  <?php
+  <?php //
 
 session_start();
 if (!isset($_SESSION['id_usuario']) || $_SESSION['id_usuario'] == null || $_SESSION['id_usuario'] == "") {
     echo'<script type="text/javascript">
                 alert("Inicio de Sesion Requerido");
-               
+                window.location="login.php"
                 </script>';
 }
 $usuario = $_SESSION['id_usuario'];
 $cargo = $_SESSION['cargo_id'];
 $nombre = $_SESSION['nombre_usuario'];
+$correo = $_SESSION['Correo'];
 
-// window.location="login.php"
+
+
 ?>
 
 

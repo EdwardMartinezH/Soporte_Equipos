@@ -38,6 +38,7 @@
          $_SESSION['id_usuario'] = $result->getId(); 
          $_SESSION['cargo_id'] = $result->getCargo_id();
          $_SESSION['nombre_usuario'] = $result->getNombre();
+         $_SESSION['Correo'] = $result->getCorreo();
 
           echo '<script language="javascript">window.location="../../vista/formPrincipal_gerencia.php"</script>';
 
@@ -51,6 +52,7 @@
          $_SESSION['id_usuario'] = $result->getId(); 
          $_SESSION['cargo_id'] = $result->getCargo_id();
          $_SESSION['nombre_usuario'] = $result->getNombre();
+          $_SESSION['Correo'] = $result->getCorreo();
 
            
           echo '<script language="javascript">window.location="../../vista/formPrincipal_Adm.php"</script>';
@@ -60,6 +62,7 @@
          $_SESSION['id_usuario'] = $result->getId(); 
          $_SESSION['cargo_id'] = $result->getCargo_id();
          $_SESSION['nombre_usuario'] = $result->getNombre();
+          $_SESSION['Correo'] = $result->getCorreo();
            
 
            echo '<script language="javascript">window.location="../../vista/formPrincipal.php"</script>';
