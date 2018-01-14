@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-    
-<!-- Mirrored from moltran.coderthemes.com/menu_2/table-datatable.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Oct 2017 05:07:42 GMT -->
-<head>
+
+    <!-- Mirrored from moltran.coderthemes.com/menu_2/table-datatable.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Oct 2017 05:07:42 GMT -->
+    <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
@@ -28,8 +28,8 @@
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css">
 
         <script src="assets/js/modernizr.min.js"></script>
-        
-          <!-- Plugins css-->
+
+        <!-- Plugins css-->
         <link href="assets/plugins/tagsinput/jquery.tagsinput.css" rel="stylesheet">
         <link href="assets/plugins/toggles/toggles.css" rel="stylesheet">
         <link href="assets/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
@@ -63,7 +63,7 @@
     <body>
 
         <!-- Navigation Bar-->
-   <?php include "header_gerencia.php"; ?>  
+        <?php include "header_gerencia.php"; ?>  
         <!-- End Navigation Bar-->
 
 
@@ -71,202 +71,202 @@
             <div class="container">
 
                 <!-- Page-Title -->
-           
-<!--     <div class="row">
-                    <div class="col-sm-12">
-                        <div class="btn-group pull-right">
-                            <button type="button" class="btn btn-primary dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Settings <span class="m-l-5"><i class="fa fa-cog"></i></span></button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
-                        </div>
-                        <h4 class="page-title">Datatable </h4>
-                    </div>
-                </div>-->
 
-       
+                <!--     <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn btn-primary dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Settings <span class="m-l-5"><i class="fa fa-cog"></i></span></button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Action</a></li>
+                                                <li><a href="#">Another action</a></li>
+                                                <li><a href="#">Something else here</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Separated link</a></li>
+                                            </ul>
+                                        </div>
+                                        <h4 class="page-title">Datatable </h4>
+                                    </div>
+                                </div>-->
+
+
 
                 <div class="row">
-                            <div class="col-sm-12">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading"><h3 class="panel-title">Registrar Equipo</h3></div>
-                                    <div class="panel-body">
-                                        
-                                        <form class="form-horizontal" role="form">   
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><h3 class="panel-title">Registrar Equipo</h3></div>
+                            <div class="panel-body">
 
-                                         
-                                            <div class="form-group">
-                                                <label class="col-sm-2 control-label">Empleado</label>
-                                                <div class="col-sm-10">
-                                                    <select required class="form-control" id="empleados">
-                                                     
-                                                    </select>
-                                           
-                                                </div>
-                                             </div>
+                                <form class="form-horizontal" role="form" >   
 
-                                            <div class="form-group">
-                                                <label class="col-sm-2 control-label">Tipo de Equipo</label>
-                                                <div class="col-sm-10">
-                                             <select required class="form-control"onChange="pantallaOnChange(this)">
-                                                        <option value="">Seleccione</option>
-                                                        <option value="1">Portatil</option>
-                                                        <option value="2">Todo en Uno</option>
-                                                        <option value="3">Pc Escritorio</option>
-                                                        <option value="4">Impresora</option>
-                                                      
-                                                    </select>
-                                           
-                                                </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Empleado</label>
+                                        <div class="col-sm-10">
+                                            <select required class="form-control" id="empleados">
+
+                                            </select>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Tipo de Equipo</label>
+                                        <div class="col-sm-10">
+                                            <select required class="form-control"onChange="pantallaOnChange(this)">
+                                                <option value="">Seleccione</option>
+                                                <option value="1">Portatil</option>
+                                                <option value="2">Todo en Uno</option>
+                                                <option value="3">Pc Escritorio</option>
+                                                <option value="4">Impresora</option>
+
+                                            </select>
+
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div id="nPantalla" style="display:none; ">
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">Serial Equipos</label>
+                                            <div class="col-sm-10">
+                                                <select required class="form-control">
+                                                    <option value="">Seleccione</option>
+                                                    <option value="1">Serial 1</option>
+                                                    <option value="2">Serial 2</option>
+                                                    <option value="3">Serial 3</option>
+
+                                                </select>
+
                                             </div>
-                                            
-                                              
-                                            
-                                            
-                   <div id="nPantalla" style="display:none; ">
-          
-                    <div class="form-group">
-                                                <label class="col-sm-2 control-label">Serial Equipos</label>
-                                                <div class="col-sm-10">
-                                                    <select required class="form-control">
-                                                        <option value="">Seleccione</option>
-                                                        <option value="1">Serial 1</option>
-                                                        <option value="2">Serial 2</option>
-                                                        <option value="3">Serial 3</option>
-                                                       
-                                                    </select>
-                                           
-                                                </div>
+                                        </div>
+
+
+
+
+
+
+                                    </div>   
+
+                                    <div id="nPantalla1" style="display:none; ">
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">Listar Teclado</label>
+                                            <div class="col-sm-10">
+                                                <select required class="form-control">
+                                                    <option value="">1</option>
+                                                    <option value="1">2</option>
+                                                    <option value="2">3</option>
+                                                    <option value="3">4</option>
+
+                                                </select>
+
                                             </div>
-          
-          
-       
-          
-          
-          
-      </div>   
-                                            
-            <div id="nPantalla1" style="display:none; ">
-              
-                   <div class="form-group">
-                                                <label class="col-sm-2 control-label">Listar Teclado</label>
-                                                <div class="col-sm-10">
-                                                    <select required class="form-control">
-                                                        <option value="">1</option>
-                                                        <option value="1">2</option>
-                                                        <option value="2">3</option>
-                                                        <option value="3">4</option>
-                                                       
-                                                    </select>
-                                           
-                                                </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">Listar Mouse</label>
+                                            <div class="col-sm-10">
+                                                <select required class="form-control">
+                                                    <option value="">1</option>
+                                                    <option value="1">2</option>
+                                                    <option value="2">3</option>
+                                                    <option value="3">4</option>
+
+                                                </select>
+
                                             </div>
-                                       
-                                            
-                                                 <div class="form-group">
-                                                <label class="col-sm-2 control-label">Listar Mouse</label>
-                                                <div class="col-sm-10">
-                                                    <select required class="form-control">
-                                                        <option value="">1</option>
-                                                        <option value="1">2</option>
-                                                        <option value="2">3</option>
-                                                        <option value="3">4</option>
-                                                       
-                                                    </select>
-                                           
-                                                </div>
+                                        </div>
+
+
+
+
+
+
+                                    </div>
+
+                                    <div id="nPantalla2" style="display:none; ">
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">Tipo de Pantallas</label>
+                                            <div class="col-sm-10">
+                                                <select required class="form-control"  onChange="listarPantallas(this)">
+                                                    <option value="">Seleccione</option>
+                                                    <option value="1">lcd</option>
+                                                    <option value="2">plasma</option>
+                                                    <option value="3">led</option>
+
+                                                </select>
+
                                             </div>
-                                       
-          
-                   
-                                            
-                                            
-          
-      </div>
-                                            
-                   <div id="nPantalla2" style="display:none; ">
-          
-                     <div class="form-group">
-                                                <label class="col-sm-2 control-label">Tipo de Pantallas</label>
-                                                <div class="col-sm-10">
-                                                    <select required class="form-control"  onChange="listarPantallas(this)">
-                                                        <option value="">Seleccione</option>
-                                                        <option value="1">lcd</option>
-                                                        <option value="2">plasma</option>
-                                                        <option value="3">led</option>
-                                                       
-                                                    </select>
-                                           
-                                                </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">seriales de Pantallas</label>
+                                            <div class="col-sm-10">
+                                                <select required class="form-control">
+                                                    <option value="">Seleccione</option>
+                                                    <option value="1">serial 1</option>
+                                                    <option value="2">serial 2</option>
+                                                    <option value="3">serial 3</option>
+
+                                                </select>
+
                                             </div>
-          
-          
-         <div class="form-group">
-                                                <label class="col-sm-2 control-label">seriales de Pantallas</label>
-                                                <div class="col-sm-10">
-                                                    <select required class="form-control">
-                                                        <option value="">Seleccione</option>
-                                                        <option value="1">serial 1</option>
-                                                        <option value="2">serial 2</option>
-                                                        <option value="3">serial 3</option>
-                                                       
-                                                    </select>
-                                           
-                                                </div>
-                                            </div>
-          
-          
-          
-      </div>   
-                                            
-                                            
-   
-                                            
-                                     
-                                            
-                                            
-                                        
-                                        
-                                            
-                                            
-                                                                       
-                                                                        
-                                       <div class="form-group">                                    
-                                <div class="col-sm-12" align="center">
-                                    <button type="button" type="submit"  value="boton" name="btnMostrar" class="btn btn-info" >Registrar</button>
-                                </div>
-                            </div>       
-                                     
-                                            
-                                        
-                                         
-
-                                       
-                           
-                                        </form>
-                                    </div> <!-- panel-body -->
-                                </div> <!-- panel -->
-                            </div> <!-- col -->
-                        </div> <!-- End row -->
-
-       
+                                        </div>
 
 
 
-           
+                                    </div>   
 
 
 
 
-    
 
 
-   <?php include "footer.php"; ?>  
-              
+
+
+
+
+
+
+
+                                    <div class="form-group">                                    
+                                        <div class="col-sm-12" align="center">
+                                            <button type="button" type="submit"  value="boton" name="btnMostrar" class="btn btn-info" >Registrar</button>
+                                        </div>
+                                    </div>       
+
+
+
+
+
+
+
+                                </form>
+                            </div> <!-- panel-body -->
+                        </div> <!-- panel -->
+                    </div> <!-- col -->
+                </div> <!-- End row -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <?php include "footer.php"; ?>  
+
             </div>
             <!-- end container -->
 
@@ -306,8 +306,8 @@
         <script src="assets/pages/datatables.init.js"></script>
 
         <script src="assets/js/jquery.app.js"></script>
-        
-        
+
+
         <!-- jQuery  -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
@@ -334,107 +334,107 @@
         <script src="assets/plugins/bootstrap-inputmask/bootstrap-inputmask.min.js" type="text/javascript"></script>
         <script src="assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
 
-             <script>
-             
-  function pantallaOnChange(sel) {
-    
-  
-           if (sel.value=="1"){
-   alert("Hello! I am an alert box 1!");
- divT=document.getElementById("nPantalla");
-           divT.style.display = "";
- 
-    divT1 = document.getElementById("nPantalla1");
-           divT1.style.display = "none";
-           
-           divT2 = document.getElementById("nPantalla2");
-           divT2.style.display = "none";
-      }
-  
-      if (sel.value=="2"){
- alert("Hello! I am an alert box!");
- divT = document.getElementById("nPantalla");
-           divT.style.display = "";
-       
-divT1 = document.getElementById("nPantalla1");
-           divT1.style.display = "";
-       
-divT2 = document.getElementById("nPantalla2");
-           divT2.style.display = "none";
-      }
+        <script>
+
+                                                   function pantallaOnChange(sel) {
+
+
+                                                       if (sel.value == "1") {
+                                                           alert("Hello! I am an alert box 1!");
+                                                           divT = document.getElementById("nPantalla");
+                                                           divT.style.display = "";
+
+                                                           divT1 = document.getElementById("nPantalla1");
+                                                           divT1.style.display = "none";
+
+                                                           divT2 = document.getElementById("nPantalla2");
+                                                           divT2.style.display = "none";
+                                                       }
+
+                                                       if (sel.value == "2") {
+                                                           alert("Hello! I am an alert box!");
+                                                           divT = document.getElementById("nPantalla");
+                                                           divT.style.display = "";
+
+                                                           divT1 = document.getElementById("nPantalla1");
+                                                           divT1.style.display = "";
+
+                                                           divT2 = document.getElementById("nPantalla2");
+                                                           divT2.style.display = "none";
+                                                       }
 //      
-   
-      
-        if (sel.value=="3"){
-
- divT = document.getElementById("nPantalla");
-           divT.style.display = "";
-       
-divT1 = document.getElementById("nPantalla1");
-           divT1.style.display = "";
-       
-divT2 = document.getElementById("nPantalla2");
-           divT2.style.display = "";
-      }
-      
-       if(sel.value==""){
-   divT = document.getElementById("nPantalla");
-           divT.style.display = "none";
-       
-divT1 = document.getElementById("nPantalla1");
-           divT1.style.display = "none";
-       
-divT2 = document.getElementById("nPantalla2");
-           divT2.style.display = "none";
-      }
-      
-       if (sel.value=="4"){
-   alert("Hello! I am an alert box 4!");
- divT=document.getElementById("nPantalla");
-           divT.style.display = "";
- 
-    divT1 = document.getElementById("nPantalla1");
-           divT1.style.display = "none";
-           
-           divT2 = document.getElementById("nPantalla2");
-           divT2.style.display = "none";
-      }
-}
 
 
-  function listarPantallas(sel2) {
-    
-  
-           if (sel2.value=="1"){
-   alert("listas las pantallas  1!");
+                                                       if (sel.value == "3") {
 
-      }
-  
-      if (sel.value=="2"){
- alert("listas las pantallas  2!");
+                                                           divT = document.getElementById("nPantalla");
+                                                           divT.style.display = "";
 
-      }
+                                                           divT1 = document.getElementById("nPantalla1");
+                                                           divT1.style.display = "";
+
+                                                           divT2 = document.getElementById("nPantalla2");
+                                                           divT2.style.display = "";
+                                                       }
+
+                                                       if (sel.value == "") {
+                                                           divT = document.getElementById("nPantalla");
+                                                           divT.style.display = "none";
+
+                                                           divT1 = document.getElementById("nPantalla1");
+                                                           divT1.style.display = "none";
+
+                                                           divT2 = document.getElementById("nPantalla2");
+                                                           divT2.style.display = "none";
+                                                       }
+
+                                                       if (sel.value == "4") {
+                                                           alert("Hello! I am an alert box 4!");
+                                                           divT = document.getElementById("nPantalla");
+                                                           divT.style.display = "";
+
+                                                           divT1 = document.getElementById("nPantalla1");
+                                                           divT1.style.display = "none";
+
+                                                           divT2 = document.getElementById("nPantalla2");
+                                                           divT2.style.display = "none";
+                                                       }
+                                                   }
+
+
+                                                   function listarPantallas(sel2) {
+
+
+                                                       if (sel2.value == "1") {
+                                                           alert("listas las pantallas  1!");
+
+                                                       }
+
+                                                       if (sel.value == "2") {
+                                                           alert("listas las pantallas  2!");
+
+                                                       }
 ////      
 //   
 //      
-        if (sel.value=="3"){
+                                                       if (sel.value == "3") {
 
- alert("listas las pantallas  3!");
-      }
+                                                           alert("listas las pantallas  3!");
+                                                       }
 //      
 
-}
+                                                   }
 
-    </script>
-        
-        
-        
-        
-     <script>
-            jQuery(document).ready(function() {
+        </script>
+
+
+
+
+        <script>
+            jQuery(document).ready(function () {
 
                 // Tags Input
-                jQuery('#tags').tagsInput({width:'auto'});
+                jQuery('#tags').tagsInput({width: 'auto'});
 
                 // Form Toggles
                 jQuery('.toggle').toggles({on: true});
@@ -471,26 +471,26 @@ divT2 = document.getElementById("nPantalla2");
                     selectionHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='search...'>",
                     afterInit: function (ms) {
                         var that = this,
-                            $selectableSearch = that.$selectableUl.prev(),
-                            $selectionSearch = that.$selectionUl.prev(),
-                            selectableSearchString = '#' + that.$container.attr('id') + ' .ms-elem-selectable:not(.ms-selected)',
-                            selectionSearchString = '#' + that.$container.attr('id') + ' .ms-elem-selection.ms-selected';
+                                $selectableSearch = that.$selectableUl.prev(),
+                                $selectionSearch = that.$selectionUl.prev(),
+                                selectableSearchString = '#' + that.$container.attr('id') + ' .ms-elem-selectable:not(.ms-selected)',
+                                selectionSearchString = '#' + that.$container.attr('id') + ' .ms-elem-selection.ms-selected';
 
                         that.qs1 = $selectableSearch.quicksearch(selectableSearchString)
-                            .on('keydown', function (e) {
-                                if (e.which === 40) {
-                                    that.$selectableUl.focus();
-                                    return false;
-                                }
-                            });
+                                .on('keydown', function (e) {
+                                    if (e.which === 40) {
+                                        that.$selectableUl.focus();
+                                        return false;
+                                    }
+                                });
 
                         that.qs2 = $selectionSearch.quicksearch(selectionSearchString)
-                            .on('keydown', function (e) {
-                                if (e.which == 40) {
-                                    that.$selectionUl.focus();
-                                    return false;
-                                }
-                            });
+                                .on('keydown', function (e) {
+                                    if (e.which == 40) {
+                                        that.$selectionUl.focus();
+                                        return false;
+                                    }
+                                });
                     },
                     afterSelect: function () {
                         this.qs1.cache();
@@ -550,26 +550,26 @@ divT2 = document.getElementById("nPantalla2");
             });
         </script>
 
-           <script type="text/javascript">
-           $(document).ready(function(){
+        <script type="text/javascript">
+            $(document).ready(function () {
                 $.ajax({
-                  type: 'post',
-                  url: '../controler/cargo/listar.php'
+                    type: 'post',
+                    url: '../controler/cargo/listar.php'
                 })
-                .done(function(listas_rep){
-                   // alert(listas_rep);
-                  $('#empleados').html(listas_rep);
-                })
-                .fail(function(){
-                  alert('Hubo un errror al cargar las listas_rep')
-                });
+                        .done(function (listas_rep) {
+                            // alert(listas_rep);
+                            $('#empleados').html(listas_rep);
+                        })
+                        .fail(function () {
+                            alert('Hubo un errror al cargar las listas_rep')
+                        });
 
-             });
-       </script>
-       
-           
+            });
+        </script>
+
+
 
     </body>
 
-<!-- Mirrored from moltran.coderthemes.com/menu_2/table-datatable.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Oct 2017 05:07:58 GMT -->
+    <!-- Mirrored from moltran.coderthemes.com/menu_2/table-datatable.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Oct 2017 05:07:58 GMT -->
 </html>
