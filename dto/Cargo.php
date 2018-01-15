@@ -1,31 +1,54 @@
 <?php
+/*
+              -------Creado por-------
+             \(°u° )/ Anarchy \( °u°)/
+              ------------------------
+ */
 
-/**
-*  
-*/
+//    Y pensar que Anarchy está hecho en código espagueti...  \\
+
+
 class Cargo {
 
-	private $id;
-	private $nombre;
-	private $area_id;
+  private $Id;
+  private $Nombre;
 
-	function __construct($id_a,$nombre_a,$area_id_a){
-		$this->id = $id_a;
-		$this->nombre = $nombre_a;
-		$this->area_id	= $area_id_a;
-	}
+    /**
+     * Constructor de Cargo
+    */
+     public function __construct(){}
 
-	public function getId(){
-		return $this->id;
-	}
+    /**
+     * Devuelve el valor correspondiente a Id
+     * @return Id
+     */
+  public function getId(){
+      return $this->Id;
+  }
 
-	public function getNombre(){
-		return $this->nombre;
-	}
+    /**
+     * Modifica el valor correspondiente a Id
+     * @param Id
+     */
+  public function setId($id){
+      $this->Id = $id;
+  }
+    /**
+     * Devuelve el valor correspondiente a Nombre
+     * @return Nombre
+     */
+  public function getNombre(){
+      return $this->Nombre;
+  }
 
-	public function getArea(){
-		return $this->area_id;
-	}
+    /**
+     * Modifica el valor correspondiente a Nombre
+     * @param Nombre
+     */
+  public function setNombre($nombre){
+      $this->Nombre = $nombre;
+  }
+
+
 }
-
-?>
+//That´s all folks!

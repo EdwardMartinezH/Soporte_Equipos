@@ -1,4 +1,21 @@
+  <?php
 
+session_start();
+if (!isset($_SESSION['id_usuario']) || $_SESSION['id_usuario'] == null || $_SESSION['id_usuario'] == "") {
+    echo'<script type="text/javascript">
+                alert("Inicio de Sesion Requerido");
+                window.location="login.php"
+                </script>';
+}
+//session_destroy();
+$usuario = $_SESSION['id_usuario'];
+$cargo = $_SESSION['cargo_id'];
+$nombre = $_SESSION['nombre_usuario'];
+
+echo $cargo;
+
+//   window.location="login.php"
+?>
 <!DOCTYPE html>
 <html>
     
@@ -47,7 +64,38 @@
 
         <!-- End Navigation Bar-->
 
-  <?php include "header_gerencia.php"; ?>  
+ <?php 
+
+
+ 
+ echo "imr ".$cargo;
+ 
+ if($cargo=="1"){
+    
+ include "header.php";
+   
+}
+ 
+if($cargo=="2"||$cargo=="3"){
+    
+    
+  echo include "header_gerencia.php";
+   
+}
+
+if($cargo=="29"){
+  echo include "header_Adm.php";
+}
+
+if($cargo>"3"&&$cargo<"29"){
+ echo   include "header.php";
+}
+if($cargo>"29"){
+ echo   include "header.php";
+}
+
+
+?>  
         
         <div class="wrapper">
             <div class="container">

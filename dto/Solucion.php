@@ -1,233 +1,118 @@
 <?php
-
-namespace AppBundle\Entity;
-
-use Doctrine\ORM\Mapping as ORM;
-
-/**
- * Solucion
- *
- * @ORM\Table(name="solucion", indexes={@ORM\Index(name="fk_Solucion_Problema1_idx", columns={"Problema_idProblema"}), @ORM\Index(name="fk_Solucion_Perifericos1_idx", columns={"Perifericos_idPerifericos"}), @ORM\Index(name="fk_Solucion_Software1_idx", columns={"Software_idSoftware"}), @ORM\Index(name="fk_Solucion_Torre1_idx", columns={"Torre_idTorre"})})
- * @ORM\Entity
+/*
+              -------Creado por-------
+             \(�u� )/ Anarchy \( �u�)/
+              ------------------------
  */
-class Solucion
-{
+
+//    �Sabias que Anarchy se gener� a s� mismo?  \\
+
+
+class Solucion {
+
+  private $idSolucion;
+  private $Problema_idProblema;
+  private $Periféricos_idPeriféricos;
+  private $Software_idSoftware;
+  private $fecha_Solucion;
+  private $Solucion;
+
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="idSolucion", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * Constructor de Solucion
+    */
+     public function __construct(){}
+
+    /**
+     * Devuelve el valor correspondiente a idSolucion
+     * @return idSolucion
      */
-    private $idsolucion;
+  public function getIdSolucion(){
+      return $this->idSolucion;
+  }
 
     /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="fecha_Solucion", type="datetime", nullable=true)
+     * Modifica el valor correspondiente a idSolucion
+     * @param idSolucion
      */
-    private $fechaSolucion;
-
+  public function setIdSolucion($idSolucion){
+      $this->idSolucion = $idSolucion;
+  }
     /**
-     * @var string
-     *
-     * @ORM\Column(name="Solucion", type="string", length=500, nullable=true)
+     * Devuelve el valor correspondiente a Problema_idProblema
+     * @return Problema_idProblema
      */
-    private $solucion;
+  public function getProblema_idProblema(){
+      return $this->Problema_idProblema;
+  }
 
     /**
-     * @var \Perifericos
-     *
-     * @ORM\ManyToOne(targetEntity="Perifericos")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="Perifericos_idPerifericos", referencedColumnName="id")
-     * })
+     * Modifica el valor correspondiente a Problema_idProblema
+     * @param Problema_idProblema
      */
-    private $perifericosperifericos;
-
+  public function setProblema_idProblema($problema_idProblema){
+      $this->Problema_idProblema = $problema_idProblema;
+  }
     /**
-     * @var \Problema
-     *
-     * @ORM\ManyToOne(targetEntity="Problema")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="Problema_idProblema", referencedColumnName="idProblema")
-     * })
+     * Devuelve el valor correspondiente a Periféricos_idPeriféricos
+     * @return Periféricos_idPeriféricos
      */
-    private $problemaproblema;
+  public function getPeriféricos_idPeriféricos(){
+      return $this->Periféricos_idPeriféricos;
+  }
 
     /**
-     * @var \Software
-     *
-     * @ORM\ManyToOne(targetEntity="Software")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="Software_idSoftware", referencedColumnName="idSoftware")
-     * })
+     * Modifica el valor correspondiente a Periféricos_idPeriféricos
+     * @param Periféricos_idPeriféricos
      */
-    private $softwaresoftware;
-
+  public function setPeriféricos_idPeriféricos($periféricos_idPeriféricos){
+      $this->Periféricos_idPeriféricos = $periféricos_idPeriféricos;
+  }
     /**
-     * @var \Torre
-     *
-     * @ORM\ManyToOne(targetEntity="Torre")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="Torre_idTorre", referencedColumnName="idTorre")
-     * })
+     * Devuelve el valor correspondiente a Software_idSoftware
+     * @return Software_idSoftware
      */
-    private $torretorre;
-
-
+  public function getSoftware_idSoftware(){
+      return $this->Software_idSoftware;
+  }
 
     /**
-     * Get idsolucion
-     *
-     * @return integer
+     * Modifica el valor correspondiente a Software_idSoftware
+     * @param Software_idSoftware
      */
-    public function getIdsolucion()
-    {
-        return $this->idsolucion;
-    }
+  public function setSoftware_idSoftware($software_idSoftware){
+      $this->Software_idSoftware = $software_idSoftware;
+  }
+    /**
+     * Devuelve el valor correspondiente a fecha_Solucion
+     * @return fecha_Solucion
+     */
+  public function getFecha_Solucion(){
+      return $this->fecha_Solucion;
+  }
 
     /**
-     * Set fechaSolucion
-     *
-     * @param \DateTime $fechaSolucion
-     *
+     * Modifica el valor correspondiente a fecha_Solucion
+     * @param fecha_Solucion
+     */
+  public function setFecha_Solucion($fecha_Solucion){
+      $this->fecha_Solucion = $fecha_Solucion;
+  }
+    /**
+     * Devuelve el valor correspondiente a Solucion
      * @return Solucion
      */
-    public function setFechaSolucion($fechaSolucion)
-    {
-        $this->fechaSolucion = $fechaSolucion;
-
-        return $this;
-    }
+  public function getSolucion(){
+      return $this->Solucion;
+  }
 
     /**
-     * Get fechaSolucion
-     *
-     * @return \DateTime
+     * Modifica el valor correspondiente a Solucion
+     * @param Solucion
      */
-    public function getFechaSolucion()
-    {
-        return $this->fechaSolucion;
-    }
+  public function setSolucion($solucion){
+      $this->Solucion = $solucion;
+  }
 
-    /**
-     * Set solucion
-     *
-     * @param string $solucion
-     *
-     * @return Solucion
-     */
-    public function setSolucion($solucion)
-    {
-        $this->solucion = $solucion;
 
-        return $this;
-    }
-
-    /**
-     * Get solucion
-     *
-     * @return string
-     */
-    public function getSolucion()
-    {
-        return $this->solucion;
-    }
-
-    /**
-     * Set perifericosperifericos
-     *
-     * @param \AppBundle\Entity\Perifericos $perifericosperifericos
-     *
-     * @return Solucion
-     */
-    public function setPerifericosperifericos(\AppBundle\Entity\Perifericos $perifericosperifericos = null)
-    {
-        $this->perifericosperifericos = $perifericosperifericos;
-
-        return $this;
-    }
-
-    /**
-     * Get perifericosperifericos
-     *
-     * @return \AppBundle\Entity\Perifericos
-     */
-    public function getPerifericosperifericos()
-    {
-        return $this->perifericosperifericos;
-    }
-
-    /**
-     * Set problemaproblema
-     *
-     * @param \AppBundle\Entity\Problema $problemaproblema
-     *
-     * @return Solucion
-     */
-    public function setProblemaproblema(\AppBundle\Entity\Problema $problemaproblema = null)
-    {
-        $this->problemaproblema = $problemaproblema;
-
-        return $this;
-    }
-
-    /**
-     * Get problemaproblema
-     *
-     * @return \AppBundle\Entity\Problema
-     */
-    public function getProblemaproblema()
-    {
-        return $this->problemaproblema;
-    }
-
-    /**
-     * Set softwaresoftware
-     *
-     * @param \AppBundle\Entity\Software $softwaresoftware
-     *
-     * @return Solucion
-     */
-    public function setSoftwaresoftware(\AppBundle\Entity\Software $softwaresoftware = null)
-    {
-        $this->softwaresoftware = $softwaresoftware;
-
-        return $this;
-    }
-
-    /**
-     * Get softwaresoftware
-     *
-     * @return \AppBundle\Entity\Software
-     */
-    public function getSoftwaresoftware()
-    {
-        return $this->softwaresoftware;
-    }
-
-    /**
-     * Set torretorre
-     *
-     * @param \AppBundle\Entity\Torre $torretorre
-     *
-     * @return Solucion
-     */
-    public function setTorretorre(\AppBundle\Entity\Torre $torretorre = null)
-    {
-        $this->torretorre = $torretorre;
-
-        return $this;
-    }
-
-    /**
-     * Get torretorre
-     *
-     * @return \AppBundle\Entity\Torre
-     */
-    public function getTorretorre()
-    {
-        return $this->torretorre;
-    }
 }
+//That�s all folks!

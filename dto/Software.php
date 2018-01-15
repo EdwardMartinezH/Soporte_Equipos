@@ -1,193 +1,118 @@
 <?php
-
-namespace AppBundle\Entity;
-
-use Doctrine\ORM\Mapping as ORM;
-
-/**
- * Software
- *
- * @ORM\Table(name="software", indexes={@ORM\Index(name="fk_Software_Equipo1_idx", columns={"Equipo_idEquipo"})})
- * @ORM\Entity
+/*
+              -------Creado por-------
+             \(°u° )/ Anarchy \( °u°)/
+              ------------------------
  */
-class Software
-{
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="idSoftware", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $idsoftware;
+
+//    ¿Has escuchado hablar del grandioso señor Arciniegas?  \\
+
+
+class Software {
+
+  private $idSoftware;
+  private $Equipo_idEquipo;
+  private $Tipo_Software_idTipo_Software;
+  private $fecha_vencimiento;
+  private $version;
+  private $nombre;
 
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="Tipo_Software_idTipo_Software", type="integer", nullable=false)
-     */
-    private $tipoSoftwareIdtipoSoftware;
+     * Constructor de Software
+    */
+     public function __construct(){}
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="fecha_vencimiento", type="string", length=45, nullable=true)
+     * Devuelve el valor correspondiente a idSoftware
+     * @return idSoftware
      */
-    private $fechaVencimiento;
+  public function getIdSoftware(){
+      return $this->idSoftware;
+  }
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="version", type="string", length=45, nullable=true)
+     * Modifica el valor correspondiente a idSoftware
+     * @param idSoftware
      */
-    private $version;
+  public function setIdSoftware($idSoftware){
+      $this->idSoftware = $idSoftware;
+  }
+    /**
+     * Devuelve el valor correspondiente a Equipo_idEquipo
+     * @return Equipo_idEquipo
+     */
+  public function getEquipo_idEquipo(){
+      return $this->Equipo_idEquipo;
+  }
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="nombre", type="string", length=45, nullable=true)
+     * Modifica el valor correspondiente a Equipo_idEquipo
+     * @param Equipo_idEquipo
      */
-    private $nombre;
+  public function setEquipo_idEquipo($equipo_idEquipo){
+      $this->Equipo_idEquipo = $equipo_idEquipo;
+  }
+    /**
+     * Devuelve el valor correspondiente a Tipo_Software_idTipo_Software
+     * @return Tipo_Software_idTipo_Software
+     */
+  public function getTipo_Software_idTipo_Software(){
+      return $this->Tipo_Software_idTipo_Software;
+  }
 
     /**
-     * @var \Equipo
-     *
-     * @ORM\ManyToOne(targetEntity="Equipo")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="Equipo_idEquipo", referencedColumnName="idEquipo")
-     * })
+     * Modifica el valor correspondiente a Tipo_Software_idTipo_Software
+     * @param Tipo_Software_idTipo_Software
      */
-    private $equipoequipo;
-
-
+  public function setTipo_Software_idTipo_Software($tipo_Software_idTipo_Software){
+      $this->Tipo_Software_idTipo_Software = $tipo_Software_idTipo_Software;
+  }
+    /**
+     * Devuelve el valor correspondiente a fecha_vencimiento
+     * @return fecha_vencimiento
+     */
+  public function getFecha_vencimiento(){
+      return $this->fecha_vencimiento;
+  }
 
     /**
-     * Get idsoftware
-     *
-     * @return integer
+     * Modifica el valor correspondiente a fecha_vencimiento
+     * @param fecha_vencimiento
      */
-    public function getIdsoftware()
-    {
-        return $this->idsoftware;
-    }
+  public function setFecha_vencimiento($fecha_vencimiento){
+      $this->fecha_vencimiento = $fecha_vencimiento;
+  }
+    /**
+     * Devuelve el valor correspondiente a version
+     * @return version
+     */
+  public function getVersion(){
+      return $this->version;
+  }
 
     /**
-     * Set tipoSoftwareIdtipoSoftware
-     *
-     * @param integer $tipoSoftwareIdtipoSoftware
-     *
-     * @return Software
+     * Modifica el valor correspondiente a version
+     * @param version
      */
-    public function setTipoSoftwareIdtipoSoftware($tipoSoftwareIdtipoSoftware)
-    {
-        $this->tipoSoftwareIdtipoSoftware = $tipoSoftwareIdtipoSoftware;
-
-        return $this;
-    }
+  public function setVersion($version){
+      $this->version = $version;
+  }
+    /**
+     * Devuelve el valor correspondiente a nombre
+     * @return nombre
+     */
+  public function getNombre(){
+      return $this->nombre;
+  }
 
     /**
-     * Get tipoSoftwareIdtipoSoftware
-     *
-     * @return integer
+     * Modifica el valor correspondiente a nombre
+     * @param nombre
      */
-    public function getTipoSoftwareIdtipoSoftware()
-    {
-        return $this->tipoSoftwareIdtipoSoftware;
-    }
+  public function setNombre($nombre){
+      $this->nombre = $nombre;
+  }
 
-    /**
-     * Set fechaVencimiento
-     *
-     * @param string $fechaVencimiento
-     *
-     * @return Software
-     */
-    public function setFechaVencimiento($fechaVencimiento)
-    {
-        $this->fechaVencimiento = $fechaVencimiento;
 
-        return $this;
-    }
-
-    /**
-     * Get fechaVencimiento
-     *
-     * @return string
-     */
-    public function getFechaVencimiento()
-    {
-        return $this->fechaVencimiento;
-    }
-
-    /**
-     * Set version
-     *
-     * @param string $version
-     *
-     * @return Software
-     */
-    public function setVersion($version)
-    {
-        $this->version = $version;
-
-        return $this;
-    }
-
-    /**
-     * Get version
-     *
-     * @return string
-     */
-    public function getVersion()
-    {
-        return $this->version;
-    }
-
-    /**
-     * Set nombre
-     *
-     * @param string $nombre
-     *
-     * @return Software
-     */
-    public function setNombre($nombre)
-    {
-        $this->nombre = $nombre;
-
-        return $this;
-    }
-
-    /**
-     * Get nombre
-     *
-     * @return string
-     */
-    public function getNombre()
-    {
-        return $this->nombre;
-    }
-
-    /**
-     * Set equipoequipo
-     *
-     * @param \AppBundle\Entity\Equipo $equipoequipo
-     *
-     * @return Software
-     */
-    public function setEquipoequipo(\AppBundle\Entity\Equipo $equipoequipo = null)
-    {
-        $this->equipoequipo = $equipoequipo;
-
-        return $this;
-    }
-
-    /**
-     * Get equipoequipo
-     *
-     * @return \AppBundle\Entity\Equipo
-     */
-    public function getEquipoequipo()
-    {
-        return $this->equipoequipo;
-    }
 }
+//That´s all folks!

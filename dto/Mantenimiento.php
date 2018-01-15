@@ -1,153 +1,70 @@
 <?php
-
-namespace AppBundle\Entity;
-
-use Doctrine\ORM\Mapping as ORM;
-
-/**
- * Mantenimiento
- *
- * @ORM\Table(name="mantenimiento")
- * @ORM\Entity
+/*
+              -------Creado por-------
+             \(°u° )/ Anarchy \( °u°)/
+              ------------------------
  */
-class Mantenimiento
-{
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="idMantenimiento", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $idmantenimiento;
+
+//    El código es tuyo, modifícalo como quieras  \\
+
+
+class Mantenimiento {
+
+  private $idMantenimiento;
+  private $feha_mantenimiento;
+  private $observaciones;
 
     /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="feha_mantenimiento", type="date", nullable=false)
-     */
-    private $fehaMantenimiento;
+     * Constructor de Mantenimiento
+    */
+     public function __construct(){}
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="observaciones", type="string", length=400, nullable=false)
+     * Devuelve el valor correspondiente a idMantenimiento
+     * @return idMantenimiento
      */
-    private $observaciones;
+  public function getIdMantenimiento(){
+      return $this->idMantenimiento;
+  }
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\ManyToMany(targetEntity="Equipo", inversedBy="mantenimientomantenimiento")
-     * @ORM\JoinTable(name="mantenimiento_has_equipo",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="Mantenimiento_idMantenimiento", referencedColumnName="idMantenimiento")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="Equipo_idEquipo", referencedColumnName="idEquipo")
-     *   }
-     * )
+     * Modifica el valor correspondiente a idMantenimiento
+     * @param idMantenimiento
      */
-    private $equipoequipo;
+  public function setIdMantenimiento($idMantenimiento){
+      $this->idMantenimiento = $idMantenimiento;
+  }
+    /**
+     * Devuelve el valor correspondiente a feha_mantenimiento
+     * @return feha_mantenimiento
+     */
+  public function getFeha_mantenimiento(){
+      return $this->feha_mantenimiento;
+  }
 
     /**
-     * Constructor
+     * Modifica el valor correspondiente a feha_mantenimiento
+     * @param feha_mantenimiento
      */
-    public function __construct()
-    {
-        $this->equipoequipo = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
+  public function setFeha_mantenimiento($feha_mantenimiento){
+      $this->feha_mantenimiento = $feha_mantenimiento;
+  }
+    /**
+     * Devuelve el valor correspondiente a observaciones
+     * @return observaciones
+     */
+  public function getObservaciones(){
+      return $this->observaciones;
+  }
 
     /**
-     * Get idmantenimiento
-     *
-     * @return integer
+     * Modifica el valor correspondiente a observaciones
+     * @param observaciones
      */
-    public function getIdmantenimiento()
-    {
-        return $this->idmantenimiento;
-    }
+  public function setObservaciones($observaciones){
+      $this->observaciones = $observaciones;
+  }
 
-    /**
-     * Set fehaMantenimiento
-     *
-     * @param \DateTime $fehaMantenimiento
-     *
-     * @return Mantenimiento
-     */
-    public function setFehaMantenimiento($fehaMantenimiento)
-    {
-        $this->fehaMantenimiento = $fehaMantenimiento;
 
-        return $this;
-    }
-
-    /**
-     * Get fehaMantenimiento
-     *
-     * @return \DateTime
-     */
-    public function getFehaMantenimiento()
-    {
-        return $this->fehaMantenimiento;
-    }
-
-    /**
-     * Set observaciones
-     *
-     * @param string $observaciones
-     *
-     * @return Mantenimiento
-     */
-    public function setObservaciones($observaciones)
-    {
-        $this->observaciones = $observaciones;
-
-        return $this;
-    }
-
-    /**
-     * Get observaciones
-     *
-     * @return string
-     */
-    public function getObservaciones()
-    {
-        return $this->observaciones;
-    }
-
-    /**
-     * Add equipoequipo
-     *
-     * @param \AppBundle\Entity\Equipo $equipoequipo
-     *
-     * @return Mantenimiento
-     */
-    public function addEquipoequipo(\AppBundle\Entity\Equipo $equipoequipo)
-    {
-        $this->equipoequipo[] = $equipoequipo;
-
-        return $this;
-    }
-
-    /**
-     * Remove equipoequipo
-     *
-     * @param \AppBundle\Entity\Equipo $equipoequipo
-     */
-    public function removeEquipoequipo(\AppBundle\Entity\Equipo $equipoequipo)
-    {
-        $this->equipoequipo->removeElement($equipoequipo);
-    }
-
-    /**
-     * Get equipoequipo
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getEquipoequipo()
-    {
-        return $this->equipoequipo;
-    }
 }
+//That´s all folks!

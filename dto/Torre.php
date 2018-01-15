@@ -1,224 +1,134 @@
 <?php
-
-namespace AppBundle\Entity;
-
-use Doctrine\ORM\Mapping as ORM;
-
-/**
- * Torre
- *
- * @ORM\Table(name="torre", indexes={@ORM\Index(name="fk_Torre_Equipo1_idx", columns={"Equipo_idEquipo"})})
- * @ORM\Entity
+/*
+              -------Creado por-------
+             \(°u° )/ Anarchy \( °u°)/
+              ------------------------
  */
-class Torre
-{
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="idTorre", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $idtorre;
+
+//    Para entender la recursividad, primero debes entender la recursividad  \\
+
+
+class Torre {
+
+  private $idTorre;
+  private $Equipo_idEquipo;
+  private $marca;
+  private $modelo;
+  private $serial;
+  private $stiker_activo;
+  private $fecha_compra;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="marca", type="string", length=45, nullable=true)
-     */
-    private $marca;
+     * Constructor de Torre
+    */
+     public function __construct(){}
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="modelo", type="string", length=45, nullable=true)
+     * Devuelve el valor correspondiente a idTorre
+     * @return idTorre
      */
-    private $modelo;
+  public function getIdTorre(){
+      return $this->idTorre;
+  }
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="serial", type="string", length=45, nullable=true)
+     * Modifica el valor correspondiente a idTorre
+     * @param idTorre
      */
-    private $serial;
+  public function setIdTorre($idTorre){
+      $this->idTorre = $idTorre;
+  }
+    /**
+     * Devuelve el valor correspondiente a Equipo_idEquipo
+     * @return Equipo_idEquipo
+     */
+  public function getEquipo_idEquipo(){
+      return $this->Equipo_idEquipo;
+  }
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="stiker_activo", type="string", length=45, nullable=true)
+     * Modifica el valor correspondiente a Equipo_idEquipo
+     * @param Equipo_idEquipo
      */
-    private $stikerActivo;
+  public function setEquipo_idEquipo($equipo_idEquipo){
+      $this->Equipo_idEquipo = $equipo_idEquipo;
+  }
+    /**
+     * Devuelve el valor correspondiente a marca
+     * @return marca
+     */
+  public function getMarca(){
+      return $this->marca;
+  }
 
     /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="fecha_compra", type="date", nullable=true)
+     * Modifica el valor correspondiente a marca
+     * @param marca
      */
-    private $fechaCompra;
+  public function setMarca($marca){
+      $this->marca = $marca;
+  }
+    /**
+     * Devuelve el valor correspondiente a modelo
+     * @return modelo
+     */
+  public function getModelo(){
+      return $this->modelo;
+  }
 
     /**
-     * @var \Equipo
-     *
-     * @ORM\ManyToOne(targetEntity="Equipo")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="Equipo_idEquipo", referencedColumnName="idEquipo")
-     * })
+     * Modifica el valor correspondiente a modelo
+     * @param modelo
      */
-    private $equipoequipo;
-
-
+  public function setModelo($modelo){
+      $this->modelo = $modelo;
+  }
+    /**
+     * Devuelve el valor correspondiente a serial
+     * @return serial
+     */
+  public function getSerial(){
+      return $this->serial;
+  }
 
     /**
-     * Get idtorre
-     *
-     * @return integer
+     * Modifica el valor correspondiente a serial
+     * @param serial
      */
-    public function getIdtorre()
-    {
-        return $this->idtorre;
-    }
+  public function setSerial($serial){
+      $this->serial = $serial;
+  }
+    /**
+     * Devuelve el valor correspondiente a stiker_activo
+     * @return stiker_activo
+     */
+  public function getStiker_activo(){
+      return $this->stiker_activo;
+  }
 
     /**
-     * Set marca
-     *
-     * @param string $marca
-     *
-     * @return Torre
+     * Modifica el valor correspondiente a stiker_activo
+     * @param stiker_activo
      */
-    public function setMarca($marca)
-    {
-        $this->marca = $marca;
-
-        return $this;
-    }
+  public function setStiker_activo($stiker_activo){
+      $this->stiker_activo = $stiker_activo;
+  }
+    /**
+     * Devuelve el valor correspondiente a fecha_compra
+     * @return fecha_compra
+     */
+  public function getFecha_compra(){
+      return $this->fecha_compra;
+  }
 
     /**
-     * Get marca
-     *
-     * @return string
+     * Modifica el valor correspondiente a fecha_compra
+     * @param fecha_compra
      */
-    public function getMarca()
-    {
-        return $this->marca;
-    }
+  public function setFecha_compra($fecha_compra){
+      $this->fecha_compra = $fecha_compra;
+  }
 
-    /**
-     * Set modelo
-     *
-     * @param string $modelo
-     *
-     * @return Torre
-     */
-    public function setModelo($modelo)
-    {
-        $this->modelo = $modelo;
 
-        return $this;
-    }
-
-    /**
-     * Get modelo
-     *
-     * @return string
-     */
-    public function getModelo()
-    {
-        return $this->modelo;
-    }
-
-    /**
-     * Set serial
-     *
-     * @param string $serial
-     *
-     * @return Torre
-     */
-    public function setSerial($serial)
-    {
-        $this->serial = $serial;
-
-        return $this;
-    }
-
-    /**
-     * Get serial
-     *
-     * @return string
-     */
-    public function getSerial()
-    {
-        return $this->serial;
-    }
-
-    /**
-     * Set stikerActivo
-     *
-     * @param string $stikerActivo
-     *
-     * @return Torre
-     */
-    public function setStikerActivo($stikerActivo)
-    {
-        $this->stikerActivo = $stikerActivo;
-
-        return $this;
-    }
-
-    /**
-     * Get stikerActivo
-     *
-     * @return string
-     */
-    public function getStikerActivo()
-    {
-        return $this->stikerActivo;
-    }
-
-    /**
-     * Set fechaCompra
-     *
-     * @param \DateTime $fechaCompra
-     *
-     * @return Torre
-     */
-    public function setFechaCompra($fechaCompra)
-    {
-        $this->fechaCompra = $fechaCompra;
-
-        return $this;
-    }
-
-    /**
-     * Get fechaCompra
-     *
-     * @return \DateTime
-     */
-    public function getFechaCompra()
-    {
-        return $this->fechaCompra;
-    }
-
-    /**
-     * Set equipoequipo
-     *
-     * @param \AppBundle\Entity\Equipo $equipoequipo
-     *
-     * @return Torre
-     */
-    public function setEquipoequipo(\AppBundle\Entity\Equipo $equipoequipo = null)
-    {
-        $this->equipoequipo = $equipoequipo;
-
-        return $this;
-    }
-
-    /**
-     * Get equipoequipo
-     *
-     * @return \AppBundle\Entity\Equipo
-     */
-    public function getEquipoequipo()
-    {
-        return $this->equipoequipo;
-    }
 }
+//That´s all folks!

@@ -1,64 +1,86 @@
 <?php
+/*
+              -------Creado por-------
+             \(°u° )/ Anarchy \( °u°)/
+              ------------------------
+ */
 
-class Problema
-{
-
-    private $idproblema;
-
-    private $problema;
-
-    private $fechaRegistro;
-
-    private $equipoequipo;
+//    Nuestra empresa cuenta con una división sólo para las frases. Disfrútalas  \\
 
 
-    public function getIdproblema()
-    {
-        return $this->idproblema;
-    }
+class Problema {
 
-    public function setProblema($problema)
-    {
-        $this->problema = $problema;
+  private $idProblema;
+  private $problema;
+  private $Equipo_idEquipo;
+  private $fecha_registro;
 
-        return $this;
-    }
+    /**
+     * Constructor de Problema
+    */
+     public function __construct(){}
 
-    public function getProblema()
-    {
-        return $this->problema;
-    }
+    /**
+     * Devuelve el valor correspondiente a idProblema
+     * @return idProblema
+     */
+  public function getIdProblema(){
+      return $this->idProblema;
+  }
 
-    public function setIdproblema($idproblema)
-    {
-        $this->idproblema = $idproblema;
+    /**
+     * Modifica el valor correspondiente a idProblema
+     * @param idProblema
+     */
+  public function setIdProblema($idProblema){
+      $this->idProblema = $idProblema;
+  }
+    /**
+     * Devuelve el valor correspondiente a problema
+     * @return problema
+     */
+  public function getProblema(){
+      return $this->problema;
+  }
 
-        return $this;
-    }
-    
-    public function setFechaRegistro($fechaRegistro)
-    {
-        $this->fechaRegistro = $fechaRegistro;
+    /**
+     * Modifica el valor correspondiente a problema
+     * @param problema
+     */
+  public function setProblema($problema){
+      $this->problema = $problema;
+  }
+    /**
+     * Devuelve el valor correspondiente a Equipo_idEquipo
+     * @return Equipo_idEquipo
+     */
+  public function getEquipo_idEquipo(){
+      return $this->Equipo_idEquipo;
+  }
 
-        return $this;
-    }
+    /**
+     * Modifica el valor correspondiente a Equipo_idEquipo
+     * @param Equipo_idEquipo
+     */
+  public function setEquipo_idEquipo($equipo_idEquipo){
+      $this->Equipo_idEquipo = $equipo_idEquipo;
+  }
+    /**
+     * Devuelve el valor correspondiente a fecha_registro
+     * @return fecha_registro
+     */
+  public function getFecha_registro(){
+      return $this->fecha_registro;
+  }
 
-  
-    public function getFechaRegistro()
-    {
-        return $this->fechaRegistro;
-    }
+    /**
+     * Modifica el valor correspondiente a fecha_registro
+     * @param fecha_registro
+     */
+  public function setFecha_registro($fecha_registro){
+      $this->fecha_registro = $fecha_registro;
+  }
 
-    public function setEquipoequipo($equipoequipo)
-    {
-        $this->equipoequipo = $equipoequipo;
 
-        return $this;
-    }
-
-    
-    public function getEquipoequipo()
-    {
-        return $this->equipoequipo;
-    }
 }
+//That´s all folks!

@@ -11,6 +11,7 @@ if (!isset($_SESSION['id_usuario']) || $_SESSION['id_usuario'] == null || $_SESS
 $usuario = $_SESSION['id_usuario'];
 $cargo = $_SESSION['cargo_id'];
 $nombre = $_SESSION['nombre_usuario'];
+$correo = $_SESSION['Correo'];
 
 
 //   window.location="login.php"
@@ -51,7 +52,7 @@ $nombre = $_SESSION['nombre_usuario'];
                                   
                                     <li><a href="javascript:void(0)"><i class="md md-settings"></i> Settings</a></li>
                                    
-                                    <li ><a  href="../index.php"><i class="md md-settings-power"></i> Logout</a></li>
+                             <li><a href="../index.php"><i class="md md-settings-power"></i> Logout</a></li>
                                 </ul>
                             </li>
                         </ul>

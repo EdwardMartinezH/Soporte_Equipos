@@ -1,385 +1,182 @@
 <?php
-
-
-/**
- * Perifericos
- *
- * @ORM\Table(name="perifericos", indexes={@ORM\Index(name="fk_Perifericos_Equipo1_idx", columns={"Equipo_idEquipo"}), @ORM\Index(name="fk_Perifericos_Departamento1_idx", columns={"Departamento_idDepartamento"}), @ORM\Index(name="fk_Perifericos_Tipo_Periferico1_idx", columns={"Tipo_Periferico_id"}), @ORM\Index(name="fk_Perifericos_Tipo_Pantalla1_idx", columns={"Tipo_Pantalla_idTipo_Pantalla"})})
- * @ORM\Entity
+/*
+              -------Creado por-------
+             \(°u° )/ Anarchy \( °u°)/
+              ------------------------
  */
-class Perifericos
-{
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="id", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $id;
+
+//    ...Y como plato principal: ¡Código espagueti!  \\
+
+
+class Perifericos {
+
+  private $id;
+  private $Equipo_idEquipo;
+  private $marca;
+  private $modelo;
+  private $serial;
+  private $pulgadas;
+  private $stiker_activo;
+  private $fecha_compra;
+  private $Tipo_Periferico_id;
+  private $Tipo_Pantalla_idTipo_Pantalla;
 
     /**
-     * @var boolean
-     *
-     * @ORM\Column(name="isImpresora", type="boolean", nullable=true)
-     */
-    private $isimpresora;
+     * Constructor de Perifericos
+    */
+     public function __construct(){}
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="marca", type="string", length=45, nullable=false)
+     * Devuelve el valor correspondiente a id
+     * @return id
      */
-    private $marca;
+  public function getId(){
+      return $this->id;
+  }
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="modelo", type="string", length=45, nullable=false)
+     * Modifica el valor correspondiente a id
+     * @param id
      */
-    private $modelo;
+  public function setId($id){
+      $this->id = $id;
+  }
+    /**
+     * Devuelve el valor correspondiente a Equipo_idEquipo
+     * @return Equipo_idEquipo
+     */
+  public function getEquipo_idEquipo(){
+      return $this->Equipo_idEquipo;
+  }
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="serial", type="string", length=45, nullable=false)
+     * Modifica el valor correspondiente a Equipo_idEquipo
+     * @param Equipo_idEquipo
      */
-    private $serial;
+  public function setEquipo_idEquipo($equipo_idEquipo){
+      $this->Equipo_idEquipo = $equipo_idEquipo;
+  }
+    /**
+     * Devuelve el valor correspondiente a marca
+     * @return marca
+     */
+  public function getMarca(){
+      return $this->marca;
+  }
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="pulgadas", type="string", length=45, nullable=true)
+     * Modifica el valor correspondiente a marca
+     * @param marca
      */
-    private $pulgadas;
+  public function setMarca($marca){
+      $this->marca = $marca;
+  }
+    /**
+     * Devuelve el valor correspondiente a modelo
+     * @return modelo
+     */
+  public function getModelo(){
+      return $this->modelo;
+  }
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="stiker_activo", type="string", length=45, nullable=true)
+     * Modifica el valor correspondiente a modelo
+     * @param modelo
      */
-    private $stikerActivo;
+  public function setModelo($modelo){
+      $this->modelo = $modelo;
+  }
+    /**
+     * Devuelve el valor correspondiente a serial
+     * @return serial
+     */
+  public function getSerial(){
+      return $this->serial;
+  }
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="fecha_compra", type="string", length=45, nullable=true)
+     * Modifica el valor correspondiente a serial
+     * @param serial
      */
-    private $fechaCompra;
+  public function setSerial($serial){
+      $this->serial = $serial;
+  }
+    /**
+     * Devuelve el valor correspondiente a pulgadas
+     * @return pulgadas
+     */
+  public function getPulgadas(){
+      return $this->pulgadas;
+  }
 
     /**
-     * @var \Departamento
-     *
-     * @ORM\ManyToOne(targetEntity="Departamento")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="Departamento_idDepartamento", referencedColumnName="idDepartamento")
-     * })
+     * Modifica el valor correspondiente a pulgadas
+     * @param pulgadas
      */
-    private $departamentodepartamento;
+  public function setPulgadas($pulgadas){
+      $this->pulgadas = $pulgadas;
+  }
+    /**
+     * Devuelve el valor correspondiente a stiker_activo
+     * @return stiker_activo
+     */
+  public function getStiker_activo(){
+      return $this->stiker_activo;
+  }
 
     /**
-     * @var \Equipo
-     *
-     * @ORM\ManyToOne(targetEntity="Equipo")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="Equipo_idEquipo", referencedColumnName="idEquipo")
-     * })
+     * Modifica el valor correspondiente a stiker_activo
+     * @param stiker_activo
      */
-    private $equipoequipo;
+  public function setStiker_activo($stiker_activo){
+      $this->stiker_activo = $stiker_activo;
+  }
+    /**
+     * Devuelve el valor correspondiente a fecha_compra
+     * @return fecha_compra
+     */
+  public function getFecha_compra(){
+      return $this->fecha_compra;
+  }
 
     /**
-     * @var \TipoPantalla
-     *
-     * @ORM\ManyToOne(targetEntity="TipoPantalla")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="Tipo_Pantalla_idTipo_Pantalla", referencedColumnName="idTipo_Pantalla")
-     * })
+     * Modifica el valor correspondiente a fecha_compra
+     * @param fecha_compra
      */
-    private $tipoPantallatipoPantalla;
+  public function setFecha_compra($fecha_compra){
+      $this->fecha_compra = $fecha_compra;
+  }
+    /**
+     * Devuelve el valor correspondiente a Tipo_Periferico_id
+     * @return Tipo_Periferico_id
+     */
+  public function getTipo_Periferico_id(){
+      return $this->Tipo_Periferico_id;
+  }
 
     /**
-     * @var \TipoPeriferico
-     *
-     * @ORM\ManyToOne(targetEntity="TipoPeriferico")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="Tipo_Periferico_id", referencedColumnName="id")
-     * })
+     * Modifica el valor correspondiente a Tipo_Periferico_id
+     * @param Tipo_Periferico_id
      */
-    private $tipoPeriferico;
-
-
+  public function setTipo_Periferico_id($tipo_Periferico_id){
+      $this->Tipo_Periferico_id = $tipo_Periferico_id;
+  }
+    /**
+     * Devuelve el valor correspondiente a Tipo_Pantalla_idTipo_Pantalla
+     * @return Tipo_Pantalla_idTipo_Pantalla
+     */
+  public function getTipo_Pantalla_idTipo_Pantalla(){
+      return $this->Tipo_Pantalla_idTipo_Pantalla;
+  }
 
     /**
-     * Get id
-     *
-     * @return integer
+     * Modifica el valor correspondiente a Tipo_Pantalla_idTipo_Pantalla
+     * @param Tipo_Pantalla_idTipo_Pantalla
      */
-    public function getId()
-    {
-        return $this->id;
-    }
+  public function setTipo_Pantalla_idTipo_Pantalla($tipo_Pantalla_idTipo_Pantalla){
+      $this->Tipo_Pantalla_idTipo_Pantalla = $tipo_Pantalla_idTipo_Pantalla;
+  }
 
-    /**
-     * Set isimpresora
-     *
-     * @param boolean $isimpresora
-     *
-     * @return Perifericos
-     */
-    public function setIsimpresora($isimpresora)
-    {
-        $this->isimpresora = $isimpresora;
 
-        return $this;
-    }
-
-    /**
-     * Get isimpresora
-     *
-     * @return boolean
-     */
-    public function getIsimpresora()
-    {
-        return $this->isimpresora;
-    }
-
-    /**
-     * Set marca
-     *
-     * @param string $marca
-     *
-     * @return Perifericos
-     */
-    public function setMarca($marca)
-    {
-        $this->marca = $marca;
-
-        return $this;
-    }
-
-    /**
-     * Get marca
-     *
-     * @return string
-     */
-    public function getMarca()
-    {
-        return $this->marca;
-    }
-
-    /**
-     * Set modelo
-     *
-     * @param string $modelo
-     *
-     * @return Perifericos
-     */
-    public function setModelo($modelo)
-    {
-        $this->modelo = $modelo;
-
-        return $this;
-    }
-
-    /**
-     * Get modelo
-     *
-     * @return string
-     */
-    public function getModelo()
-    {
-        return $this->modelo;
-    }
-
-    /**
-     * Set serial
-     *
-     * @param string $serial
-     *
-     * @return Perifericos
-     */
-    public function setSerial($serial)
-    {
-        $this->serial = $serial;
-
-        return $this;
-    }
-
-    /**
-     * Get serial
-     *
-     * @return string
-     */
-    public function getSerial()
-    {
-        return $this->serial;
-    }
-
-    /**
-     * Set pulgadas
-     *
-     * @param string $pulgadas
-     *
-     * @return Perifericos
-     */
-    public function setPulgadas($pulgadas)
-    {
-        $this->pulgadas = $pulgadas;
-
-        return $this;
-    }
-
-    /**
-     * Get pulgadas
-     *
-     * @return string
-     */
-    public function getPulgadas()
-    {
-        return $this->pulgadas;
-    }
-
-    /**
-     * Set stikerActivo
-     *
-     * @param string $stikerActivo
-     *
-     * @return Perifericos
-     */
-    public function setStikerActivo($stikerActivo)
-    {
-        $this->stikerActivo = $stikerActivo;
-
-        return $this;
-    }
-
-    /**
-     * Get stikerActivo
-     *
-     * @return string
-     */
-    public function getStikerActivo()
-    {
-        return $this->stikerActivo;
-    }
-
-    /**
-     * Set fechaCompra
-     *
-     * @param string $fechaCompra
-     *
-     * @return Perifericos
-     */
-    public function setFechaCompra($fechaCompra)
-    {
-        $this->fechaCompra = $fechaCompra;
-
-        return $this;
-    }
-
-    /**
-     * Get fechaCompra
-     *
-     * @return string
-     */
-    public function getFechaCompra()
-    {
-        return $this->fechaCompra;
-    }
-
-    /**
-     * Set departamentodepartamento
-     *
-     * @param \AppBundle\Entity\Departamento $departamentodepartamento
-     *
-     * @return Perifericos
-     */
-    public function setDepartamentodepartamento(\AppBundle\Entity\Departamento $departamentodepartamento = null)
-    {
-        $this->departamentodepartamento = $departamentodepartamento;
-
-        return $this;
-    }
-
-    /**
-     * Get departamentodepartamento
-     *
-     * @return \AppBundle\Entity\Departamento
-     */
-    public function getDepartamentodepartamento()
-    {
-        return $this->departamentodepartamento;
-    }
-
-    /**
-     * Set equipoequipo
-     *
-     * @param \AppBundle\Entity\Equipo $equipoequipo
-     *
-     * @return Perifericos
-     */
-    public function setEquipoequipo(\AppBundle\Entity\Equipo $equipoequipo = null)
-    {
-        $this->equipoequipo = $equipoequipo;
-
-        return $this;
-    }
-
-    /**
-     * Get equipoequipo
-     *
-     * @return \AppBundle\Entity\Equipo
-     */
-    public function getEquipoequipo()
-    {
-        return $this->equipoequipo;
-    }
-
-    /**
-     * Set tipoPantallatipoPantalla
-     *
-     * @param \AppBundle\Entity\TipoPantalla $tipoPantallatipoPantalla
-     *
-     * @return Perifericos
-     */
-    public function setTipoPantallatipoPantalla(\AppBundle\Entity\TipoPantalla $tipoPantallatipoPantalla = null)
-    {
-        $this->tipoPantallatipoPantalla = $tipoPantallatipoPantalla;
-
-        return $this;
-    }
-
-    /**
-     * Get tipoPantallatipoPantalla
-     *
-     * @return \AppBundle\Entity\TipoPantalla
-     */
-    public function getTipoPantallatipoPantalla()
-    {
-        return $this->tipoPantallatipoPantalla;
-    }
-
-    /**
-     * Set tipoPeriferico
-     *
-     * @param \AppBundle\Entity\TipoPeriferico $tipoPeriferico
-     *
-     * @return Perifericos
-     */
-    public function setTipoPeriferico(\AppBundle\Entity\TipoPeriferico $tipoPeriferico = null)
-    {
-        $this->tipoPeriferico = $tipoPeriferico;
-
-        return $this;
-    }
-
-    /**
-     * Get tipoPeriferico
-     *
-     * @return \AppBundle\Entity\TipoPeriferico
-     */
-    public function getTipoPeriferico()
-    {
-        return $this->tipoPeriferico;
-    }
 }
+//That´s all folks!

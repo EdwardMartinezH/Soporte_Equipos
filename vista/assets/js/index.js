@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $.ajax({
     type: 'POST',
-    url: '../dao/listar_area.php'
+    url: '../controllers/CargoList.php'
   })
   .done(function(listas_rep){
     $('#Cargo_id').html(listas_rep)

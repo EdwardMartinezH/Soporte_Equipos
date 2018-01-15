@@ -1,115 +1,70 @@
 <?php
+/*
+              -------Creado por-------
+             \(°u° )/ Anarchy \( °u°)/
+              ------------------------
+ */
 
-class Equipo
-{
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="idEquipo", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $idequipo;
+//    Recuerda, cuando enciendas la molotov, debes arrojarla  \\
 
-    /**
-     * @var \Usuario
-     *
-     * @ORM\ManyToOne(targetEntity="Usuario")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="Usuario_idUsuario", referencedColumnName="idUsuario")
-     * })
-     */
-    private $usuariousuario;
+
+class Equipo {
+
+  private $idEquipo;
+  private $usuario_Id;
+  private $tipo_equipo_id;
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\ManyToMany(targetEntity="Mantenimiento", mappedBy="equipoequipo")
-     */
-    private $mantenimientomantenimiento;
+     * Constructor de Equipo
+    */
+     public function __construct(){}
 
     /**
-     * Constructor
+     * Devuelve el valor correspondiente a idEquipo
+     * @return idEquipo
      */
-    public function __construct()
-    {        
-    }
-
+  public function getIdEquipo(){
+      return $this->idEquipo;
+  }
 
     /**
-     * Get idequipo
-     *
-     * @return integer
+     * Modifica el valor correspondiente a idEquipo
+     * @param idEquipo
      */
-    public function getIdequipo()
-    {
-        return $this->idequipo;
-    }
-
-    public function setIdequipo($idEquipo)
-    {
-        $this->idequipo=$idEquipo;
-    }
+  public function setIdEquipo($idEquipo){
+      $this->idEquipo = $idEquipo;
+  }
     /**
-     * Set usuariousuario
-     *
-     * @param \AppBundle\Entity\Usuario $usuariousuario
-     *
-     * @return Equipo
+     * Devuelve el valor correspondiente a usuario_Id
+     * @return usuario_Id
      */
-    public function setUsuariousuario( $usuariousuario)
-    {
-        $this->usuariousuario = $usuariousuario;
-
-        return $this;
-    }
+  public function getUsuario_Id(){
+      return $this->usuario_Id;
+  }
 
     /**
-     * Get usuariousuario
-     *
-     * @return \AppBundle\Entity\Usuario
+     * Modifica el valor correspondiente a usuario_Id
+     * @param usuario_Id
      */
-    public function getUsuariousuario()
-    {
-        return $this->usuariousuario;
-    }
+  public function setUsuario_Id($usuario_Id){
+      $this->usuario_Id = $usuario_Id;
+  }
+    /**
+     * Devuelve el valor correspondiente a tipo_equipo_id
+     * @return tipo_equipo_id
+     */
+  public function getTipo_equipo_id(){
+      return $this->tipo_equipo_id;
+  }
 
     /**
-     * Add mantenimientomantenimiento
-     *
-     * @param \AppBundle\Entity\Mantenimiento $mantenimientomantenimiento
-     *
-     * @return Equipo
+     * Modifica el valor correspondiente a tipo_equipo_id
+     * @param tipo_equipo_id
      */
-    public function addMantenimientomantenimiento( $mantenimientomantenimiento)
-    {
-        $this->mantenimientomantenimiento[] = $mantenimientomantenimiento;
+  public function setTipo_equipo_id($tipo_equipo_id){
+      $this->tipo_equipo_id = $tipo_equipo_id;
+  }
 
-        return $this;
-    }
 
-    /**
-     * Remove mantenimientomantenimiento
-     *
-     * @param \AppBundle\Entity\Mantenimiento $mantenimientomantenimiento
-     */
-    public function removeMantenimientomantenimiento( $mantenimientomantenimiento)
-    {
-        $this->mantenimientomantenimiento->removeElement($mantenimientomantenimiento);
-    }
-
-    /**
-     * Get mantenimientomantenimiento
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getMantenimientomantenimiento()
-    {
-        return $this->mantenimientomantenimiento;
-    }
-
-    public function getAlias(){
-        return "Equipo ".$this->idequipo;
-    }
-    
 }
+//That´s all folks!
