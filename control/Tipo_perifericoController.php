@@ -92,14 +92,14 @@ class Tipo_perifericoController {
    * @return idGestor Devuelve el identificador del gestor de conexión
    */
   private static function getGestorDefault(){
-      return FactoryDao::$NULL_GESTOR;
+      return FactoryDao::$MYSQL_FACTORY;
   }
   /**
    * Para su comodidad, defina aquí el nombre de base de datos predilecto para esta entidad
    * @return dbName Devuelve el nombre de la base de datos a emplear
    */
   private static function getDataBaseDefault(){
-      return "dbName";
+      return "soporte";
   }
 
 }
