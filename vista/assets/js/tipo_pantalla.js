@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $.ajax({
     type: 'POST',
-    url: '../dao/listar_tipo_pantalla.php'
+    url: '../controllers/TipoPantallaList.php'
   })
   .done(function(listas_rep){
     $('#tipo_pantalla_id').html(listas_rep)

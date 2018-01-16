@@ -27,9 +27,8 @@ class PerifericosController {
    * @param tipo_Periferico_id
    * @param tipo_Pantalla_idTipo_Pantalla
    */
-  public static function insert( $id,  $equipo_idEquipo,  $marca,  $modelo,  $serial,  $pulgadas,  $stiker_activo,  $fecha_compra,  $tipo_Periferico_id,  $tipo_Pantalla_idTipo_Pantalla){
-      $perifericos = new Perifericos();
-      $perifericos->setId($id); 
+  public static function insert( $equipo_idEquipo,  $marca,  $modelo,  $serial,  $pulgadas,  $stiker_activo,  $fecha_compra,  $tipo_Periferico_id,  $tipo_Pantalla_idTipo_Pantalla){
+      $perifericos = new Perifericos(); 
       $perifericos->setEquipo_idEquipo($equipo_idEquipo); 
       $perifericos->setMarca($marca); 
       $perifericos->setModelo($modelo); 
@@ -124,14 +123,14 @@ class PerifericosController {
    * @return idGestor Devuelve el identificador del gestor de conexión
    */
   private static function getGestorDefault(){
-      return FactoryDao::$NULL_GESTOR;
+      return FactoryDao::$MYSQL_FACTORY;
   }
   /**
    * Para su comodidad, defina aquí el nombre de base de datos predilecto para esta entidad
    * @return dbName Devuelve el nombre de la base de datos a emplear
    */
   private static function getDataBaseDefault(){
-      return "dbName";
+      return "soporte";
   }
 
 }

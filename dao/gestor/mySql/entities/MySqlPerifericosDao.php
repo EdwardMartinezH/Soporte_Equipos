@@ -29,7 +29,6 @@ private $cn;
      * @throws NullPointerException Si los objetos correspondientes a las llaves foraneas son null
      */
   public function insert($perifericos){
-      $id=$perifericos->getId();
 $equipo_idEquipo=$perifericos->getEquipo_idEquipo();
 $marca=$perifericos->getMarca();
 $modelo=$perifericos->getModelo();
@@ -41,8 +40,8 @@ $tipo_Periferico_id=$perifericos->getTipo_Periferico_id();
 $tipo_Pantalla_idTipo_Pantalla=$perifericos->getTipo_Pantalla_idTipo_Pantalla();
 
       try {
-          $sql= "INSERT INTO `perifericos`( `id`, `Equipo_idEquipo`, `marca`, `modelo`, `serial`, `pulgadas`, `stiker_activo`, `fecha_compra`, `Tipo_Periferico_id`, `Tipo_Pantalla_idTipo_Pantalla`)"
-          ."VALUES ('$id','$equipo_idEquipo','$marca','$modelo','$serial','$pulgadas','$stiker_activo','$fecha_compra','$tipo_Periferico_id','$tipo_Pantalla_idTipo_Pantalla')";
+          $sql= "INSERT INTO `perifericos`( `Equipo_idEquipo`, `marca`, `modelo`, `serial`, `pulgadas`, `stiker_activo`, `fecha_compra`, `Tipo_Periferico_id`, `Tipo_Pantalla_idTipo_Pantalla`)"
+          ."VALUES ('$equipo_idEquipo','$marca','$modelo','$serial','$pulgadas','$stiker_activo','$fecha_compra','$tipo_Periferico_id','$tipo_Pantalla_idTipo_Pantalla')";
           return $this->insertarConsulta($sql);
       } catch (SQLException $e) {
           throw new Exception('Primary key is null');

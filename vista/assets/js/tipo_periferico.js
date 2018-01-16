@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $.ajax({
     type: 'POST',
-    url: '../dao/listar_tipo_periferico.php'
+    url: '../controllers/Tipo_perifericoList.php'
   })
   .done(function(listas_rep){
     $('#tipo_periferico').html(listas_rep)
