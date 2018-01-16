@@ -30,13 +30,13 @@ private $cn;
      */
   public function insert($problema){
       $idProblema=$problema->getIdProblema();
-$problema=$problema->getProblema();
+$descproblema=$problema->getProblema();
 $equipo_idEquipo=$problema->getEquipo_idEquipo();
 $fecha_registro=$problema->getFecha_registro();
 
       try {
           $sql= "INSERT INTO `problema`( `idProblema`, `problema`, `Equipo_idEquipo`, `fecha_registro`)"
-          ."VALUES ('$idProblema','$problema','$equipo_idEquipo',DEFAULT)";
+          ."VALUES ('$idProblema','$descproblema','$equipo_idEquipo',DEFAULT)";
           return $this->insertarConsulta($sql);
       } catch (SQLException $e) {
           throw new Exception('Primary key is null');
