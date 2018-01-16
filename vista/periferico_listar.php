@@ -98,26 +98,17 @@
                                 <table id="datatable-buttons" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>Id</th>
+                                            <th>Nombre</th>
+                                            <th>Marca</th>
+                                            <th>Modelo</th>
+                                            <th>Styker Activo</th>
+                                            <th>Fecha de compra</th>
                                         </tr>
                                     </thead>
 
 
-                                    <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
-                                        </tr>
-                                      
+                                    <tbody id="perifericos">                                                                          
                                     </tbody>
                                 </table>
 
@@ -192,7 +183,15 @@
             } );
             TableManageButtons.init();
         </script>
+        <script>
+        $(document).ready(function(){              
+                $.post("../controllers/PerifericoList.php",
+                    function(data, status){
+                         $('#perifericos').html(data);
+                    });
 
+             });
+        </script>
 
     </body>
 
