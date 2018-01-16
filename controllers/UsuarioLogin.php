@@ -27,6 +27,6 @@ if ($usuario->getContraseña() == $pass) {
             }
     }
 } else {
-    echo '<script language="javascript">window.location="../../index.php"</script>';
+    echo '<script language="javascript">window.location="../index.php"</script>';
 }
 
