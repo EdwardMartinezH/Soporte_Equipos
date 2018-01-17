@@ -1,12 +1,11 @@
+<?php
 /*
               -------Creado por-------
-             \(°u° )/ Anarchy \( °u°)/
+             \(Â°uÂ° )/ Anarchy \( Â°uÂ°)/
               ------------------------
  */
 
 //    Tu alma nos pertenece... Salve Mr. Arciniegas  \\
-
-<?php
 
 interface Tipo_equipoDao {
 
@@ -18,7 +17,7 @@ interface Tipo_equipoDao {
   public function insert($tipo_equipo);
     /**
      * Modifica un objeto Tipo_equipo en la base de datos.
-     * @param tipo_equipo objeto con la información a modificar
+     * @param tipo_equipo objeto con la informaciÃ³n a modificar
      * @throws NullPointerException Si los objetos correspondientes a las llaves foraneas son null
      */
   public function update($tipo_equipo);
@@ -35,9 +34,15 @@ interface Tipo_equipoDao {
      * @throws NullPointerException Si los objetos correspondientes a las llaves foraneas son null
      */
   public function select($tipo_equipo);
+  /**
+   * Lista todos los objetos Tipo_equipo de la base de datos
+   * @return $result Array con los objetos Tipo_equipo en base de datos o Null
+   * @throws NullPointerException Si los objetos correspondientes a las llaves foraneas son null
+   */
+  public static function listAll();
     /**
-     * Cierra la conexión actual a la base de datos
+     * Cierra la conexiÃ³n actual a la base de datos
      */
   public function close();
 }
-//That´s all folks!
+//ThatÂ´s all folks!
