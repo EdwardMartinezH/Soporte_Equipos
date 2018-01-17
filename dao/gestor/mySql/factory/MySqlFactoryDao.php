@@ -25,6 +25,8 @@ include_once realpath('..').'\dao\gestor\mySql\entities\MySqlSoftwareDao.php';
 include_once realpath('..').'\dao\interfaz\SoftwareDao.php';
 include_once realpath('..').'\dao\gestor\mySql\entities\MySqlSolucionDao.php';
 include_once realpath('..').'\dao\interfaz\SolucionDao.php';
+include_once realpath('..').'\dao\gestor\mySql\entities\MySqlTipo_equipoDao.php';
+include_once realpath('..').'\dao\interfaz\Tipo_equipoDao.php';
 include_once realpath('..').'\dao\gestor\mySql\entities\MySqlTipo_pantallaDao.php';
 include_once realpath('..').'\dao\interfaz\Tipo_pantallaDao.php';
 include_once realpath('..').'\dao\gestor\mySql\entities\MySqlTipo_perifericoDao.php';
@@ -107,6 +109,13 @@ class MySqlFactoryDao extends FactoryDao{
      */
     public function getTipo_pantallaDao($dbName) {
         return new MySqlTipo_pantallaDao($this->getConexion()->obtener($dbName));
+    }
+    /**
+     * Devuelve una instancia de la entidad MySqlTipo_equipoDao
+     * @return Instancia de la entidad MySqlTipo_equipoDao
+     */
+    public function getTipo_equipoDao($dbName) {
+        return new MySqlTipo_equipoDao($this->getConexion()->obtener($dbName));
     }
     /**
      * Devuelve una instancia de la entidad MySqlTipo_perifericoDao
