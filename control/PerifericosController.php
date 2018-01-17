@@ -118,7 +118,22 @@ class PerifericosController {
      $perifericosDao->close();
      return $result;
   }
-
+public static function listByTipoPeriferico($tipo_Periferico){
+     $periferico=new Perifericos();
+     $periferico->setTipo_Periferico_id($tipo_Periferico);
+     $perifericosDao =FactoryDao::getFactory(self::getGestorDefault())->getPerifericosDao(self::getDataBaseDefault());
+     $result = $perifericosDao->listByTipoPeriferico($periferico);
+     $perifericosDao->close();
+     return $result;
+  }
+  public static function listByTipoPantalla($tipo_Pantalla){
+     $periferico=new Perifericos();
+     $periferico->setTipo_Pantalla_idTipo_Pantalla($tipo_Pantalla);
+     $perifericosDao =FactoryDao::getFactory(self::getGestorDefault())->getPerifericosDao(self::getDataBaseDefault());
+     $result = $perifericosDao->listByTipoPantalla($periferico);
+     $perifericosDao->close();
+     return $result;
+  }
   /**
    * Para su comodidad, defina aquí el gestor de conexión predilecto para esta entidad
    * @return idGestor Devuelve el identificador del gestor de conexión
