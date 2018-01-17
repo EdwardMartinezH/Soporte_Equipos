@@ -70,10 +70,16 @@ public static $MYSQL_FACTORY = 0;
      */
      public abstract function getSolucionDao($dbName);
      /**
+     * Devuelve una instancia de Tipo_equipoDao que depende del gestor de base de datos
+     * @param dbName Nombre o identificador de la base de datos a conectar
+     * @return instancia de Tipo_equipoDao
+     */
+     public abstract function getTipo_equipoDao($dbName);
+     /**
      * Devuelve una instancia de Tipo_pantallaDao que depende del gestor de base de datos
      * @param dbName Nombre o identificador de la base de datos a conectar
      * @return instancia de Tipo_pantallaDao
-     */
+     */	
      public abstract function getTipo_pantallaDao($dbName);
      /**
      * Devuelve una instancia de Tipo_perifericoDao que depende del gestor de base de datos
