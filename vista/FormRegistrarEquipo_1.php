@@ -69,6 +69,8 @@ echo $cargo;
 
         <script src="assets/js/modernizr.min.js"></script>
 
+          
+
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -152,9 +154,8 @@ if($cargo>"29"){
                                             <div class="form-group">
                                                 <label class="col-sm-2 control-label">Empleado</label>
                                                 <div class="col-sm-10">
-                                                    <select required class="form-control" id="empleados">
-                                                     
-                                                    </select>
+                                                            <select  required id="Cargo_id" name="Cargo_id" class="form-control">
+          </select>
                                            
                                                 </div>
                                              </div>
@@ -383,7 +384,7 @@ if($cargo>"29"){
         <script type="text/javascript" src="assets/plugins/jquery-multi-select/jquery.quicksearch.js"></script>
         <script src="assets/plugins/bootstrap-inputmask/bootstrap-inputmask.min.js" type="text/javascript"></script>
         <script src="assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
-
+     <script type="text/javascript" src="assets/js/index.js"></script> <!-- /.usu para-body -->
              <script>
              
   function pantallaOnChange(sel) {
@@ -600,23 +601,7 @@ divT2 = document.getElementById("nPantalla2");
             });
         </script>
 
-           <script type="text/javascript">
-           $(document).ready(function(){
-                $.ajax({
-                  type: 'post',
-                  url: '../controler/cargo/listar.php'
-                })
-                .done(function(listas_rep){
-                   // alert(listas_rep);
-                  $('#empleados').html(listas_rep);
-                })
-                .fail(function(){
-                  alert('Hubo un errror al cargar las listas_rep')
-                });
-
-             });
-       </script>
-       
+          
            
 
     </body>
