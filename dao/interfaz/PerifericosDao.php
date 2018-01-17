@@ -37,6 +37,7 @@ interface PerifericosDao {
   public function select($perifericos);
   public function listByTipoPeriferico($periferico);  
   public function listByTipoPantalla($periferico);
+  public static function listPantallasFree();
     /**
      * Cierra la conexión actual a la base de datos
      */
