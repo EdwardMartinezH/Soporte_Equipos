@@ -138,5 +138,9 @@ class MySqlFactoryDao extends FactoryDao{
         return new MySqlConexion();
     }
 
+    public function getTipo_equipoDao($dbName) {
+         return new MySqlTipo_equipoDao($this->getConexion()->obtener($dbName));
+    }
+
 }
 //That´s all folks!

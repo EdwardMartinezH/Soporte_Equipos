@@ -93,7 +93,7 @@
                 <div class="row">
                             <div class="col-sm-12">
                                 <div class="panel panel-default">
-                                    <div class="panel-heading"><h3 class="panel-title">Registrar Equipo</h3></div>
+                                    <div class="panel-heading"><h3 class="panel-title">Registrar Equiposss</h3></div>
                                     <div class="panel-body">
                                         
                                         <form class="form-horizontal" role="form">   
@@ -441,7 +441,7 @@
            $(document).ready(function(){
                 $.ajax({
                   type: 'post',
-                  url: '../controler/cargo/listar.php'
+                  url: '../controllers/CargoList.php'
                 })
                 .done(function(listas_rep){
                    // alert(listas_rep);
@@ -452,6 +452,8 @@
                 });
 
              });
+             
+  
        </script>
 
     </body>
