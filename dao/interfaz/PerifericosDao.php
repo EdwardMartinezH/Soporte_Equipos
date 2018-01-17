@@ -35,6 +35,8 @@ interface PerifericosDao {
      * @throws NullPointerException Si los objetos correspondientes a las llaves foraneas son null
      */
   public function select($perifericos);
+  public function listByTipoPeriferico($periferico);  
+  public function listByTipoPantalla($periferico);
     /**
      * Cierra la conexión actual a la base de datos
      */
