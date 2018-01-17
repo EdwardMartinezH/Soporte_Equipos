@@ -163,7 +163,7 @@ public function listByTipoPeriferico($periferico){
       try {
           $sql ="SELECT `id`, `Equipo_idEquipo`, `marca`, `modelo`, `serial`, `pulgadas`, `stiker_activo`, `fecha_compra`, `Tipo_Periferico_id`, `Tipo_Pantalla_idTipo_Pantalla`"
           ."FROM `perifericos`"
-          ."WHERE `Tipo_Periferico_id`=$tipo";
+          ."WHERE `Tipo_Periferico_id`=$tipo AND `Equipo_idEquipo`=NULL";
           $data = $this->ejecutarConsulta($sql);
           for ($i=0; $i < count($data) ; $i++) {
               $perifericos= new Perifericos();
@@ -192,7 +192,7 @@ public function listByTipoPeriferico($periferico){
       try {
           $sql ="SELECT `id`, `Equipo_idEquipo`, `marca`, `modelo`, `serial`, `pulgadas`, `stiker_activo`, `fecha_compra`, `Tipo_Periferico_id`, `Tipo_Pantalla_idTipo_Pantalla`"
           ."FROM `perifericos`"
-          ."WHERE `Tipo_Pantalla_idTipo_Pantalla`=$tipo";
+          ."WHERE `Tipo_Pantalla_idTipo_Pantalla`=$tipo AND `Equipo_idEquipo`=NULL";
           $data = $this->ejecutarConsulta($sql);
           for ($i=0; $i < count($data) ; $i++) {
               $perifericos= new Perifericos();
