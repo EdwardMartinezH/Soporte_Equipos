@@ -22,19 +22,14 @@ private $cn;
             $this->cn =$conexion;
     }
 
-    /**
-     * Guarda un objeto Equipo en la base de datos.
-     * @param equipo objeto a guardar
-     * @return  Valor asignado a la llave primaria 
-     * @throws NullPointerException Si los objetos correspondientes a las llaves foraneas son null
-     */
-  public function insert($equipo){
+     public function insert($equipo){
       $idEquipo=$equipo->getIdEquipo();
-$usuario_Id=$equipo->getUsuario_Id();
+$usuario_Id=$equipo->getUsuario_Id()->getId();
+$tipo_equipo_id=$equipo->getTipo_equipo_id()->getId_tipo_equipo();
 
       try {
-          $sql= "INSERT INTO `equipo`( `idEquipo`, `usuario_Id`)"
-          ."VALUES ('$idEquipo','$usuario_Id')";
+          $sql= "INSERT INTO `equipo`( `idEquipo`, `usuario_Id`, `tipo_equipo_id`)"
+          ."VALUES ('$idEquipo','$usuario_Id','$tipo_equipo_id')";
           return $this->insertarConsulta($sql);
       } catch (SQLException $e) {
           throw new Exception('Primary key is null');
@@ -51,13 +46,18 @@ $usuario_Id=$equipo->getUsuario_Id();
       $idEquipo=$equipo->getIdEquipo();
 
       try {
-          $sql= "SELECT `idEquipo`, `usuario_Id`"
+          $sql= "SELECT `idEquipo`, `usuario_Id`, `tipo_equipo_id`"
           ."FROM `equipo`"
           ."WHERE `idEquipo`='$idEquipo'";
           $data = $this->ejecutarConsulta($sql);
           for ($i=0; $i < count($data) ; $i++) {
           $equipo->setIdEquipo($data[$i]['idEquipo']);
-          $equipo->setUsuario_Id($data[$i]['usuario_Id']);
+           $usuario = new Usuario();
+           $usuario->setId($data[$i]['usuario_Id']);
+           $equipo->setUsuario_Id($usuario);
+           $tipo_equipo = new Tipo_equipo();
+           $tipo_equipo->setId_tipo_equipo($data[$i]['tipo_equipo_id']);
+           $equipo->setTipo_equipo_id($tipo_equipo);
 
           }
       return $equipo;      } catch (SQLException $e) {
@@ -65,29 +65,7 @@ $usuario_Id=$equipo->getUsuario_Id();
       return null;
       }
   }
-/**
-     * Busca un objeto Equipo en la base de datos.
-     * @param equipo objeto con el idUsuario a consultar
-     * @return El objeto consultado o null
-     * @throws NullPointerException Si los objetos correspondientes a las llaves foraneas son null
-     */
-  public function selectByUsuario($equipo){
-      $idUsuario=$equipo->getUsuario_Id();
-      try {
-          $sql= "SELECT `idEquipo`, `usuario_Id`"
-          ."FROM `equipo`"
-          ."WHERE `usuario_Id`='$idUsuario'";
-          $data = $this->ejecutarConsulta($sql);
-          for ($i=0; $i < count($data) ; $i++) {
-          $equipo->setIdEquipo($data[$i]['idEquipo']);
-          $equipo->setUsuario_Id($data[$i]['usuario_Id']);
 
-          }
-      return $equipo;      } catch (SQLException $e) {
-          throw new Exception('Primary key is null');
-      return null;
-      }
-  }
     /**
      * Modifica un objeto Equipo en la base de datos.
      * @param equipo objeto con la información a modificar
@@ -96,10 +74,11 @@ $usuario_Id=$equipo->getUsuario_Id();
      */
   public function update($equipo){
       $idEquipo=$equipo->getIdEquipo();
-$usuario_Id=$equipo->getUsuario_Id();
+$usuario_Id=$equipo->getUsuario_Id()->getId();
+$tipo_equipo_id=$equipo->getTipo_equipo_id()->getId_tipo_equipo();
 
       try {
-          $sql= "UPDATE `equipo` SET`idEquipo`='$idEquipo' ,`usuario_Id`='$usuario_Id' WHERE `idEquipo`='$idEquipo'";
+          $sql= "UPDATE `equipo` SET`idEquipo`='$idEquipo' ,`usuario_Id`='$usuario_Id' ,`tipo_equipo_id`='$tipo_equipo_id' WHERE `idEquipo`='$idEquipo'";
          return $this->insertarConsulta($sql);
       } catch (SQLException $e) {
           throw new Exception('Primary key is null');
@@ -131,14 +110,19 @@ $usuario_Id=$equipo->getUsuario_Id();
   public function listAll(){
       $lista = array();
       try {
-          $sql ="SELECT `idEquipo`, `usuario_Id`"
+          $sql ="SELECT `idEquipo`, `usuario_Id`, `tipo_equipo_id`"
           ."FROM `equipo`"
           ."WHERE 1";
           $data = $this->ejecutarConsulta($sql);
           for ($i=0; $i < count($data) ; $i++) {
               $equipo= new Equipo();
           $equipo->setIdEquipo($data[$i]['idEquipo']);
-          $equipo->setUsuario_Id($data[$i]['usuario_Id']);
+           $usuario = new Usuario();
+           $usuario->setId($data[$i]['usuario_Id']);
+           $equipo->setUsuario_Id($usuario);
+           $tipo_equipo = new Tipo_equipo();
+           $tipo_equipo->setId_tipo_equipo($data[$i]['tipo_equipo_id']);
+           $equipo->setTipo_equipo_id($tipo_equipo);
 
           array_push($lista,$equipo);
           }
@@ -148,7 +132,60 @@ $usuario_Id=$equipo->getUsuario_Id();
       return null;
       }
   }
+/**
+     * Busca un objeto Equipo en la base de datos.
+     * @param equipo objeto con el idUsuario a consultar
+     * @return El objeto consultado o null
+     * @throws NullPointerException Si los objetos correspondientes a las llaves foraneas son null
+     */
+  public function selectByUsuario($equipo){
+      $idUsuario=$equipo->getUsuario_Id();
+      try {
+          $sql= "SELECT `idEquipo`, `usuario_Id`, `tipo_equipo_id`"
+          ."FROM `equipo`"
+          ."WHERE `usuario_Id`='$idUsuario'";
+          $data = $this->ejecutarConsulta($sql);
+          for ($i=0; $i < count($data) ; $i++) {
+          $equipo->setIdEquipo($data[$i]['idEquipo']);
+           $usuario = new Usuario();
+           $usuario->setId($data[$i]['usuario_Id']);
+           $equipo->setUsuario_Id($usuario);
+           $tipo_equipo = new Tipo_equipo();
+           $tipo_equipo->setId_tipo_equipo($data[$i]['tipo_equipo_id']);
+           $equipo->setTipo_equipo_id($tipo_equipo);
 
+          }
+      return $equipo;      } catch (SQLException $e) {
+          throw new Exception('Primary key is null');
+      return null;
+      }
+  }
+  public function listByTipoEquipo($equipo) {
+       $lista = array();
+       $tipo=$equipo->getTipo_equipo_id();
+      try {
+          $sql ="SELECT `idEquipo`, `usuario_Id`, `tipo_equipo_id`"
+          ."FROM `equipo`"
+          ."WHERE `tipo_equipo_id`=$tipo";
+          $data = $this->ejecutarConsulta($sql);
+          for ($i=0; $i < count($data) ; $i++) {
+              $equipo= new Equipo();
+          $equipo->setIdEquipo($data[$i]['idEquipo']);
+           $usuario = new Usuario();
+           $usuario->setId($data[$i]['usuario_Id']);
+           $equipo->setUsuario_Id($usuario);
+           $tipo_equipo = new Tipo_equipo();
+           $tipo_equipo->setId_tipo_equipo($data[$i]['tipo_equipo_id']);
+           $equipo->setTipo_equipo_id($tipo_equipo);
+
+          array_push($lista,$equipo);
+          }
+      return $lista;
+      } catch (SQLException $e) {
+          throw new Exception('Primary key is null');
+      return null;
+      }
+    }
       public function insertarConsulta($sql){
           $this->cn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           $sentencia=$this->cn->prepare($sql);
@@ -170,5 +207,8 @@ $usuario_Id=$equipo->getUsuario_Id();
   public function close(){
       $cn=null;
   }
+
+
+
 }
 //That´s all folks!
