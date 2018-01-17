@@ -216,7 +216,7 @@ public function listByTipoPeriferico($periferico){
       }
   }
   
-    public static function listPantallasFree(){
+    public function listPantallasFree(){
          $lista = array();
       try {
           $sql ="SELECT `id`, `Equipo_idEquipo`, `marca`, `modelo`, `serial`, `pulgadas`, `stiker_activo`, `fecha_compra`, `Tipo_Periferico_id`, `Tipo_Pantalla_idTipo_Pantalla`"
