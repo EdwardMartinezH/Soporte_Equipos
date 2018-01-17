@@ -36,6 +36,7 @@ interface EquipoDao {
      */
   public function select($equipo);
   public function selectByUsuario($equipo);
+  public function listByTipoEquipo($equipo);
     /**
      * Cierra la conexión actual a la base de datos
      */
