@@ -1,3 +1,4 @@
+<?php
 /*
               -------Creado por-------
              \(°u° )/ Anarchy \( °u°)/
@@ -6,7 +7,6 @@
 
 //    Si crees que las mujeres son difíciles, no conoces Anarchy  \\
 
-<?php
 include_once realpath('..').'\dao\gestor\mySql\factory\MySqlFactoryDao.php';
 include_once realpath('..').'\dao\interfaz\Tipo_equipoDao.php';
 include_once realpath('..').'\dto\Tipo_equipoDto.php';
