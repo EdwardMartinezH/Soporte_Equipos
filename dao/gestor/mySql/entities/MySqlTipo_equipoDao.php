@@ -1,22 +1,22 @@
+<?php
 /*
               -------Creado por-------
-             \(°u° )/ Anarchy \( °u°)/
+             \(Â°uÂ° )/ Anarchy \( Â°uÂ°)/
               ------------------------
  */
 
-//    Si crees que las mujeres son difíciles, no conoces Anarchy  \\
+//    Si crees que las mujeres son difÃ­ciles, no conoces Anarchy  \\
 
-<?php
-include_once realpath('../factory/MySqlFactoryDao.php');
-include_once realpath('../../../interfaz/Tipo_equipoDao.php');
-include_once realpath('../../../../dto/Tipo_equipoDto.php');
+include_once realpath('..').'\dao\gestor\mySql\factory\MySqlFactoryDao.php';
+include_once realpath('..').'\dao\interfaz\Tipo_equipoDao.php';
+include_once realpath('..').'\dto\Tipo_equipoDto.php';
 
 class MySqlTipo_equipoDao implements Tipo_equipoDao{
 
 private $cn;
 
     /**
-     * Inicializa una única conexión a la base de datos, que se usará para cada consulta.
+     * Inicializa una Ãºnica conexiÃ³n a la base de datos, que se usarÃ¡ para cada consulta.
      */
     function __construct($conexion) {
             $cn =$conexion;
@@ -63,7 +63,7 @@ private $cn;
 
     /**
      * Modifica un objeto Tipo_equipo en la base de datos.
-     * @param tipo_equipo objeto con la información a modificar
+     * @param tipo_equipo objeto con la informaciÃ³n a modificar
      * @return  Valor de la llave primaria 
      * @throws NullPointerException Si los objetos correspondientes a las llaves foraneas son null
      */
@@ -93,7 +93,7 @@ private $cn;
 
     /**
      * Busca un objeto Tipo_equipo en la base de datos.
-     * @return ArrayList<Tipo_equipo> Puede contener los objetos consultados o estar vacío
+     * @return ArrayList<Tipo_equipo> Puede contener los objetos consultados o estar vacÃ­o
      * @throws NullPointerException Si los objetos correspondientes a las llaves foraneas son null
      */
   public function listAll(){
@@ -133,10 +133,10 @@ private $cn;
           return $data;
     }
     /**
-     * Cierra la conexión actual a la base de datos
+     * Cierra la conexiÃ³n actual a la base de datos
      */
   public function close(){
       $cn=null;
   }
 }
-//That´s all folks!
+//ThatÂ´s all folks!
