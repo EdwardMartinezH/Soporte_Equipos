@@ -13,16 +13,18 @@ require_once realpath("..").'\dao\interfaz\EquipoDao.php';
 
 class EquipoController {
 
-  /**
+    /**
    * Crea un objeto Equipo a partir de sus parámetros y lo guarda en base de datos.
    * Puede recibir NullPointerException desde los métodos del Dao
    * @param idEquipo
    * @param usuario_Id
+   * @param tipo_equipo_id
    */
-  public static function insert( $idEquipo,  $usuario_Id){
+  public static function insert( $idEquipo,  $usuario_Id,  $tipo_equipo_id){
       $equipo = new Equipo();
       $equipo->setIdEquipo($idEquipo); 
       $equipo->setUsuario_Id($usuario_Id); 
+      $equipo->setTipo_equipo_id($tipo_equipo_id); 
 
      $equipoDao =FactoryDao::getFactory(self::getGestorDefault())->getEquipoDao(self::getDataBaseDefault());
      $rtn = $equipoDao->insert($equipo);
@@ -51,10 +53,12 @@ class EquipoController {
    * Puede recibir NullPointerException desde los métodos del Dao
    * @param idEquipo
    * @param usuario_Id
+   * @param tipo_equipo_id
    */
-  public static function update($idEquipo, $usuario_Id){
+  public static function update($idEquipo, $usuario_Id, $tipo_equipo_id){
       $equipo = self::select($idEquipo);
       $equipo->setUsuario_Id($usuario_Id); 
+      $equipo->setTipo_equipo_id($tipo_equipo_id); 
 
      $equipoDao =FactoryDao::getFactory(self::getGestorDefault())->getEquipoDao(self::getDataBaseDefault());
      $equipoDao->update($equipo);
@@ -86,7 +90,14 @@ class EquipoController {
      $equipoDao->close();
      return $result;
   }
-
+  public static function listByTipoEquipo($tipo_equipo_id){
+     $equipo=new Equipo();
+     $equipo->setTipo_equipo_id($tipo_equipo_id);
+     $equipoDao =FactoryDao::getFactory(self::getGestorDefault())->getEquipoDao(self::getDataBaseDefault());
+     $result = $equipoDao->listByTipoEquipo($equipo);
+     $equipoDao->close();
+     return $result;
+  }
   /**
    * Para su comodidad, defina aquí el gestor de conexión predilecto para esta entidad
    * @return idGestor Devuelve el identificador del gestor de conexión
