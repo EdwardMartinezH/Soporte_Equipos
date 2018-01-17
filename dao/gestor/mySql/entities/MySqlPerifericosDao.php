@@ -29,7 +29,7 @@ private $cn;
      * @throws NullPointerException Si los objetos correspondientes a las llaves foraneas son null
      */
   public function insert($perifericos){
-$equipo_idEquipo=$perifericos->getEquipo_idEquipo();
+//$equipo_idEquipo=null;
 $marca=$perifericos->getMarca();
 $modelo=$perifericos->getModelo();
 $serial=$perifericos->getSerial();
@@ -41,7 +41,7 @@ $tipo_Pantalla_idTipo_Pantalla=$perifericos->getTipo_Pantalla_idTipo_Pantalla();
 
       try {
           $sql= "INSERT INTO `perifericos`( `Equipo_idEquipo`, `marca`, `modelo`, `serial`, `pulgadas`, `stiker_activo`, `fecha_compra`, `Tipo_Periferico_id`, `Tipo_Pantalla_idTipo_Pantalla`)"
-          ."VALUES ('$equipo_idEquipo','$marca','$modelo','$serial','$pulgadas','$stiker_activo','$fecha_compra','$tipo_Periferico_id','$tipo_Pantalla_idTipo_Pantalla')";
+          ."VALUES (null,'$marca','$modelo','$serial','$pulgadas','$stiker_activo','$fecha_compra','$tipo_Periferico_id','$tipo_Pantalla_idTipo_Pantalla')";
           return $this->insertarConsulta($sql);
       } catch (SQLException $e) {
           throw new Exception('Primary key is null');
@@ -215,6 +215,36 @@ public function listByTipoPeriferico($periferico){
       return null;
       }
   }
+  
+    public static function listPantallasFree(){
+         $lista = array();
+      try {
+          $sql ="SELECT `id`, `Equipo_idEquipo`, `marca`, `modelo`, `serial`, `pulgadas`, `stiker_activo`, `fecha_compra`, `Tipo_Periferico_id`, `Tipo_Pantalla_idTipo_Pantalla`"
+          ."FROM `perifericos`"
+          ."WHERE `Equipo_idEquipo` is null and `Tipo_Periferico_id` = 1";
+          $data = $this->ejecutarConsulta($sql);
+          for ($i=0; $i < count($data) ; $i++) {
+              $perifericos= new Perifericos();
+          $perifericos->setId($data[$i]['id']);
+          $perifericos->setEquipo_idEquipo($data[$i]['Equipo_idEquipo']);
+          $perifericos->setMarca($data[$i]['marca']);
+          $perifericos->setModelo($data[$i]['modelo']);
+          $perifericos->setSerial($data[$i]['serial']);
+          $perifericos->setPulgadas($data[$i]['pulgadas']);
+          $perifericos->setStiker_activo($data[$i]['stiker_activo']);
+          $perifericos->setFecha_compra($data[$i]['fecha_compra']);
+          $perifericos->setTipo_Periferico_id($data[$i]['Tipo_Periferico_id']);
+          $perifericos->setTipo_Pantalla_idTipo_Pantalla($data[$i]['Tipo_Pantalla_idTipo_Pantalla']);
+
+          array_push($lista,$perifericos);
+          }
+      return $lista;
+      } catch (SQLException $e) {
+          throw new Exception('Primary key is null');
+      return null;
+      }
+    }
+  
       public function insertarConsulta($sql){
           $this->cn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           $sentencia=$this->cn->prepare($sql);

@@ -27,9 +27,8 @@ class PerifericosController {
    * @param tipo_Periferico_id
    * @param tipo_Pantalla_idTipo_Pantalla
    */
-  public static function insert( $id,  $equipo_idEquipo,  $marca,  $modelo,  $serial,  $pulgadas,  $stiker_activo,  $fecha_compra,  $tipo_Periferico_id,  $tipo_Pantalla_idTipo_Pantalla){
-      $perifericos = new Perifericos();
-      $perifericos->setId($id); 
+  public static function insert($equipo_idEquipo,  $marca,  $modelo,  $serial,  $pulgadas,  $stiker_activo,  $fecha_compra,  $tipo_Periferico_id,  $tipo_Pantalla_idTipo_Pantalla){
+      $perifericos = new Perifericos(); 
       $perifericos->setEquipo_idEquipo($equipo_idEquipo); 
       $perifericos->setMarca($marca); 
       $perifericos->setModelo($modelo); 
@@ -134,6 +133,14 @@ public static function listByTipoPeriferico($tipo_Periferico){
      $perifericosDao->close();
      return $result;
   }
+  
+  public static function listPantallasFree(){
+     $perifericosDao =FactoryDao::getFactory(self::getGestorDefault())->getPerifericosDao(self::getDataBaseDefault());
+     $result = $perifericosDao->listPantallasFree();
+     $perifericosDao->close();
+     return $result;
+  }
+  
   /**
    * Para su comodidad, defina aquí el gestor de conexión predilecto para esta entidad
    * @return idGestor Devuelve el identificador del gestor de conexión
