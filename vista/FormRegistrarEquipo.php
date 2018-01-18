@@ -126,7 +126,7 @@
                                                  <div class="form-group">
                                                 <label class="col-sm-2 control-label">Listar Tipo Pantalla</label>
                                                 <div class="col-sm-10">
-                                                    <select required class="form-control">
+                                                    <select required class="form-control" >
                                                         <option value="">Seleccione</option>
                                                         <option value="1">Lcd</option>
                                                         <option value="2">Plasma</option>
@@ -140,12 +140,7 @@
                                                  <div class="form-group">
                                                 <label class="col-sm-2 control-label">Listar Pantallas</label>
                                                 <div class="col-sm-10">
-                                                    <select required class="form-control">
-                                                        <option value="">1</option>
-                                                        <option value="1">2</option>
-                                                        <option value="2">3</option>
-                                                        <option value="3">4</option>
-                                                       
+                                                    <select required class="form-control" id="pantallas">                                                                                                           
                                                     </select>
                                            
                                                 </div>
@@ -155,11 +150,7 @@
                                                  <div class="form-group">
                                                 <label class="col-sm-2 control-label">Listar Teclado</label>
                                                 <div class="col-sm-10">
-                                                    <select required class="form-control">
-                                                        <option value="">1</option>
-                                                        <option value="1">2</option>
-                                                        <option value="2">3</option>
-                                                        <option value="3">4</option>
+                                                    <select required class="form-control" id="teclados">                                                     
                                                        
                                                     </select>
                                            
@@ -170,12 +161,8 @@
                                                  <div class="form-group">
                                                 <label class="col-sm-2 control-label">Listar Mouse</label>
                                                 <div class="col-sm-10">
-                                                    <select required class="form-control">
-                                                        <option value="">1</option>
-                                                        <option value="1">2</option>
-                                                        <option value="2">3</option>
-                                                        <option value="3">4</option>
-                                                       
+                                                    <select required class="form-control" id="mouses">
+                                                                                                       
                                                     </select>
                                            
                                                 </div>
@@ -186,12 +173,8 @@
                                                  <div class="form-group">
                                                 <label class="col-sm-2 control-label">Listar Impresora</label>
                                                 <div class="col-sm-10">
-                                                    <select required class="form-control">
-                                                        <option value="">1</option>
-                                                        <option value="1">2</option>
-                                                        <option value="2">3</option>
-                                                        <option value="3">4</option>
-                                                       
+                                                    <select required class="form-control" id="impresoras">
+
                                                     </select>
                                            
                                                 </div>
@@ -201,11 +184,8 @@
                                                  <div class="form-group">
                                                 <label class="col-sm-2 control-label">Listar Camara</label>
                                                 <div class="col-sm-10">
-                                                    <select required class="form-control">
-                                                        <option value="">1</option>
-                                                        <option value="1">2</option>
-                                                        <option value="2">3</option>
-                                                        <option value="3">4</option>
+                                                    <select required class="form-control" id="camaras">
+
                                                        
                                                     </select>
                                            
@@ -451,8 +431,82 @@
                   alert('Hubo un errror al cargar las listas_rep')
                 });
 
+                $.ajax({
+                  type: 'post',
+                  url: '../controllers/PantallaList.php'
+                })
+                .done(function(listas_rep){
+                   // alert(listas_rep);
+                  $('#pantallas').html(listas_rep);
+                })
+                .fail(function(){
+                  alert('Hubo un errror al cargar las listas_rep')
+                });
+
+
+                 $.ajax({
+                  type: 'post',
+                  url: '../controllers/TecladosFreeList.php'
+                })
+                .done(function(listas_rep){
+                   // alert(listas_rep);
+                  $('#teclados').html(listas_rep);
+                })
+                .fail(function(){
+                  alert('Hubo un errror al cargar las listas_rep')
+                });
+
+                $.ajax({
+                  type: 'post',
+                  url: '../controllers/MouseFreeList.php'
+                })
+                .done(function(listas_rep){
+                   // alert(listas_rep);
+                  $('#mouses').html(listas_rep);
+                })
+                .fail(function(){
+                  alert('Hubo un errror al cargar las listas_rep')
+                });
+
+                $.ajax({
+                  type: 'post',
+                  url: '../controllers/ImpresorasFreeList.php'
+                })
+                .done(function(listas_rep){
+                   // alert(listas_rep);
+                  $('#impresoras').html(listas_rep);
+                })
+                .fail(function(){
+                  alert('Hubo un errror al cargar las listas_rep')
+                });
+
+                $.ajax({
+                  type: 'post',
+                  url: '../controllers/ImpresorasFreeList.php'
+                })
+                .done(function(listas_rep){
+                   // alert(listas_rep);
+                  $('#impresoras').html(listas_rep);
+                })
+                .fail(function(){
+                  alert('Hubo un errror al cargar las listas_rep')
+                });
+
+                  $.ajax({
+                  type: 'post',
+                  url: '../controllers/CamarasFreeList.php'
+                })
+                .done(function(listas_rep){
+                   // alert(listas_rep);
+                  $('#camaras').html(listas_rep);
+                })
+                .fail(function(){
+                  alert('Hubo un errror al cargar las listas_rep')
+                });
+   
              });
-             
+
+           
   
        </script>
 

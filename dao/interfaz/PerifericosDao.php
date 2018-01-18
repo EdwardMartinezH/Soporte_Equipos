@@ -37,7 +37,11 @@ interface PerifericosDao {
   public function select($perifericos);
   public function listByTipoPeriferico($periferico);  
   public function listByTipoPantalla($periferico);
-  public static function listPantallasFree();
+  public  function listPantallasFree();
+  public function listTecladosFree();
+  public function listmousesFree();
+  public function listImpresorasFree();
+  public function listCamarasFree();
     /**
      * Cierra la conexión actual a la base de datos
      */

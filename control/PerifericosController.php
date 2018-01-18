@@ -140,6 +140,34 @@ public static function listByTipoPeriferico($tipo_Periferico){
      $perifericosDao->close();
      return $result;
   }
+
+  public static function listTecladosFree(){
+     $perifericosDao =FactoryDao::getFactory(self::getGestorDefault())->getPerifericosDao(self::getDataBaseDefault());
+     $result = $perifericosDao->listTecladosFree();
+     $perifericosDao->close();
+     return $result;
+  }
+  
+
+   public static function listmousesFree(){
+     $perifericosDao =FactoryDao::getFactory(self::getGestorDefault())->getPerifericosDao(self::getDataBaseDefault());
+     $result = $perifericosDao->listmousesFree();
+     $perifericosDao->close();
+     return $result;
+  }
+  public static function listImpresorasFree(){
+     $perifericosDao =FactoryDao::getFactory(self::getGestorDefault())->getPerifericosDao(self::getDataBaseDefault());
+     $result = $perifericosDao->listImpresorasFree();
+     $perifericosDao->close();
+     return $result;
+  }
+
+   public static function listCamarasFree(){
+     $perifericosDao =FactoryDao::getFactory(self::getGestorDefault())->getPerifericosDao(self::getDataBaseDefault());
+     $result = $perifericosDao->listCamarasFree();
+     $perifericosDao->close();
+     return $result;
+  }
   
   /**
    * Para su comodidad, defina aquí el gestor de conexión predilecto para esta entidad
