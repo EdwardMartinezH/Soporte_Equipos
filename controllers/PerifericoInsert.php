@@ -7,6 +7,8 @@ include_once realpath('../dto/Perifericos.php');
  * Insertar un perifericos. Se trae todo. La validación se hace en HTML y aquí llegan muuuchos ""      
  * La request debe traer idEquipo,idTipoPeriferico,idTipoPantalla,marca,modelo,serial,pulgadas,sticker_activo,fecha_compra         
  */
+
+
 $last_id = PerifericosController::insert(
         null, 
         filter_input(INPUT_POST, 'marca'), 

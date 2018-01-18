@@ -40,8 +40,13 @@ $tipo_Periferico_id=$perifericos->getTipo_Periferico_id();
 $tipo_Pantalla_idTipo_Pantalla=$perifericos->getTipo_Pantalla_idTipo_Pantalla();
 
       try {
+        if($tipo_Periferico_id != 1){
+       $sql= "INSERT INTO `perifericos`( `Equipo_idEquipo`, `marca`, `modelo`, `serial`, `pulgadas`, `stiker_activo`, `fecha_compra`, `Tipo_Periferico_id`, `Tipo_Pantalla_idTipo_Pantalla`)"
+          ."VALUES (null,'$marca','$modelo','$serial','$pulgadas','$stiker_activo','$fecha_compra','$tipo_Periferico_id',null)";
+          }else{         
           $sql= "INSERT INTO `perifericos`( `Equipo_idEquipo`, `marca`, `modelo`, `serial`, `pulgadas`, `stiker_activo`, `fecha_compra`, `Tipo_Periferico_id`, `Tipo_Pantalla_idTipo_Pantalla`)"
           ."VALUES (null,'$marca','$modelo','$serial','$pulgadas','$stiker_activo','$fecha_compra','$tipo_Periferico_id','$tipo_Pantalla_idTipo_Pantalla')";
+        }
           return $this->insertarConsulta($sql);
       } catch (SQLException $e) {
           throw new Exception('Primary key is null');
