@@ -31,7 +31,7 @@ private $cn;
   public function insert($tipo_equipo){
       try {
           $sql= "INSERT INTO `tipo_equipo`( `id_tipo_equipo`, `nombre`)"
-          +"VALUES ('$tipo_equipo->getId_tipo_equipo()','$tipo_equipo->getNombre()')";
+          ."VALUES ('$tipo_equipo->getId_tipo_equipo()','$tipo_equipo->getNombre()')";
           return $this->insertarConsulta($sql);
       } catch (SQLException $e) {
           throw new Exception('Primary key is null');
@@ -47,8 +47,8 @@ private $cn;
   public function select($tipo_equipo){
       try {
           $sql= "SELECT `id_tipo_equipo`, `nombre`"
-          +"FROM `tipo_equipo`"
-          +"WHERE `id_tipo_equipo`='$tipo_equipo->getId_tipo_equipo()'";
+          ."FROM `tipo_equipo`"
+          ."WHERE `id_tipo_equipo`='$tipo_equipo->getId_tipo_equipo()'";
           $data = $this->ejecutarConsulta($sql);
           for ($i=0; $i < count($data) ; $i++) {
           $tipo_equipo->setId_tipo_equipo($data[$i]['id_tipo_equipo']);
@@ -100,8 +100,8 @@ private $cn;
       $lista = array();
       try {
           $sql ="SELECT `id_tipo_equipo`, `nombre`"
-          +"FROM `tipo_equipo`"
-          +"WHERE 1";
+          ."FROM `tipo_equipo`"
+          ."WHERE 1";
           $data = $this->ejecutarConsulta($sql);
           for ($i=0; $i < count($data) ; $i++) {
               $tipo_equipo= new Tipo_equipo();
