@@ -19,7 +19,7 @@ private $cn;
      * Inicializa una única conexión a la base de datos, que se usará para cada consulta.
      */
     function __construct($conexion) {
-            $cn =$conexion;
+            $this->cn =$conexion;
     }
 
     /**
