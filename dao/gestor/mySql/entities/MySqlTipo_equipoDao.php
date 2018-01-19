@@ -9,7 +9,7 @@
 
 include_once realpath('..').'\dao\gestor\mySql\factory\MySqlFactoryDao.php';
 include_once realpath('..').'\dao\interfaz\Tipo_equipoDao.php';
-include_once realpath('..').'\dto\Tipo_equipoDto.php';
+include_once realpath('..').'\dto\Tipo_equipo.php';
 
 class MySqlTipo_equipoDao implements Tipo_equipoDao{
 
