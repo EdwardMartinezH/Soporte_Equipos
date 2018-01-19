@@ -115,7 +115,7 @@ class MySqlFactoryDao extends FactoryDao{
 //     * @return Instancia de la entidad MySqlTipo_equipoDao
 //     */
     public function getTipo_equipoDao($dbName) {
-//        return new MySqlTipo_equipoDao($this->getConexion()->obtener($dbName));
+        return new MySqlTipo_equipoDao($this->getConexion()->obtener($dbName));
     }
     /**
      * Devuelve una instancia de la entidad MySqlTipo_perifericoDao
