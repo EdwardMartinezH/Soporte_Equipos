@@ -39,7 +39,7 @@ interface Tipo_equipoDao {
    * @return $result Array con los objetos Tipo_equipo en base de datos o Null
    * @throws NullPointerException Si los objetos correspondientes a las llaves foraneas son null
    */
-  public static function listAll();
+  public function listAll();
     /**
      * Cierra la conexión actual a la base de datos
      */
