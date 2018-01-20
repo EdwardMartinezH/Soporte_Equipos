@@ -403,7 +403,35 @@ class MySqlPerifericosDao implements PerifericosDao {
     public function close() {
         $cn = null;
     }
+public function listByEquipo($periferico) {
+      $lista = array();
+      $idEquipo=$periferico->getEquipo_idEquipo();
+      try {
+          $sql ="SELECT `id`, `Equipo_idEquipo`, `marca`, `modelo`, `serial`, `pulgadas`, `stiker_activo`, `fecha_compra`, `Tipo_Periferico_id`, `Tipo_Pantalla_idTipo_Pantalla`"
+          ."FROM `perifericos`"
+          ."WHERE `Equipo_idEquipo`=$idEquipo";
+          $data = $this->ejecutarConsulta($sql);
+          for ($i=0; $i < count($data) ; $i++) {
+              $perifericos= new Perifericos();
+          $perifericos->setId($data[$i]['id']);
+          $perifericos->setEquipo_idEquipo($data[$i]['Equipo_idEquipo']);
+          $perifericos->setMarca($data[$i]['marca']);
+          $perifericos->setModelo($data[$i]['modelo']);
+          $perifericos->setSerial($data[$i]['serial']);
+          $perifericos->setPulgadas($data[$i]['pulgadas']);
+          $perifericos->setStiker_activo($data[$i]['stiker_activo']);
+          $perifericos->setFecha_compra($data[$i]['fecha_compra']);
+          $perifericos->setTipo_Periferico_id($data[$i]['Tipo_Periferico_id']);
+          $perifericos->setTipo_Pantalla_idTipo_Pantalla($data[$i]['Tipo_Pantalla_idTipo_Pantalla']);
 
+          array_push($lista,$perifericos);
+          }
+      return $lista;
+      } catch (SQLException $e) {
+          throw new Exception('Primary key is null');
+      return null;
+      }  
+    }
 }
 
 //That´s all folks!
