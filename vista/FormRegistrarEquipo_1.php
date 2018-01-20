@@ -158,13 +158,9 @@
          <div class="form-group">
                                                 <label class="col-sm-2 control-label">seriales de Pantallas</label>
                                                 <div class="col-sm-10">
-                                                    <select required class="form-control">
-                                                        <option value="">Seleccione</option>
-                                                        <option value="1">serial 1</option>
-                                                        <option value="2">serial 2</option>
-                                                        <option value="3">serial 3</option>
-                                                       
-                                                    </select>
+                                                   <select required class="form-control" id="pantallas" name="pantalla">                                                                                                           
+
+                                            </select>
                                            
                                                 </div>
                                             </div>
