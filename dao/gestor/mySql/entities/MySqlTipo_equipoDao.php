@@ -45,10 +45,11 @@ private $cn;
      * @throws NullPointerException Si los objetos correspondientes a las llaves foraneas son null
      */
   public function select($tipo_equipo){
+    $idEquipo=$tipo_equipo->getId_tipo_equipo()->getId_tipo_equipo();
       try {
           $sql= "SELECT `id_tipo_equipo`, `nombre`"
           ."FROM `tipo_equipo`"
-          ."WHERE `id_tipo_equipo`='$tipo_equipo->getId_tipo_equipo()'";
+          ."WHERE `id_tipo_equipo`='$idEquipo'";
           $data = $this->ejecutarConsulta($sql);
           for ($i=0; $i < count($data) ; $i++) {
           $tipo_equipo->setId_tipo_equipo($data[$i]['id_tipo_equipo']);
