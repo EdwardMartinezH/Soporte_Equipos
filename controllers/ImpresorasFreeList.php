@@ -3,7 +3,7 @@ include_once realpath('../control/PerifericosController.php');
 
 $impresoras = PerifericosController::listImpresorasFree();
 
-$listas = '<option value="">Seleccione </option>';
+$listas = '<option value="null">Seleccione </option>';
 for ($i=0; $i < count($impresoras) ; $i++) { 
 	$v = $impresoras[$i]->getId();
     $n = $impresoras[$i]->getMarca();

@@ -20,9 +20,8 @@ class EquipoController {
    * @param usuario_Id
    * @param tipo_equipo_id
    */
-  public static function insert( $idEquipo,  $usuario_Id,  $tipo_equipo_id){
-      $equipo = new Equipo();
-      $equipo->setIdEquipo($idEquipo); 
+  public static function insert($usuario_Id,  $tipo_equipo_id){
+      $equipo = new Equipo();    
       $equipo->setUsuario_Id($usuario_Id); 
       $equipo->setTipo_equipo_id($tipo_equipo_id); 
 

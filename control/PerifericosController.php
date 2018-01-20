@@ -91,6 +91,14 @@ class PerifericosController {
      $perifericosDao->update($perifericos);
      $perifericosDao->close();
   }
+  
+   public static function updateEquipoId($id, $equipo_idEquipo){
+     $perifericos = self::select($id);
+     $perifericos->setEquipo_idEquipo($equipo_idEquipo);  
+     $perifericosDao =FactoryDao::getFactory(self::getGestorDefault())->getPerifericosDao(self::getDataBaseDefault());
+     $perifericosDao->updateEquipoId($perifericos);
+     $perifericosDao->close();
+  }
 
   /**
    * Elimina un objeto Perifericos de la base de datos a partir de su(s) llave(s) primaria(s).

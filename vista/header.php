@@ -121,7 +121,7 @@ $correo = $_SESSION['Correo'];
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
                                                 <h4 class="modal-title">Registrar Solicitud</h4>
                                             </div>
-                                            <form action="../controler/problema/insertar.php" method="post">
+                                            <form action="../controllers/ProblemaInsert.php" method="post">
                                             <div class="modal-body">
                                                 <div class="row">
                                                     <div class="col-md-12">

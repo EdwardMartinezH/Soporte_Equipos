@@ -22,14 +22,13 @@ private $cn;
             $this->cn =$conexion;
     }
 
-     public function insert($equipo){
-      $idEquipo=$equipo->getIdEquipo();
-$usuario_Id=$equipo->getUsuario_Id()->getId();
-$tipo_equipo_id=$equipo->getTipo_equipo_id()->getId_tipo_equipo();
+     public function insert($equipo){    
+$usuario_Id=$equipo->getUsuario_Id();
+$tipo_equipo_id=$equipo->getTipo_equipo_id();
 
       try {
-          $sql= "INSERT INTO `equipo`( `idEquipo`, `usuario_Id`, `tipo_equipo_id`)"
-          ."VALUES ('$idEquipo','$usuario_Id','$tipo_equipo_id')";
+          $sql= "INSERT INTO `equipo`( `usuario_Id`, `tipo_equipo_id`)"
+          ."VALUES ($usuario_Id,$tipo_equipo_id)";
           return $this->insertarConsulta($sql);
       } catch (SQLException $e) {
           throw new Exception('Primary key is null');

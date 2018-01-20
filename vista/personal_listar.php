@@ -106,18 +106,8 @@
                                     </thead>
 
 
-                                    <tbody>
-                                        <tr>
-                                            <td hidden="true">Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td><button data-toggle="modal" data-target="#modal-solucion" class="btn btn-icon waves-effect waves-light btn-info m-b-5"> <i class="fa fa-keyboard-o" Title="Descipción " ></i> </button>
-                                            <button class="btn btn-icon waves-effect waves-light btn-danger m-b-5"> <i class="fa fa-remove "Title="Eliminar "></i> </button>
-                                            
-                                            </td>
-                                        </tr>
+                                    <tbody id="usuarios" >
+                                       
                                       
                                     </tbody>
                                 </table>
@@ -226,6 +216,22 @@
                 var table = $('#datatable-fixed-header').DataTable( { fixedHeader: true } );
             } );
             TableManageButtons.init();
+        </script>
+        
+        <script>
+            $(document).ready(function () {
+                $.ajax({
+                    type: 'post',
+                    url: '../controllers/UsuarioList.php'
+                })
+                        .done(function (listas_rep) {
+                            // alert(listas_rep);
+                            $('#usuarios').html(listas_rep);
+                        })
+                        .fail(function () {
+                            alert('Hubo un errror al cargar las listas_rep')
+                        });
+                        });
         </script>
 
 

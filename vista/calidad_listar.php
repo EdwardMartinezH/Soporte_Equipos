@@ -58,76 +58,10 @@
                             <div class="panel-heading">
                                 <h3 class="panel-title">Buttons example</h3>
                             </div>
-                            <div class="panel-body">
+                            <div class="panel-body" id="calidad">
 
-                                <div id="datatable-buttons_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-<!--                                    <div class="dt-buttons btn-group"><a class="btn btn-default buttons-copy buttons-html5 btn-sm" tabindex="0" aria-controls="datatable-buttons"><span>Copy</span></a><a class="btn btn-default buttons-csv buttons-html5 btn-sm" tabindex="0" aria-controls="datatable-buttons"><span>CSV</span></a><a class="btn btn-default buttons-pdf buttons-html5 btn-sm" tabindex="0" aria-controls="datatable-buttons"><span>PDF</span></a><a class="btn btn-default buttons-print btn-sm" tabindex="0" aria-controls="datatable-buttons"><span>Print</span></a></div><div id="datatable-buttons_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="datatable-buttons"></label></div>-->
-                                    
-                                    <table id="datatable-buttons" class="table table-striped table-bordered dataTable no-footer dtr-inline" role="grid" aria-describedby="datatable-buttons_info">
-                                    <thead>
-                                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 8px;"><h6>Id</h6></th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 20px;"><h6>Cargo</h6></th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 20px;"><h6>Cambio de contraseña</h6></th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 20px;"><h6>Bloqueo de Sesion</h6></th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 20px;"><h6>Bloqueo Automatico</h6></th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 20px;"><h6>Copia de Seguridad</h6></th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 101px;"><h6>Antivirus</h6></th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 20px;"><h6>Programas no Permitidos
-                                                </h6></th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 20px;"><h6>Carpetas Compartidas</h6></th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 20px;"><h6>Cuenta Administrador</h6></th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 20px;"><h6>Observaciones Compartidas</h6></th>
-                                        </tr>
-                                    </thead>
-
-
-                                    <tbody>
-                                        
-                                        
-               
-                                        
-                                        
-                                    <tr role="row" class="odd">
-                                            <td class="sorting_1" tabindex="0">1</td>
-                                            <td>Accountant humano</td>
-                                            <td>Accountant humano</td>
-                                            <td>Tokyo</td>
-                                            <td>33</td>
-                                            <td>2008/11/28</td>
-                                            <td>$162,700</td>
-                                            <td>33</td>
-                                            <td>2008/11/28</td>
-                                            <td>$162,700</td>
-                                            <td>$162,700</td>
-                                        </tr>
-                                    <tr role="row" class="odd">
-                                            <td class="sorting_1" tabindex="0">2</td>
-                                            <td>Accountant humano</td>
-                                            <td>Accounno</td>
-                                            <td>Tokyo</td>
-                                            <td>33</td>
-                                            <td>2008/11/28</td>
-                                            <td>$162,700</td>
-                                            <td>33</td>
-                                            <td>2008/11/28</td>
-                                            <td>$162,700</td>
-                                            <td>$162,700</td>
-                                        </tr>
-                                    <tr role="row" class="odd">
-                                            <td class="sorting_1" tabindex="0">3</td>
-                                            <td>Accountant ho</td>
-                                            <td>Accountant humano</td>
-                                            <td>Tokyo</td>
-                                            <td>33</td>
-                                            <td>2008/11/28</td>
-                                            <td>$162,700</td>
-                                            <td>33</td>
-                                            <td>2008/11/28</td>
-                                            <td>$162,700</td>
-                                            <td>$162,700</td>
-                                        </tr>
-                                       </tbody>
-                                </table>
+                                
+<!--                               
 <!--                                    <div class="dataTables_info" id="datatable-buttons_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div>-->
                                     <div class="dataTables_paginate paging_simple_numbers" id="datatable-buttons_paginate"><ul class="pagination">
 <!--                                            <li class="paginate_button previous disabled" aria-controls="datatable-buttons" tabindex="0" id="datatable-buttons_previous"><a href="#">Previous</a></li>-->
@@ -207,6 +141,23 @@
             } );
             TableManageButtons.init();
         </script>
+        
+        <script>
+         $(document).ready(function () {
+                $.ajax({
+                    type: 'post',
+                    url: '../controllers/CalidadList.php'
+                })
+                        .done(function (listas_rep) {
+                            // alert(listas_rep);
+                            $('#calidad').html(listas_rep);
+                        })
+                        .fail(function () {
+                            alert('Hubo un errror al cargar las listas_rep')
+                        });
+                        });
+        </script>
+            
 
 
     </body>

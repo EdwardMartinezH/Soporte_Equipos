@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-    
-<!-- Mirrored from moltran.coderthemes.com/menu_2/table-datatable.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Oct 2017 05:07:42 GMT -->
-<head>
+
+    <!-- Mirrored from moltran.coderthemes.com/menu_2/table-datatable.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Oct 2017 05:07:42 GMT -->
+    <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
@@ -28,8 +28,8 @@
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css">
 
         <script src="assets/js/modernizr.min.js"></script>
-        
-          <!-- Plugins css-->
+
+        <!-- Plugins css-->
         <link href="assets/plugins/tagsinput/jquery.tagsinput.css" rel="stylesheet">
         <link href="assets/plugins/toggles/toggles.css" rel="stylesheet">
         <link href="assets/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
@@ -63,7 +63,7 @@
     <body>
 
         <!-- Navigation Bar-->
-       <?php include "header_Adm.php"; ?>  
+        <?php include "header_Adm.php"; ?>  
         <!-- End Navigation Bar-->
 
 
@@ -71,165 +71,166 @@
             <div class="container">
 
                 <!-- Page-Title -->
-           
-<!--     <div class="row">
-                    <div class="col-sm-12">
-                        <div class="btn-group pull-right">
-                            <button type="button" class="btn btn-primary dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Settings <span class="m-l-5"><i class="fa fa-cog"></i></span></button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
-                        </div>
-                        <h4 class="page-title">Datatable </h4>
-                    </div>
-                </div>-->
 
-       
+                <!--     <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn btn-primary dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Settings <span class="m-l-5"><i class="fa fa-cog"></i></span></button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Action</a></li>
+                                                <li><a href="#">Another action</a></li>
+                                                <li><a href="#">Something else here</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Separated link</a></li>
+                                            </ul>
+                                        </div>
+                                        <h4 class="page-title">Datatable </h4>
+                                    </div>
+                                </div>-->
+
+
 
                 <div class="row">
-                            <div class="col-sm-12">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading"><h3 class="panel-title">Registrar Equiposss</h3></div>
-                                    <div class="panel-body">
-                                        
-                                        <form class="form-horizontal" role="form">   
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><h3 class="panel-title">Registrar Equiposss</h3></div>
+                            <div class="panel-body">
 
-                                         
-                                            <div class="form-group">
-                                                <label class="col-sm-2 control-label">Empleado</label>
-                                                <div class="col-sm-10">
-                                                    <select required class="form-control" id="empleados">
-                                                     
-                                                    </select>
-                                           
-                                                </div>
-                                             </div>
+                                <form class="form-horizontal" role="form" method="post" action="../controllers/EquipoInsert.php">   
 
-                                            <div class="form-group">
-                                                <label class="col-sm-2 control-label">Tipo de Equipo</label>
-                                                <div class="col-sm-10">
-                                                    <select required class="form-control">
-                                                        <option value="">Seleccione</option>
-                                                        <option value="1">Portatil</option>
-                                                        <option value="2">Todo en Uno</option>
-                                                        <option value="3">Pc Escritorio</option>
-                                                      
-                                                    </select>
-                                           
-                                                </div>
-                                            </div>
-                                            
-                                                 <div class="form-group">
-                                                <label class="col-sm-2 control-label">Listar Tipo Pantalla</label>
-                                                <div class="col-sm-10">
-                                                    <select required class="form-control" >
-                                                        <option value="">Seleccione</option>
-                                                        <option value="1">Lcd</option>
-                                                        <option value="2">Plasma</option>
-                                                        <option value="3">Led</option>
-                                                       
-                                                    </select>
-                                           
-                                                </div>
-                                            </div>
-                                            
-                                                 <div class="form-group">
-                                                <label class="col-sm-2 control-label">Listar Pantallas</label>
-                                                <div class="col-sm-10">
-                                                    <select required class="form-control" id="pantallas">                                                                                                           
-                                                    </select>
-                                           
-                                                </div>
-                                            </div>
-                                       
-                                            
-                                                 <div class="form-group">
-                                                <label class="col-sm-2 control-label">Listar Teclado</label>
-                                                <div class="col-sm-10">
-                                                    <select required class="form-control" id="teclados">                                                     
-                                                       
-                                                    </select>
-                                           
-                                                </div>
-                                            </div>
-                                       
-                                            
-                                                 <div class="form-group">
-                                                <label class="col-sm-2 control-label">Listar Mouse</label>
-                                                <div class="col-sm-10">
-                                                    <select required class="form-control" id="mouses">
-                                                                                                       
-                                                    </select>
-                                           
-                                                </div>
-                                            </div>
-                                       
-                                            
-                                            
-                                                 <div class="form-group">
-                                                <label class="col-sm-2 control-label">Listar Impresora</label>
-                                                <div class="col-sm-10">
-                                                    <select required class="form-control" id="impresoras">
 
-                                                    </select>
-                                           
-                                                </div>
-                                            </div>
-                                            
-                                            
-                                                 <div class="form-group">
-                                                <label class="col-sm-2 control-label">Listar Camara</label>
-                                                <div class="col-sm-10">
-                                                    <select required class="form-control" id="camaras">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Empleado</label>
+                                        <div class="col-sm-10">
+                                            <select required class="form-control" id="empleados" name="empleado">
 
-                                                       
-                                                    </select>
-                                           
-                                                </div>
-                                            </div>
-                                            
-                                            
-                                        
-                                            
-                                            
-                                                                       
-                                                                        
-                                       <div class="form-group">                                    
-                                <div class="col-sm-12" align="center">
-                                    <button type="button" type="submit"  value="boton" name="btnMostrar" class="btn btn-info" >Registrar</button>
-                                </div>
-                            </div>       
-                                     
-                                            
-                                        
-                                         
+                                            </select>
 
-                                       
-                           
-                                        </form>
-                                    </div> <!-- panel-body -->
-                                </div> <!-- panel -->
-                            </div> <!-- col -->
-                        </div> <!-- End row -->
+                                        </div>
+                                    </div>
 
-       
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Tipo de Equipo</label>
+                                        <div class="col-sm-10">
+                                            <select required class="form-control" name="equipo">
+                                                <option value="">Seleccione</option>
+                                                <option value="1">Portatil</option>
+                                                <option value="2">Todo en Uno</option>
+                                                <option value="3">Pc Escritorio</option>
+
+                                            </select>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Listar Tipo Pantalla</label>
+                                        <div class="col-sm-10">
+                                            <select required class="form-control" name="tipoPantalla">
+                                                <option value="">Seleccione</option>
+                                                <option value="1">Lcd</option>
+                                                <option value="2">Plasma</option>
+                                                <option value="3">Led</option>
+
+                                            </select>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Listar Pantallas</label>
+                                        <div class="col-sm-10">
+                                            <select required class="form-control" id="pantallas" name="pantalla">                                                                                                           
+
+                                            </select>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Listar Teclado</label>
+                                        <div class="col-sm-10">
+                                            <select required class="form-control" id="teclados" name="teclados">                                                     
+                                                <option value="2">Plasma</option>
+                                            </select>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Listar Mouse</label>
+                                        <div class="col-sm-10">
+                                            <select required class="form-control" id="mouses" name="raton">
+                                                <option value="2">Plasma</option>                                           
+                                            </select>
+
+                                        </div>
+                                    </div>
 
 
 
-           
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Listar Impresora</label>
+                                        <div class="col-sm-10">
+                                            <select required class="form-control" id="impresoras" name="impresora">
+
+                                            </select>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Listar Camara</label>
+                                        <div class="col-sm-10">
+                                            <select required class="form-control" id="camaras" name="camara">
+                                                <option value="2">Plasma</option>
+
+                                            </select>
+
+                                        </div>
+                                    </div>
 
 
 
 
-    
 
 
-   <?php include "footer.php"; ?>  
-              
+
+                                    <div class="form-group">                                    
+                                        <div class="col-sm-12" align="center">
+                                            <input type="submit"  value="registrar" name="btnMostrar" class="btn btn-info" >
+                                        </div>
+                                    </div>       
+
+
+
+
+
+
+
+                                </form>
+                            </div> <!-- panel-body -->
+                        </div> <!-- panel -->
+                    </div> <!-- col -->
+                </div> <!-- End row -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <?php include "footer.php"; ?>  
+
             </div>
             <!-- end container -->
 
@@ -269,8 +270,8 @@
         <script src="assets/pages/datatables.init.js"></script>
 
         <script src="assets/js/jquery.app.js"></script>
-        
-        
+
+
         <!-- jQuery  -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
@@ -297,11 +298,11 @@
         <script src="assets/plugins/bootstrap-inputmask/bootstrap-inputmask.min.js" type="text/javascript"></script>
         <script src="assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
 
-     <script>
-            jQuery(document).ready(function() {
+        <script>
+            jQuery(document).ready(function () {
 
                 // Tags Input
-                jQuery('#tags').tagsInput({width:'auto'});
+                jQuery('#tags').tagsInput({width: 'auto'});
 
                 // Form Toggles
                 jQuery('.toggle').toggles({on: true});
@@ -338,26 +339,26 @@
                     selectionHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='search...'>",
                     afterInit: function (ms) {
                         var that = this,
-                            $selectableSearch = that.$selectableUl.prev(),
-                            $selectionSearch = that.$selectionUl.prev(),
-                            selectableSearchString = '#' + that.$container.attr('id') + ' .ms-elem-selectable:not(.ms-selected)',
-                            selectionSearchString = '#' + that.$container.attr('id') + ' .ms-elem-selection.ms-selected';
+                                $selectableSearch = that.$selectableUl.prev(),
+                                $selectionSearch = that.$selectionUl.prev(),
+                                selectableSearchString = '#' + that.$container.attr('id') + ' .ms-elem-selectable:not(.ms-selected)',
+                                selectionSearchString = '#' + that.$container.attr('id') + ' .ms-elem-selection.ms-selected';
 
                         that.qs1 = $selectableSearch.quicksearch(selectableSearchString)
-                            .on('keydown', function (e) {
-                                if (e.which === 40) {
-                                    that.$selectableUl.focus();
-                                    return false;
-                                }
-                            });
+                                .on('keydown', function (e) {
+                                    if (e.which === 40) {
+                                        that.$selectableUl.focus();
+                                        return false;
+                                    }
+                                });
 
                         that.qs2 = $selectionSearch.quicksearch(selectionSearchString)
-                            .on('keydown', function (e) {
-                                if (e.which == 40) {
-                                    that.$selectionUl.focus();
-                                    return false;
-                                }
-                            });
+                                .on('keydown', function (e) {
+                                    if (e.which == 40) {
+                                        that.$selectionUl.focus();
+                                        return false;
+                                    }
+                                });
                     },
                     afterSelect: function () {
                         this.qs1.cache();
@@ -417,100 +418,100 @@
             });
         </script>
 
-           <script type="text/javascript">
-           $(document).ready(function(){
+        <script type="text/javascript">
+            $(document).ready(function () {
                 $.ajax({
-                  type: 'post',
-                  url: '../controllers/CargoList.php'
+                    type: 'post',
+                    url: '../controllers/CargoList.php'
                 })
-                .done(function(listas_rep){
-                   // alert(listas_rep);
-                  $('#empleados').html(listas_rep);
-                })
-                .fail(function(){
-                  alert('Hubo un errror al cargar las listas_rep')
-                });
-
-                $.ajax({
-                  type: 'post',
-                  url: '../controllers/PantallaList.php'
-                })
-                .done(function(listas_rep){
-                   // alert(listas_rep);
-                  $('#pantallas').html(listas_rep);
-                })
-                .fail(function(){
-                  alert('Hubo un errror al cargar las listas_rep')
-                });
-
-
-                 $.ajax({
-                  type: 'post',
-                  url: '../controllers/TecladosFreeList.php'
-                })
-                .done(function(listas_rep){
-                   // alert(listas_rep);
-                  $('#teclados').html(listas_rep);
-                })
-                .fail(function(){
-                  alert('Hubo un errror al cargar las listas_rep')
-                });
+                        .done(function (listas_rep) {
+                            // alert(listas_rep);
+                            $('#empleados').html(listas_rep);
+                        })
+                        .fail(function () {
+                            alert('Hubo un errror al cargar las listas_rep')
+                        });
 
                 $.ajax({
-                  type: 'post',
-                  url: '../controllers/MouseFreeList.php'
+                    type: 'post',
+                    url: '../controllers/PantallaList.php'
                 })
-                .done(function(listas_rep){
-                   // alert(listas_rep);
-                  $('#mouses').html(listas_rep);
-                })
-                .fail(function(){
-                  alert('Hubo un errror al cargar las listas_rep')
-                });
+                        .done(function (listas_rep) {
+                            // alert(listas_rep);
+                            $('#pantallas').html(listas_rep);
+                        })
+                        .fail(function () {
+                            alert('Hubo un errror al cargar las listas_rep')
+                        });
+
 
                 $.ajax({
-                  type: 'post',
-                  url: '../controllers/ImpresorasFreeList.php'
+                    type: 'post',
+                    url: '../controllers/TecladosFreeList.php'
                 })
-                .done(function(listas_rep){
-                   // alert(listas_rep);
-                  $('#impresoras').html(listas_rep);
-                })
-                .fail(function(){
-                  alert('Hubo un errror al cargar las listas_rep')
-                });
+                        .done(function (listas_rep) {
+                            // alert(listas_rep);
+                            $('#teclados').html(listas_rep);
+                        })
+                        .fail(function () {
+                            alert('Hubo un errror al cargar las listas_rep')
+                        });
 
                 $.ajax({
-                  type: 'post',
-                  url: '../controllers/ImpresorasFreeList.php'
+                    type: 'post',
+                    url: '../controllers/MouseFreeList.php'
                 })
-                .done(function(listas_rep){
-                   // alert(listas_rep);
-                  $('#impresoras').html(listas_rep);
-                })
-                .fail(function(){
-                  alert('Hubo un errror al cargar las listas_rep')
-                });
+                        .done(function (listas_rep) {
+                            // alert(listas_rep);
+                            $('#mouses').html(listas_rep);
+                        })
+                        .fail(function () {
+                            alert('Hubo un errror al cargar las listas_rep')
+                        });
 
-                  $.ajax({
-                  type: 'post',
-                  url: '../controllers/CamarasFreeList.php'
+                $.ajax({
+                    type: 'post',
+                    url: '../controllers/ImpresorasFreeList.php'
                 })
-                .done(function(listas_rep){
-                   // alert(listas_rep);
-                  $('#camaras').html(listas_rep);
-                })
-                .fail(function(){
-                  alert('Hubo un errror al cargar las listas_rep')
-                });
-   
-             });
+                        .done(function (listas_rep) {
+                            // alert(listas_rep);
+                            $('#impresoras').html(listas_rep);
+                        })
+                        .fail(function () {
+                            alert('Hubo un errror al cargar las listas_rep')
+                        });
 
-           
-  
-       </script>
+                $.ajax({
+                    type: 'post',
+                    url: '../controllers/ImpresorasFreeList.php'
+                })
+                        .done(function (listas_rep) {
+                            // alert(listas_rep);
+                            $('#impresoras').html(listas_rep);
+                        })
+                        .fail(function () {
+                            alert('Hubo un errror al cargar las listas_rep')
+                        });
+
+                $.ajax({
+                    type: 'post',
+                    url: '../controllers/CamarasFreeList.php'
+                })
+                        .done(function (listas_rep) {
+                            // alert(listas_rep);
+                            $('#camaras').html(listas_rep);
+                        })
+                        .fail(function () {
+                            alert('Hubo un errror al cargar las listas_rep')
+                        });
+
+            });
+
+
+
+        </script>
 
     </body>
 
-<!-- Mirrored from moltran.coderthemes.com/menu_2/table-datatable.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Oct 2017 05:07:58 GMT -->
+    <!-- Mirrored from moltran.coderthemes.com/menu_2/table-datatable.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Oct 2017 05:07:58 GMT -->
 </html>
