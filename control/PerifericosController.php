@@ -125,6 +125,14 @@ class PerifericosController {
      $perifericosDao->close();
      return $result;
   }
+  public static function listByEquipo($equipo_idEquipo){
+     $periferico = new Perifericos();
+     $periferico->setEquipo_idEquipo($equipo_idEquipo);
+     $perifericosDao =FactoryDao::getFactory(self::getGestorDefault())->getPerifericosDao(self::getDataBaseDefault());
+     $result = $perifericosDao->listByEquipo($periferico);
+     $perifericosDao->close();
+     return $result;
+  }
 public static function listByTipoPeriferico($tipo_Periferico){
      $periferico=new Perifericos();
      $periferico->setTipo_Periferico_id($tipo_Periferico);
