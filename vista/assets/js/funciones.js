@@ -11,20 +11,30 @@ function ajax(url, datos, rta) {
     return ajax;
 }
 
-function ValidarNit(nit){
+function FormRegistrarPeriferico1(nit){
     var url = "./php/validarnit.php?nit="+nit;
     var datos = {};
     var rta = "#validanit";
     ajax(url, datos, rta);
 }
 
-function MostrarInicio()
+function FormRegistrarPeriferico()
 {
-    var url = "html/index.html";
+    var url = "FormRegistrarPeriferico.php";
     var datos = {};
     var rta = "#mostrarcontenido";
     ajax(url, datos, rta);
 }
+
+
+function FormRegistrarEquipo()
+{
+    var url = "FormRegistrarEquipo_1.php";
+    var datos = {};
+    var rta = "#mostrarcontenido";
+    ajax(url, datos, rta);
+}
+//<editor-fold defaultstate="collapsed" desc="comment">
 
 function MostrarContactenos() {
     var url = "./html/contacto.html";
@@ -384,3 +394,4 @@ function masInfoCoti(id) {
     ajax(url, datos, rta);
     loading(rta);
 }
+//</editor-fold>

@@ -52,7 +52,9 @@
             <div class="container">
 
 
-       
+         <div id="mostrarcontenido"  class="col-lg-12">
+
+                 
 
                 <div class="row">
                     <div class="col-md-12">
@@ -105,7 +107,7 @@
                 </div> <!-- End Row -->
 
 
-       
+         </div>
 
 
      <div id="modal-solucion" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
@@ -192,7 +194,105 @@
         <script src="assets/pages/datatables.init.js"></script>
 
         <script src="assets/js/jquery.app.js"></script>
+    
+                  <!--<script type="text/javascript" src="assets/js/tipo_pantalla.js"></script>--> 
+        <script type="text/javascript" src="assets/js/funciones.js"></script> <!-- /.usu para-body -->
 
+        
+                 <script>
+             
+//  function pantallaOnChange(sel) {
+//    
+//  
+//           if (sel.value=="1"){
+//  
+// divT=document.getElementById("nPantalla");
+//           divT.style.display = "";
+// 
+//    divT1 = document.getElementById("nPantalla1");
+//           divT1.style.display = "none";
+//           
+//           divT2 = document.getElementById("nPantalla2");
+//           divT2.style.display = "none";
+//      }
+//  
+//      if (sel.value=="2"){
+//
+// divT = document.getElementById("nPantalla");
+//           divT.style.display = "";
+//       
+//divT1 = document.getElementById("nPantalla1");
+//           divT1.style.display = "";
+//       
+//divT2 = document.getElementById("nPantalla2");
+//           divT2.style.display = "none";
+//      }
+////      
+//   
+//      
+//        if (sel.value=="3"){
+//
+// divT = document.getElementById("nPantalla");
+//           divT.style.display = "";
+//       
+//divT1 = document.getElementById("nPantalla1");
+//           divT1.style.display = "";
+//       
+//divT2 = document.getElementById("nPantalla2");
+//           divT2.style.display = "";
+//      }
+//      
+//       if(sel.value==""){
+//   divT = document.getElementById("nPantalla");
+//           divT.style.display = "none";
+//       
+//divT1 = document.getElementById("nPantalla1");
+//           divT1.style.display = "none";
+//       
+//divT2 = document.getElementById("nPantalla2");
+//           divT2.style.display = "none";
+//      }
+//      
+//       if (sel.value=="4"){
+//   
+// divT=document.getElementById("nPantalla");
+//           divT.style.display = "";
+// 
+//    divT1 = document.getElementById("nPantalla1");
+//           divT1.style.display = "none";
+//           
+//           divT2 = document.getElementById("nPantalla2");
+//           divT2.style.display = "none";
+//      }
+//}
+//
+
+  function listarPantallas(sel2) {
+    
+  
+           if (sel2.value=="1"){
+   alert("listas las pantallas  1!");
+
+      }
+  
+      if (sel.value=="2"){
+ alert("listas las pantallas  2!");
+
+      }
+////      
+//   
+//      
+        if (sel.value=="3"){
+
+ alert("listas las pantallas  3!");
+      }
+//      
+
+}
+
+    </script>
+        
+        
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#datatable').dataTable();
@@ -216,6 +316,10 @@
 
              });
        </script> 
+       
+       
+      
+     
 
     </body>
 

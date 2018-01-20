@@ -1,19 +1,20 @@
-   
   <?php
 
 session_start();
 if (!isset($_SESSION['id_usuario']) || $_SESSION['id_usuario'] == null || $_SESSION['id_usuario'] == "") {
     echo'<script type="text/javascript">
                 alert("Inicio de Sesion Requerido");
-            
+                window.location="login.php"
                 </script>';
 }
+//session_destroy();
 $usuario = $_SESSION['id_usuario'];
 $cargo = $_SESSION['cargo_id'];
 $nombre = $_SESSION['nombre_usuario'];
+$correo = $_SESSION['Correo'];
 
 
-//    window.location="login.php"
+//   window.location="login.php"
 ?>
 
 
@@ -101,8 +102,8 @@ $nombre = $_SESSION['nombre_usuario'];
                             <li class="has-submenu">
                                 <a href="#"><i class="md md-palette "></i><span>  Equipos  </span> </a>
                                 <ul class="submenu">
-                                    <li><a href="FormRegistrarPeriferico.php">Registrar Periferico</a></li>
-                                    <li><a href="FormRegistrarEquipo.php">Registrar Equipo</a></li>
+                                    <li><a onclick="FormRegistrarPeriferico();">Registrar Periferico</a></li>
+                                    <li><a onclick="FormRegistrarEquipo();">Registrar Equipo</a></li>
                                     <li><a href="periferico_listar.php">Listar Periferico</a></li>
                                     <li><a href="equipo_listar.php">Listar Equipo</a></li>
                                    
