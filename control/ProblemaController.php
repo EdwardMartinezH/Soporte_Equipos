@@ -21,10 +21,10 @@ class ProblemaController {
    * @param equipo_idEquipo
    * @param fecha_registro
    */
-  public static function insert( $idProblema,  $problema,  $equipo_idEquipo,  $fecha_registro){
+  public static function insert( $idProblema,  $desproblema,  $equipo_idEquipo,  $fecha_registro){
       $problema = new Problema();
       $problema->setIdProblema($idProblema); 
-      $problema->setProblema($problema); 
+      $problema->setProblema($desproblema); 
       $problema->setEquipo_idEquipo($equipo_idEquipo); 
       $problema->setFecha_registro($fecha_registro); 
 
