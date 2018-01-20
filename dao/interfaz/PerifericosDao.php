@@ -42,6 +42,7 @@ interface PerifericosDao {
   public function listmousesFree();
   public function listImpresorasFree();
   public function listCamarasFree();
+  public function listByEquipo($periferico); 
     /**
      * Cierra la conexión actual a la base de datos
      */
