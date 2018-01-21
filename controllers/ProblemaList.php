@@ -3,17 +3,7 @@
 include_once realpath('../control/ProblemaController.php');
 
 $problemas = ProblemaController::listAll();
-$html = '<table id="datatable-buttons" class="table table-striped table-bordered">
-                                            <thead>
-                                                <tr>
-                                                    <th>id</th>
-                                                    <th>Problema</th>
-                                                    <th>Equipo_idEquipo</th>
-                                                    <th>fecha_registro</th>
-                                                  
-                                                </tr>
-                                            </thead>
-                                            <tbody>';  
+$html = "";  
 for ($i = 0; $i < count($problemas); $i++) {         
         $idProblema = $problemas[$i]->getIdProblema();
         $problema = $problemas[$i]->getProblema();
@@ -26,9 +16,7 @@ for ($i = 0; $i < count($problemas); $i++) {
                   <td>$fecha</td>                  
                  ";    
 }
-$html.="  </tbody>
-                                        </table>               
-              ";
+$html.="";
 echo $html;
 
 
