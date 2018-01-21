@@ -304,7 +304,7 @@
 <script type="text/javascript">
            $(document).ready(function(){
                 var codID = $('#codID').val();
-                $.post("../controler/solucion/listarSolucionAndProblemaByEquipo_1.php",
+                $.post("../controllers/ProblemaList.php",
                     {
                         cod: codID
                     },
