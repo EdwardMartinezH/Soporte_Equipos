@@ -84,12 +84,10 @@
                                     <thead>
                                         <tr>
                                             <th hidden="true">id oculto</th>
-                                            <th style="width: 20px;">Id</th>
-                                            <th style="width: 20px;">fecha Problema</th>
-                                            <th style="width: 20px;">Problema</th>
-                                            <th style="width: 20px;">fecha Solucion</th>
-                                            <th style="width: 20px;">Solucion</th>
-                                            <th style="width: 20px;">modificar</th>
+                                            <th>Id</th>
+                                                    <th>Problema</th>
+                                                    <th>Id equipo</th>
+                                                    <th>Fecha registro</th>
                                         </tr>
                                     </thead>
 
